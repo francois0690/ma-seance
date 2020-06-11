@@ -20,6 +20,7 @@ Rails.application.routes.draw do
       resources :consultations, only: [ :new, :create ]
   end
   get 'profil', to: 'users#profil', as: 'profil'
+  get 'aubergine', to: 'pages#aubergine', as: 'aubergine'
 
   patch 'profil/users_id', to: 'users#update_avatar', as: :update_avatar
 
