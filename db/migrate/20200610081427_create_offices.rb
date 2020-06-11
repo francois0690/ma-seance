@@ -3,7 +3,7 @@ class CreateOffices < ActiveRecord::Migration[6.0]
     create_table :offices do |t|
       t.string :name
       # t.references :address, foreign_key: true
-      t.references :address, polymorphic: true, null: false
+      t.references :address#, polymorphic: true
 
       t.timestamps
     end
