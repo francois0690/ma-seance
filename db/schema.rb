@@ -46,11 +46,10 @@ ActiveRecord::Schema.define(version: 2020_06_10_085051) do
 
   create_table "offices", force: :cascade do |t|
     t.string "name"
-    t.string "address_type", null: false
-    t.bigint "address_id", null: false
+    t.bigint "address_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["address_type", "address_id"], name: "index_offices_on_address_type_and_address_id"
+    t.index ["address_id"], name: "index_offices_on_address_id"
   end
 
   create_table "specialities", force: :cascade do |t|
@@ -69,11 +68,10 @@ ActiveRecord::Schema.define(version: 2020_06_10_085051) do
     t.string "last_name"
     t.string "phone"
     t.boolean "is_pro"
-    t.string "address_type", null: false
-    t.bigint "address_id", null: false
+    t.bigint "address_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["address_type", "address_id"], name: "index_users_on_address_type_and_address_id"
+    t.index ["address_id"], name: "index_users_on_address_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
