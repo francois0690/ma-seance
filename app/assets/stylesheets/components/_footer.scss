@@ -2,7 +2,7 @@
   width: 100%;
   height: 100%;
   max-height: 100%;
-  background-color: $red-medium-2;
+  background-color: $red-bg;
   text-align: center;
   padding: 12px 12px;
 
@@ -39,7 +39,7 @@
     transition: 0.2s
    }
     i.fab:hover {
-      color: rgba(112,70,87,0.9);
+      color: $red-medium;
     }
    }
   }
