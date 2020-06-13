@@ -51,10 +51,10 @@
   }
     // Ligne de séparation
     .separation {
-      background-color: black;
+      background-color: rgba(0,0,0,0.5);
       opacity: 0.5;
       height: 1px;
-      margin: 5px 140px;
+      margin: 5px 29%;
     }
     // copyright-conditions d'utilisation
     .footer-condition-utilisation {
@@ -64,7 +64,7 @@
         margin-bottom: 0;
 
         strong {
-        font-weight: 500;
+          font-weight: 500;
         }
       }
     }
