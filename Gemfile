@@ -29,6 +29,9 @@ gem 'redis', '~> 4.0'
 gem 'bootsnap', '>= 1.4.2', require: false
 
 gem 'devise'
+#Cloudinary
+gem 'cloudinary'
+gem 'down'
 
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
@@ -61,6 +64,5 @@ end
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
-#Cloudinary
-gem 'cloudinary'
+
 
