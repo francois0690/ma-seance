@@ -10,7 +10,7 @@
 
 
   a {
-    color: white;
+    color: black;
   }
 // A propost de ma secance + Font Awsome
 .footer-top {
@@ -18,7 +18,7 @@
   justify-content: center;
 
   .footer-top-a-propos {
-    color: white;
+    color: black;
     font-size: 14px;
     padding-right: 30px;
 
@@ -37,7 +37,7 @@
     vertical-align: middle;
     font-size: 30px;
     padding: 0 8px;
-    color: rgba(255,255,255,1) ;
+    color: rgba(0,0,0,1) ;
     transition: 0.2s
    }
     i.fab:hover {
@@ -47,14 +47,14 @@
   }
     // Ligne de séparation
     .separation {
-      background-color: #f4f4f4;
+      background-color: #black;
       opacity: 0.5;
       height: 1px;
       margin: 5px 250px;
     }
     // copyright-conditions d'utilisation
     .footer-condition-utilisation {
-      color: white;
+      color: black;
       font-size: 11px;
       p {
         font-weight: normal;
