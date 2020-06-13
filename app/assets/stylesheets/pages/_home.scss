@@ -1,1 +1,17 @@
 // Specific CSS for your home-page
+#ia {
+    margin-top: 150px;
+    display: flex;
+    padding: 64px 72px;
+    background-color: $red-bg;
+    border-radius: 4px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+}
+
+#ia .card-body {
+    padding-right: 160px;
+}
+
+#ia .card-body .card-text {
+    margin-top: 48px;
+}
