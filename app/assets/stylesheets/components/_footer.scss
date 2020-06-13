@@ -24,14 +24,18 @@
 
     p {
       margin-bottom: 0;
+      line-height: normal;
     }
   }
 
   .footer-top-socialmedia {
-    padding-top: 8px;
+    //padding-top: 6px;
     padding-left: 30px;
     vertical-align: middle;
 
+   a:hover{
+    text-decoration: none;
+   }
  // font Awsome
    i.fab {
     vertical-align: middle;
@@ -41,7 +45,7 @@
     transition: 0.2s
    }
     i.fab:hover {
-      color: $red-medium;
+      color: $red;
     }
    }
   }
@@ -50,15 +54,18 @@
       background-color: black;
       opacity: 0.5;
       height: 1px;
-      margin: 5px 250px;
+      margin: 5px 140px;
     }
     // copyright-conditions d'utilisation
     .footer-condition-utilisation {
       color: black;
       font-size: 11px;
       p {
-        font-weight: normal;
         margin-bottom: 0;
+
+        strong {
+        font-weight: 500;
+        }
       }
     }
 }
