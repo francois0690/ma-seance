@@ -6,5 +6,6 @@ class User < ApplicationRecord
   has_one :address # , polymorphic: true
   has_many :consultations
   has_many :activities
+  has_many :jobs
   has_one_attached :avatar
 end
