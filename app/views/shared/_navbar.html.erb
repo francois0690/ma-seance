@@ -19,7 +19,7 @@
 <% else %>
 <nav class="navbar navbar-expand-lg d-flex navbar-light align-content-center justify-content-between">
   <div class="flex-grow-1 d-flex justify-content-center">
-    <a class="navbar-brand text-center">Ma séance</a>
+    <%= link_to "Ma séance", root_path, class: "navbar-brand text-center" %>
   </div>
   <div class="nav-item d-flex">
     <%= link_to "Login", new_user_session_path, class: "button accept nav-link" %>
