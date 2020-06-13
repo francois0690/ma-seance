@@ -5,29 +5,38 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-require "open-uri"
+# require "open-uri"
+require "down"
+
+
 
 
 
 p "cleaning database"
-Activity.destroy_all
 Consultation.destroy_all
-
-Office.destroy_all
-Speciality.destroy_all
+Activity.destroy_all
 Job.destroy_all
 Address.destroy_all
+Speciality.destroy_all
+Office.destroy_all
 User.destroy_all
 
 
 # Create avatars
-avatar_docteur_male = URI.open('https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/docteur2_krnjuk.jpg')
+# avatar_docteur_male = URI.open("https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/docteur2_krnjuk.jpg")
+avatar_docteur_male = Down.download('https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/docteur2_krnjuk.jpg')
 
-avatar_docteur_female = URI.open('https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/avatar_docteur_dp7tj7.png')
+# avatar_docteur_female = URI.open("https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/avatar_docteur_dp7tj7.png")
+avatar_docteur_female = Down.download("https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/avatar_docteur_dp7tj7.png")
 
-avatar_docteur_female_nurse = URI.open('https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/docteur1_tapj6v.jpg')
+# p avatar_docteur_female
+# avatar_docteur_female_nurse = URI.open('https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/docteur1_tapj6v.jpg')
+avatar_docteur_female_nurse = Down.download('https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/docteur1_tapj6v.jpg')
 
-avatar_patient = URI.open('https://res.cloudinary.com/dewwle39t/image/upload/v1592053825/ma-seance/avatar_generique_ikdvyc.png')
+# avatar_patient = URI.open('https://res.cloudinary.com/dewwle39t/image/upload/v1592053825/ma-seance/avatar_generique_ikdvyc.png')
+avatar_patient = Down.download('https://res.cloudinary.com/dewwle39t/image/upload/v1592053825/ma-seance/avatar_generique_ikdvyc.png')
+
+# p avatar_docteur_female
 
 # Create jobs
 jobs_array = [ "aromathérapeute", "auriculothérapeute", "balnéothérapeute", "biothérapeute", "crachouillot-thérapeute", "cryothérapeute", "ergothérapeute", "fasciathérapeute", "hypnothérapeute", "kinésithérapeute", "logothérapeute", "magnétothérapeute", "massothérapeute", "musicothérapeute", "phytothérapeute", "podothérapeute", "pseudothérapeute", "psychothérapeute", "radiothérapeute", "sexothérapeute", "thalassothérapeute", "urinothérapeute", "zoothérapeute" ]
@@ -136,9 +145,7 @@ f.email = "francois0690@gmail.com"
 f.password = "123456"
 f.password_confirmation = "123456"
 f.is_pro = false
-# f.avatar.attach(io: avatar_patient, filename: 'avatar.png', content_type: 'image/jpg')
-f.avatar.attach(io: avatar_docteur_male, filename: 'toto_avatar.jpg', content_type: 'image/jpg')
-
+#f.avatar.attach(io: avatar_patient, filename: 'avatarf.jpg', content_type: 'image/jpg')
 f.save!
 
 b = User.new
@@ -149,7 +156,9 @@ b.email = "barnabe.dubus@gmail.com"
 b.password = "123456"
 b.password_confirmation = "123456"
 b.is_pro = false
-# b.avatar.attach(io: avatar_patient, filename: 'avatar.jpg', content_type: 'image/jpg')
+#b.avatar.attach(io: avatar_patient, filename: 'avatarb.jpg', content_type: 'image/jpg')
+#b.avatar = f.avatar
+
 b.save!
 
 s = User.new
@@ -160,7 +169,7 @@ s.email = "shaun.o.graham@gmail.com"
 s.password = "123456"
 s.password_confirmation = "123456"
 s.is_pro = false
-# s.avatar.attach(io: avatar_patient, filename: 'avatar.jpg', content_type: 'image/jpg')
+#s.avatar.attach(io: avatar_patient, filename: 'avatars.jpg', content_type: 'image/jpg')
 s.save!
 
 m = User.new
@@ -171,7 +180,7 @@ m.email = "myriam.dbdr@gmail.com"
 m.password = "123456"
 m.password_confirmation = "123456"
 m.is_pro = false
-# m.avatar.attach(io: avatar_patient, filename: 'avatar.jpg', content_type: 'image/jpg')
+#m.avatar.attach(io: avatar_patient, filename: 'avatarm.jpg', content_type: 'image/jpg')
 m.save!
 
 d1 = User.new
@@ -182,7 +191,7 @@ d1.email = "docteur1@gmail.com"
 d1.password = "123456"
 d1.password_confirmation = "123456"
 d1.is_pro = true
-# d1.avatar.attach(io: avatar_docteur_male, filename: 'avatar_docteur_male.jpg', content_type: 'image/jpg')
+d1.avatar.attach(io: avatar_docteur_male, filename: 'avatar_docteur_male.jpg', content_type: 'image/jpg')
 d1.description = "Je suis un professionnel de la santé titulaire d'un diplôme de docteur en médecine et d'un diplôme d'État de docteur en médecine. Je soigne les maladies, pathologies et blessures."
 d1.save!
 
@@ -194,7 +203,7 @@ d2.email = "docteur2@gmail.com"
 d2.password = "123456"
 d2.password_confirmation = "123456"
 d2.is_pro = true
-# d2.avatar.attach(io: avatar_docteur_female, filename: 'avatar_docteur_female.jpg', content_type: 'image/jpg')
+d2.avatar.attach(io: avatar_docteur_female, filename: 'avatar_docteur_female.jpg', content_type: 'image/jpg')
 d2.description = "Je traite vos problèmes posés dans l'exercice de la sexualité, que ce soit avant le rapport ou durant le rapport"
 d2.save!
 
@@ -206,7 +215,7 @@ p1.email = "patient1@gmail.com"
 p1.password = "123456"
 p1.password_confirmation = "123456"
 p1.is_pro = false
-# p1.avatar.attach(io: avatar_patient, filename: 'avatar.jpg', content_type: 'image/jpg')
+p1.avatar.attach(io: avatar_patient, filename: 'avatarp1.jpg', content_type: 'image/jpg')
 p1.save!
 
 p "#{User.count} utilisateurs crées"
@@ -245,7 +254,7 @@ p "#{Activity.count} activités créées"
 # Consultation
 consultation1 = Consultation.new
 consultation1.activity = activity1
-consultation1.patient = p1.id
+consultation1.user = p1
 consultation1.date = "2020-07-17"
 consultation1.save!
 
