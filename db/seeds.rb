@@ -5,7 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
-# require "open-uri"
+require "open-uri"
 require "down"
 
 
@@ -185,14 +185,15 @@ m.save!
 
 d1 = User.new
 d1.civility = "M."
-d1.first_name = "Jean"
+d1.first_name = "Sébastien"
 d1.last_name = "Coucou"
 d1.email = "docteur1@gmail.com"
 d1.password = "123456"
 d1.password_confirmation = "123456"
 d1.is_pro = true
 d1.avatar.attach(io: avatar_docteur_male, filename: 'avatar_docteur_male.jpg', content_type: 'image/jpg')
-d1.description = "Je suis un professionnel de la santé titulaire d'un diplôme de docteur en médecine et d'un diplôme d'État de docteur en médecine. Je soigne les maladies, pathologies et blessures."
+d1.description = "Je vous accueille tous les jours pour des téléconsultations (appel vocal ou vidéo). Psychologue clinicien, psychothérapeute et psychanalyste, ma pratique auprès d'enfants, d'adolescents et d'adultes repose sur un travail en libéral et en institution (CMP, ITEP, SAVS notamment). Il peut s'agir d'accompagnements ponctuels, de psychothérapie individuelle ou de couple, ou d'entretiens de guidance parentale. N'hésitez pas à me contacter, nous trouverons ensemble la formule qui vous convient !"
+d1.phone = "0611751644"
 d1.save!
 
 d2 = User.new
@@ -204,8 +205,253 @@ d2.password = "123456"
 d2.password_confirmation = "123456"
 d2.is_pro = true
 d2.avatar.attach(io: avatar_docteur_female, filename: 'avatar_docteur_female.jpg', content_type: 'image/jpg')
-d2.description = "Je traite vos problèmes posés dans l'exercice de la sexualité, que ce soit avant le rapport ou durant le rapport"
+d2.description = "Je traite vos problèmes posés dans l'exercice de la sexualité, que ce soit avant le rapport ou durant le rapport."
+d2.phone = "0613069386"
 d2.save!
+
+
+d3 = User.new
+d3.civility = "Mme"
+d3.first_name = "Elisabeth"
+d3.last_name = "KONRAT"
+d3.email = "docteur3@gmail.com"
+d3.password = "123456"
+d3.password_confirmation = "123456"
+d3.is_pro = true
+#d3.avatar.attach(io: avatar_docteur_female, filename: 'avatar_docteur_female.jpg', content_type: 'image/jpg')
+d3.description = "J'utilise l'Analyse Transactionnelle, discipline structurée et méthodique, dotée d'une boîte à outils précieuse (états du moi Parent/Adulte/Enfant, sentiments parasites, jeux psychologiques, triangle Sauveur/Persecuteur/Victime, scénario de vie, ...). Formée chez ATPsy pour la pratique de psychothérapies en Analyse Transactionnelle, je suis aussi Technicien en PNL (IFPNL). J'ai également suivi le cursus académique de psychanalyse, sur 3 années, à l'EPCI. Je connais bien le monde des entreprises, ayant été salariée + de 20 ans dans les systèmes d'information au marketing, puis comme commerciale. Je reçois aux Halles, à Paris, dans un cabinet lumineux et confortable."
+d3.phone = "0664498249"
+d3.save!
+
+
+d4 = User.new
+d4.civility = "Mme"
+d4.first_name = "Elsa"
+d4.last_name = "GRÜNFELD"
+d4.email = "docteur4@gmail.com"
+d4.password = "123456"
+d4.password_confirmation = "123456"
+d4.is_pro = true
+#d4.avatar.attach(io: avatar_docteur_female, filename: 'avatar_docteur_female.jpg', content_type: 'image/jpg')
+d4.description = "Vous sentez que vous avez besoin d'aide pour surmonter vos difficultés ? Je vous accompagne et vous écoute dans vos difficultés émotionnelles, personnelles et professionnelles. Je suis psychopraticienne certifiée en Psychosynthèse, Psychanalyste, titulaire du Certificat Européen de Psychothérapie."
+d4.phone = "0613678846"
+d4.save!
+
+
+d5 = User.new
+d5.civility = "Mme"
+d5.first_name = "Marion"
+d5.last_name = "FABRE"
+d5.email = "docteur5@gmail.com"
+d5.password = "123456"
+d5.password_confirmation = "123456"
+d5.is_pro = true
+#d4.avatar.attach(io: avatar_docteur_female, filename: 'avatar_docteur_female.jpg', content_type: 'image/jpg')
+d5.description = "L'accession à l'autonomie se manifeste par la libération ou le recouvrement de trois facultés : la conscience, la spontanéité, l'intimié.\" E. Berne Classée parmi les thérapies humanistes, l'Analyse Transactionnelle (AT) est une théorie de la communication et de la personnalité dont l'approche est à la fois cognitive, émotionnelle et comportementale. Grâce à une grille de lecture riche aux concepts didactiques, l'AT s'attache à identifier les mécanismes internes et externes qui animent nos émotions, nos pensées et nos comportements. Je suis psychopraticienne formée en Analyse Transactionnelle ainsi qu'en Hypnose et en Sophrologie. Je vous reçois sur rendez-vous du lundi au vendredi ainsi que le samedi. Au plaisir de vous rencontrer et de vous accompagner sur le chemin de votre changement et vers la réalisation de vos objectifs."
+d5.phone = "078595817"
+d5.save!
+
+
+d6 = User.new
+d6.civility = "Mme"
+d6.first_name = "Nathalie"
+d6.last_name = "De Reynal"
+d6.email = "docteur6@gmail.com"
+d6.password = "123456"
+d6.password_confirmation = "123456"
+d6.is_pro = true
+#d4.avatar.attach(io: avatar_docteur_female, filename: 'avatar_docteur_female.jpg', content_type: 'image/jpg')
+d6.description = "Je vous accueille et vous accompagne dans un espace bienveillant et sécurisant qui sera le vôtre, afin de vous aider à surmonter vos difficultés et découvrir vos propres ressources. Je suis diplômée de l'université européenne Sigmund Freud University puis formée à l'Analyse Psycho-Organique à l'Ecole Française d'Analyse Psycho-Organique. Je vous propose un suivi intégratif prenant source dans la psychanalyse et s'articulant avec une dimension psychocorporelle afin de vous aider à retrouver votre unité corps/esprit et d'accéder à votre autonomie psychique"
+d6.phone = "0607689295"
+d6.save!
+
+
+d7 = User.new
+d7.civility = "Mme"
+d7.first_name = "Aurélia"
+d7.last_name = "De Condé"
+d7.email = "docteur7@gmail.com"
+d7.password = "123456"
+d7.password_confirmation = "123456"
+d7.is_pro = true
+#d4.avatar.attach(io: avatar_docteur_female, filename: 'avatar_docteur_female.jpg', content_type: 'image/jpg')
+d7.description = "La PSYCHOTHÉRAPIE st un processus qui permet de prendre conscience de ses besoins et de ses désirs, d'identifier ses émotions et ses fonctionnements. Elle favorise créativité, autonomie et responsabilité. LA PSYCHOTHÉRAPIE est un voyage vers la connaissance de soi. C'est une démarche permettant d'explorer les difficultés existentielles et les problèmes concrets de la vie, dans un cadre soutenant et bienveillant. La GESTALT-THÉRAPIE ne se limite pas à une vision individualiste de l'humain, mais s'intéresse aux interactions de l'individu avec ses environnements, qu'ils soient personnels, professionnels ou sociaux. Elle place le patient comme acteur du changement et la relation comme moteur de ce changement. S'ajuster, s'orienter, découvrir et donner du sens à sa vie placent la Gestalt-thérapie dans une visée existentielle."
+d7.phone = "0641063999"
+d7.save!
+
+
+
+d8 = User.new
+d8.civility = "Mme"
+d8.first_name = "Carine"
+d8.last_name = "Chaussemiche"
+d8.email = "docteur8@gmail.com"
+d8.password = "123456"
+d8.password_confirmation = "123456"
+d8.is_pro = true
+#d4.avatar.attach(io: avatar_docteur_female, filename: 'avatar_docteur_female.jpg', content_type: 'image/jpg')
+d8.description = "L'Atelier Ame est un cabinet de psychotérapie où Carine Chaussemiche vous accompagne à travers le rêve éveillé et/ou l'art-thérapie pour dépasser votre problématique, découvrir votre potentiel et repartir apaisé. Des ateliers mandala ou de calligraphie thérapeutique vous permettent d'augmenter votre bien-être intérieur."
+d8.phone = "0621018586"
+d8.save!
+
+
+d9 = User.new
+d9.civility = "Mme"
+d9.first_name = "Amandine"
+d9.last_name = "Caulle"
+d9.email = "docteur9@gmail.com"
+d9.password = "123456"
+d9.password_confirmation = "123456"
+d9.is_pro = true
+#d4.avatar.attach(io: avatar_docteur_female, filename: 'avatar_docteur_female.jpg', content_type: 'image/jpg')
+d9.description = "psychologue et psychothérapeute pour adultes à Beauvais, spécialisée en ICV (intégration du cycle de la vie), technique similaire à l'EMDR pour la résolution des traumatismes. J'utilise aussi les TCC ou l'EMDR, la sophrologie, la CNV. Séance d'une heure en face à face au cabinet ou à distance."
+d9.phone = "0651006945"
+d9.save!
+
+
+d10 = User.new
+d10.civility = "Mme"
+d10.first_name = "Colombe"
+d10.last_name = "Alvarez"
+d10.email = "docteur10@gmail.com"
+d10.password = "123456"
+d10.password_confirmation = "123456"
+d10.is_pro = true
+#d4.avatar.attach(io: avatar_docteur_female, filename: 'avatar_docteur_female.jpg', content_type: 'image/jpg')
+d10.description = "Aussi appelé analyste, le psychanalyste assiste les patients afin de surmonter les difficultés psychologiques qu'ils rencontrent (angoisse, inhibition, difficultés affectives, relationnelles, somatisation, dépression, burn-out, mal-être, crise identitaire). Le cabinet de psychothérapie se veut être un espace accueillant et sécurisant, un lieu d'écoute et de soutien pour permettre à la personne en thérapie de se poser, dire ce qui est important pour elle, raconter son histoire, vivre ses émotions librement, dans la confidentialité et sans jugement. Je m'appuie sur une méthode thérapeutique intégrative qui s'appelle l'Analyse Psycho-Organique (APO), elle s'appuie sur la psychanalyse et les outils des thérapies psycho-corporelles.  La traversée de certains passages de vie peut s’avérer plus difficile que d’autres, la psychothérapie permet un accompagnement personnalisé et adapté au rythme de chacun. Je consulte en cabinet et à distance par visioconférence."
+d10.phone = "0631531678"
+d10.save!
+
+
+d11 = User.new
+d11.civility = "M."
+d11.first_name = "Romain"
+d11.last_name = "BOULARD"
+d11.email = "docteur11@gmail.com"
+d11.password = "123456"
+d11.password_confirmation = "123456"
+d11.is_pro = true
+#d4.avatar.attach(io: avatar_docteur_female, filename: 'avatar_docteur_female.jpg', content_type: 'image/jpg')
+d11.description = "Initialement spécialisé dans l'éducation et la pédagogie auprès des enfants et des adolescents comme animateur et conseillé pédagogique au sein de l'éducation nationale et auprès de l'Aide Sociale à l'Enfance (l'ASE), je me suis intéressé peu à peu à l'adulte et aux personnes âgées qui font partie intégrante de ma patientèle. ​ Formé à la relation d'aide et notamment à l'Approche Centrée sur la Personne *(A.C.P) de CARL ROGERS depuis 2011 à Paris en psychanalyse et psychothérapie. ​ A ce titre j'accompagne en psychothérapie des adultes depuis 2011 en proies à des situations émotionnelles douloureuses (suicide d'un proche, dépression, harcèlement au travail, solitude, mal-être,burn-out, deuil, séparation, victimes d'inceste, ...). Formé par l'école SOHO Holistique à La Baule par Marc Niedergang et Jacqueline Niedergang depuis 2018. La pratique de la sophrologie concerne toute personne qui souhaite améliorer son existence et développer mieux être et sérénité."
+d11.phone = "0685431183"
+d11.save!
+
+d12 = User.new
+d12.civility = "Mme"
+d12.first_name = "Catherine"
+d12.last_name = "FRUGIER"
+d12.email = "docteur12@gmail.com"
+d12.password = "123456"
+d12.password_confirmation = "123456"
+d12.is_pro = true
+#d4.avatar.attach(io: avatar_docteur_female, filename: 'avatar_docteur_female.jpg', content_type: 'image/jpg')
+d12.description = "Je propose des téléconsultations pendant toute la durée du confinement, après un premier entretien gratuit d'une vingtaine de minutes. En temps normal, je consulte à Voisins le Bretonneux (78). Mes spécificités : • stress: difficulté à gérer ses émotions, état dépressif, anxieux. • moments difficiles de la vie : deuil, maladie, séparation, remise en question des choix de vie... • difficultés relationnelles : difficultés à s’affirmer, sortir d'une relation toxique. Je conçois le travail thérapeutique comme un chemin de découverte de soi qui nous amène à découvrir et mobiliser nos ressources pour sortir de situations difficiles. Je suis attentive à tout ce qui fait que chaque être est unique : ressentis corporels, émotions, pensée, inscription dans la vie sociale, spiritualité. J’ai choisi pour cela comme cadre théorique la gestalt-thérapie et l’analyse transactionnelle."
+d12.phone = "0673556461"
+d12.save!
+
+d13 = User.new
+d13.civility = "Mme"
+d13.first_name = "Elisa"
+d13.last_name = "Monnet"
+d13.email = "docteur13@gmail.com"
+d13.password = "123456"
+d13.password_confirmation = "123456"
+d13.is_pro = true
+#d4.avatar.attach(io: avatar_docteur_female, filename: 'avatar_docteur_female.jpg', content_type: 'image/jpg')
+d13.description = "Thérapeute en Analyse Transactionnelle, je suis aussi coach professionnelle certifiée. Je vous accompagne sur toutes les difficultés liées aux relations à autrui et à soi-même: * communiquer (gestion des émotions), * créer du lien (de l'intimité et des relations harmonieuses), * développer le lien durablement (confiance en soi, vaincre la peur de l'abandon, du rejet) Grâce à une première carrière dans un grand groupe international, je vous apporte mes compétences, que vos empêchements se manifestent sur un plan professionnel ou personnel, avec des symptômes précis ou par une angoisse diffuse et ce, dans le but d'y voir clair, d'y apporter du sens afin de les dépasser. Vous avez de la ressource !"
+d13.phone = "0764169333"
+d13.save!
+
+d14 = User.new
+d14.civility = "Mme"
+d14.first_name = "Fanny"
+d14.last_name = "DEBAT"
+d14.email = "docteur14@gmail.com"
+d14.password = "123456"
+d14.password_confirmation = "123456"
+d14.is_pro = true
+#d4.avatar.attach(io: avatar_docteur_female, filename: 'avatar_docteur_female.jpg', content_type: 'image/jpg')
+d14.description = "Consultations possibles le samedi et le dimanche. Consultations par skype ou par téléphone pendant le confinement. Ça ne va pas, mais... On reporte toujours à plus tard. On se dit que ce n'est pas si grave, qu'il ne faut pas s'apitoyer sur son sort... que cela pourrait être pire ! Sans doute. Mais... si cela pouvait être mieux ? Et même pourquoi pas, beaucoup mieux ? Si votre vie valait bien plus qu'un ca pourrait être pire ? Vous souffrez de déprime, stress, anxiété ou angoisse, et cela perdure... Vous avez des problèmes de sommeil ou dans vos relations ( travail, couple, en société...). Être parent ou beau-parent soulève des difficultés... Ou tout simplement, vous ne vous sentez pas confortable et heureux-se dans votre vie, peu importe la raison... La thérapie peut vous aider à mieux vous connaître et aller vers le changement. Lors d'un premier rendez-vous, qui n'engage pas à poursuivre, nous faisons connaissance et voyons ensemble ce qu'il est possible de faire."
+d14.phone = "0760365935"
+d14.save!
+
+d15 = User.new
+d15.civility = "M."
+d15.first_name = "Jean Cyrille"
+d15.last_name = "Lecoq"
+d15.email = "docteur15@gmail.com"
+d15.password = "123456"
+d15.password_confirmation = "123456"
+d15.is_pro = true
+#d4.avatar.attach(io: avatar_docteur_female, filename: 'avatar_docteur_female.jpg', content_type: 'image/jpg')
+d15.description = "Aide lors de cette crise sanitaire ! utilisez et découvrez par le E-Coaching, les techniques des champions pour surmonter vos difficultés et cette situation inédite ! Devenez un Etre - Athlète, REALISEZ- Vous ! Je vous propose lors de nos séances de mettre en lumière les éléments permettant de vous réaliser sur les plans personnels, professionnels et sportifs. En effet, nous disposons de toutes les techniques pour mettre en oeuvre cela et ainsi de faire de votre quotidien, un cheminement différent !"
+d15.phone = "0778257319"
+d15.save!
+
+d16 = User.new
+d16.civility = "Mme"
+d16.first_name = "Frédérique"
+d16.last_name = "BETTON"
+d16.email = "docteur16@gmail.com"
+d16.password = "123456"
+d16.password_confirmation = "123456"
+d16.is_pro = true
+#d4.avatar.attach(io: avatar_docteur_female, filename: 'avatar_docteur_female.jpg', content_type: 'image/jpg')
+d16.description = "En raison de l'épidémie du Covid 19 et du confinement auquel nous sommes contraints, je vous propose une écoute par téléphone ou par visioconférence. N'hésitez pas si vous ressentez la nécessité de recevoir une aide extérieure attentive et capable de vous conseiller. J'accueille toute personne ressentant le besoin de confier ses questionnements à un tiers capable de lui apporter un éclairage nouveau et bienveillant. Angoisses, répétition de conflits et d'échecs, phobies, états dépressifs persistants et troubles de la personnalité sont de fréquents motifs de consultation. Les relations parents-enfants délicates, les conflits récurrents dans le couple, et les difficultés au travail sont également une source de souffrance élaborable en thérapie."
+d16.phone = "0619057051"
+d16.save!
+
+d17 = User.new
+d17.civility = "Mme"
+d17.first_name = "Alice"
+d17.last_name = "Bertrand-Hardy"
+d17.email = "docteur17@gmail.com"
+d17.password = "123456"
+d17.password_confirmation = "123456"
+d17.is_pro = true
+#d4.avatar.attach(io: avatar_docteur_female, filename: 'avatar_docteur_female.jpg', content_type: 'image/jpg')
+d17.description = "Vous vivez un malaise, ou une souffrance, et vous ne parvenez pas à le résoudre seul : difficultés professionnelles ou relationnelles répétitives, burn-out, problèmes de couple, émotions / stress difficiles à gérer, rupture, deuil, mal-être diffus ou envahissant, ... Vous avez besoin d'être écouté, de comprendre ce qui se passe pour pouvoir avancer. La psychothérapie vise à vous libérer de ce qui vous bloque intérieurement pour retrouver énergie et joie de vivre dans le présent, en lien avec les autres. Dans un premier temps, nous explorons ce qui se passe pour vous. Vous clarifiez ainsi ce que vous voulez en vous engageant dans ce travail de thérapie. Je suis là pour accueillir avec vous ce que vous vivez : la parole, la réflexion mais aussi le corps, les ressentis, les rêves, ce qui se passe entre nous ont leur place dans notre travail. Nous pourrons aussi utiliser des medias créatifs (métaphores, dessins, collages, ...)."
+d17.phone = "0620845809"
+d17.save!
+
+d18 = User.new
+d18.civility = "Mme"
+d18.first_name = "Mélanie"
+d18.last_name = "Bouxom"
+d18.email = "docteur18@gmail.com"
+d18.password = "123456"
+d18.password_confirmation = "123456"
+d18.is_pro = true
+#d4.avatar.attach(io: avatar_docteur_female, filename: 'avatar_docteur_female.jpg', content_type: 'image/jpg')
+d18.description = "Psychologue clinicienne, dotée d'un Master 2 en psychologie clinique et psychopathologie ainsi que d'une expérience en psychiatrie, je propose des consultations individuelles, mais aussi de couples ou familiales, sur rendez-vous. Je propose une écoute bienveillante, active, soutenante afin de, ensemble, comprendre ce qui se passe et construire des moyens durables pour vous permettre de dépasser les difficultés que vous rencontrez. Selon les cas, un soutien psychologique ou une psychothérapie peut être proposée; cette dernière ayant pour but de restaurer un MOI plus conforme à celui ou celle que vous êtes devenu.e, et une confiance en soi parfois fragilisée par certaines épreuves ou expériences du passées, ou fragilisée par les peurs et croyances inconscientes qui dirigent nos vies à notre insu. Ce travail de rencontre avec soi-même restaure un narcissisme positif indispensable et une légitimité à être et à penser nécessaire pour affronter le monde et les expériences de la vie."
+d18.phone = "0698295565"
+d18.save!
+
+d19 = User.new
+d19.civility = "M."
+d19.first_name = "Stéphane"
+d19.last_name = "CHAUSSIN"
+d19.email = "docteur19@gmail.com"
+d19.password = "123456"
+d19.password_confirmation = "123456"
+d19.is_pro = true
+#d4.avatar.attach(io: avatar_docteur_female, filename: 'avatar_docteur_female.jpg', content_type: 'image/jpg')
+d19.description = "J'accompagne des personnes qui rencontrent des difficultés, des souffrances, des blocages dans leurs vies. Vous pouvez être amenés à consulter: • suite à des évènements de vie difficiles à traverser • suite à des comportements ou des états qui perturbent votre quotidien • suite à des actes dont vous avez été victimes Je suis formé à la Gestalt thérapie et ma posture de thérapeute s’appuie sur cette approche. Issue de la psychologie humaniste, la Gestalt thérapie est attentive aux modes de contact avec notre environnement et vise à retrouver de la souplesse et de la fluidité dans nos fonctionnements et nos interactions avec les autres. Elle donne la parole au corps et cherche à équilibrer les pôles intellectuel, corporel et affectif. Elle vise également à développer l'autonomie, la responsabilité et la créativité."
+d19.phone = "0768708698"
+d19.save!
+
+d20 = User.new
+d20.civility = "M."
+d20.first_name = "laurent"
+d20.last_name = "Depraz"
+d20.email = "docteur20@gmail.com"
+d20.password = "123456"
+d20.password_confirmation = "123456"
+d20.is_pro = true
+#d4.avatar.attach(io: avatar_docteur_female, filename: 'avatar_docteur_female.jpg', content_type: 'image/jpg')
+d20.description = "Pendant cette période difficile de confinement, je vous propose des téléconsultations vidéos ou téléphoniques ### Vous engager dans une psychothérapie Gestalt, c’est faire le choix de la confiance en la possibilité de changement, d'aller mieux Vous souhaitez commencer une psychothérapie Gestalt : - Peut être vivez-vous une situation de souffrance : Ce peut être à l'occasion d'une expérience difficile (anxiété, tristesse, estime de soi, deuil, conflit, burn out), ou à l'occasion de difficultés relationnelles (en couple, au travail, en famille)  - Peut être désirez-vous donner plus de sens à votre vie, retrouver plus de marge de manœuvre, de capacité à choisir la direction que vous souhaitez donner à votre vie Je vous accompagne dans le travail thérapeutique pour interroger vos comportements répétitifs, vos peurs, vos résistances et je vous soutiens dans votre cheminement vers le changement, la nouveauté et la confiance."
+d20.phone = "0675697705"
+d20.save!
 
 p1 = User.new
 p1.civility = "M."
