@@ -1,0 +1,45 @@
+.card_doctor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    width: 350px;
+    padding: 32px 16px;
+    opacity: 1;
+    // padding: 16px;
+    text-align: center;
+    // margin: auto 0;
+    .photo {
+        width: 250px;
+        height: 550px;
+        // margin-bottom: 32px;
+    }
+    .info {
+        overflow: hidden;
+        h2 {
+            text-transform: uppercase;
+            margin-top: 32px;
+            color: white;
+            font-size: 32px;
+            font-weight: bold;
+        }
+        p {
+            color: white;
+            font-size: 20px;
+            // margin: 0;
+            font-weight: lighter;
+            margin-bottom: 8px;
+        }
+        h3 {
+            opacity: 0;
+            margin-top: 24px;
+            color: white;
+            font-size: 20px;
+            font-weight: bold;
+        }
+    }
+}

@@ -1,0 +1,14 @@
+<% if !doctor.nil? %>
+    <div class="card_doctor">
+    <% if doctor.avatar.attached? %>    
+ <div class="photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+                    url(<%= cl_image_path doctor.avatar.key ,height: 250, width: 250, crop: :fill, gravity: :face %>)">
+        </div> 
+<%end%>
+        <div class="info">
+            <h2><%= "#{doctor.civility} #{doctor.first_name} #{doctor.last_name}" %></h2>
+            <p><%= doctor.description%></p>
+            <p><i><%= doctor.phone%></i></p>
+        </div>
+</div>
+<%end%>

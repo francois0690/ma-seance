@@ -1,0 +1,72 @@
+.grid {
+    width: 100%;
+    padding: 20px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-around;
+    overflow: shcroll;
+    margin-bottom: 32px;
+}
+
+.doctors {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 32px;
+    grid-auto-rows: minmax(100px, auto);
+    .grid-map {
+        background-color: white;
+        grid-column: 3;
+        grid-row: 1 / 3;
+    }
+    .one {
+        grid-column: 1;
+        grid-row: 1;
+    }
+    .two {
+        grid-column: 2;
+        grid-row: 1;
+    }
+    .three {
+        grid-column: 1;
+        grid-row: 2;
+    }
+    .four {
+        grid-column: 2;
+        grid-row: 2;
+    }
+    .five {
+        grid-column: 1;
+        grid-row: 3;
+    }
+    .six {
+        grid-column: 2;
+        grid-row: 3;
+    }
+    .seven {
+        grid-column: 3;
+        grid-row: 3;
+    }
+    .height {
+        grid-column: 1;
+        grid-row: 4;
+    }
+    .nine {
+        grid-column: 2;
+        grid-row: 4;
+    }
+    .ten {
+        grid-column: 3;
+        grid-row: 4;
+    }
+}
+
+.page-link {
+    background-color: $red !important;
+    border-color: $red !important;
+    color: $red-medium-3 !important;
+    &.active {
+        background-color: $red !important;
+        border-color: $red !important;
+        color: white !important;
+    }
+}
