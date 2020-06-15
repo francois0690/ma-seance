@@ -5,6 +5,7 @@
     display: flex;
     justify-content: space-around;
     overflow: shcroll;
+    margin-bottom: 32px;
 }
 
 .doctors {
@@ -56,5 +57,16 @@
     .ten {
         grid-column: 3;
         grid-row: 4;
+    }
+}
+
+.page-link {
+    background-color: $red !important;
+    border-color: $red !important;
+    color: $red-medium-3 !important;
+    &.active {
+        background-color: $red !important;
+        border-color: $red !important;
+        color: white !important;
     }
 }
