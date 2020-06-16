@@ -38,9 +38,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[6.0]
       t.string :last_name
       t.string :phone
       t.boolean :is_pro
-      # t.references :address, foreign_key: true
       t.string :description
-      t.references :address #, polymorphic: true
 
 
       t.timestamps null: false

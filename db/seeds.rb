@@ -24,7 +24,10 @@ User.destroy_all
 
 # Create avatars
 # avatar_docteur_male = URI.open("https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/docteur2_krnjuk.jpg")
-avatar_docteur_male = Down.download('https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/docteur2_krnjuk.jpg')
+
+avatar_docteur_male = open(URI.escape("https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/docteur2_krnjuk.jpg"))
+
+# avatar_docteur_male = Down.download('https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/docteur2_krnjuk.jpg')
 
 # avatar_docteur_female = URI.open("https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/avatar_docteur_dp7tj7.png")
 avatar_docteur_female = Down.download("https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/avatar_docteur_dp7tj7.png")
@@ -204,7 +207,7 @@ d2.email = "docteur2@gmail.com"
 d2.password = "123456"
 d2.password_confirmation = "123456"
 d2.is_pro = true
-d2.avatar.attach(io: avatar_docteur_female, filename: 'avatar_docteur_female.jpg', content_type: 'image/jpg')
+# d2.avatar.attach(io: avatar_docteur_female, filename: 'avatar_docteur_female.jpg', content_type: 'image/jpg')
 d2.description = "Je traite vos problèmes posés dans l'exercice de la sexualité, que ce soit avant le rapport ou durant le rapport."
 d2.phone = "0613069386"
 d2.save!
