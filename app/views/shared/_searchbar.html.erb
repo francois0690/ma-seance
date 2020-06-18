@@ -1,0 +1,28 @@
+<%= form_tag aubergine_path, method: :get do %>
+<div class="searchbar">
+
+  <div id= "no-padding" class="searchbar-left">
+    <i class="fas fa-search"></i>
+    <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Où…?"%>
+  </div>
+
+  <div class="border"></div>
+
+  <div id ="no-padding" class="searchbar-right">
+    <i class="fas fa-user-alt"></i>
+    <%= text_field_tag :query,
+    params[:query],
+    class: "form-control",
+    placeholder: "Quel praticien…?"%>
+
+  </div>
+
+  <div class="searchbar-action">
+    <%= submit_tag "Rechercher", id: "widthheight-100", class: "button accept" %>
+  </div>
+
+<% end %>
+</div>
