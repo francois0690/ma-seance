@@ -501,6 +501,7 @@ d20.description = "Pendant cette période difficile de confinement, je vous prop
 d20.phone = "0675697705"
 d20.save!
 
+
 p1 = User.new
 p1.civility = "M."
 p1.first_name = "Marcel"
@@ -512,6 +513,19 @@ p1.is_pro = false
 avatar_patient = Down.download('https://res.cloudinary.com/dewwle39t/image/upload/v1592053825/ma-seance/avatar_generique_ikdvyc.png')
 p1.avatar.attach(io: avatar_patient, filename: 'avatarp1.jpg', content_type: 'image/jpg')
 p1.save!
+
+p2 = User.new
+p2.civility = "Mme"
+p2.first_name = "Géraldine"
+p2.last_name = "Je Vaisbien"
+p2.email = "patient2@gmail.com"
+p2.password = "123456"
+p2.password_confirmation = "123456"
+p2.is_pro = false
+avatar_patient = Down.download('https://res.cloudinary.com/dewwle39t/image/upload/v1592053825/ma-seance/avatar_generique_ikdvyc.png')
+p2.avatar.attach(io: avatar_patient, filename: 'avatarp1.jpg', content_type: 'image/jpg')
+p2.save!
+
 
 p "#{User.count} utilisateurs crées"
 
@@ -542,6 +556,24 @@ activity2.speciality = s2
 activity2.office = office2
 activity2.save!
 
+activity3 = Activity.new
+activity3.user = d3
+activity3.speciality = s3
+activity3.office = office3
+activity3.save!
+
+activity4 = Activity.new
+activity4.user = d4
+activity4.speciality = s4
+activity4.office = office4
+activity4.save!
+
+activity5 = Activity.new
+activity5.user = d5
+activity5.speciality = s5
+activity5.office = office5
+activity5.save!
+
 p "#{Activity.count} activités créées"
 
 
@@ -553,4 +585,10 @@ consultation1.user = p1
 consultation1.date = "2020-07-17"
 consultation1.save!
 
-p "#{Consultation.count} activités créées"
+consultation2 = Consultation.new
+consultation2.activity = activity2
+consultation2.user = p2
+consultation2.date = "2020-07-25"
+consultation2.save!
+
+p "#{Consultation.count} consultations créées"
