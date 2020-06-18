@@ -13,13 +13,15 @@ require "json"
 
 
 
-p "cleaning database"
+p "cleaning database..."
 Consultation.destroy_all
 Activity.destroy_all
 Job.destroy_all
 Speciality.destroy_all
 Office.destroy_all
 User.destroy_all
+p "database clean !"
+p "parsing json..."
 
 
 # Create avatars
@@ -27,22 +29,22 @@ User.destroy_all
 
 # avatar_docteur_male = open(URI.escape("https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/docteur2_krnjuk.jpg"))
 
-avatar_docteur_male = Down.download('https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/docteur2_krnjuk.jpg')
+# avatar_docteur_male = Down.download('https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/docteur2_krnjuk.jpg')
 
 # avatar_docteur_female = URI.open("https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/avatar_docteur_dp7tj7.png")
-avatar_docteur_female = Down.download("https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/avatar_docteur_dp7tj7.png")
+# avatar_docteur_female = Down.download("https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/avatar_docteur_dp7tj7.png")
 
 # p avatar_docteur_female
 # avatar_docteur_female_nurse = URI.open('https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/docteur1_tapj6v.jpg')
-avatar_docteur_female_nurse = Down.download('https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/docteur1_tapj6v.jpg')
+# avatar_docteur_female_nurse = Down.download('https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/docteur1_tapj6v.jpg')
 
 # avatar_patient = URI.open('https://res.cloudinary.com/dewwle39t/image/upload/v1592053825/ma-seance/avatar_generique_ikdvyc.png')
-avatar_patient = Down.download('https://res.cloudinary.com/dewwle39t/image/upload/v1592053825/ma-seance/avatar_generique_ikdvyc.png')
+# avatar_patient = Down.download('https://res.cloudinary.com/dewwle39t/image/upload/v1592053825/ma-seance/avatar_generique_ikdvyc.png')
 
 # p avatar_docteur_female
 
 # Create jobs
-jobs_array = [ "aromathérapeute", "auriculothérapeute", "balnéothérapeute", "biothérapeute", "crachouillot-thérapeute", "cryothérapeute", "ergothérapeute", "fasciathérapeute", "hypnothérapeute", "kinésithérapeute", "logothérapeute", "magnétothérapeute", "massothérapeute", "musicothérapeute", "phytothérapeute", "podothérapeute", "pseudothérapeute", "psychothérapeute", "radiothérapeute", "sexothérapeute", "thalassothérapeute", "urinothérapeute", "zoothérapeute" ]
+# jobs_array = [ "aromathérapeute", "auriculothérapeute", "balnéothérapeute", "biothérapeute", "crachouillot-thérapeute", "cryothérapeute", "ergothérapeute", "fasciathérapeute", "hypnothérapeute", "kinésithérapeute", "logothérapeute", "magnétothérapeute", "massothérapeute", "musicothérapeute", "phytothérapeute", "podothérapeute", "pseudothérapeute", "psychothérapeute", "radiothérapeute", "sexothérapeute", "thalassothérapeute", "urinothérapeute", "zoothérapeute" ]
 
 # jobs.each do |j|
 #   new_job = Job.new(job_name: j)
@@ -496,21 +498,18 @@ FILEPATH = "#{Rails.root}/db/psys-light.json"
 
 serialized_psys = File.read(FILEPATH)
 psy_array = JSON.parse(serialized_psys, symbolize_names: true)
-count = 1
+count = 0
 psy_array.each do |hash|
   user = User.new
   user.civility = hash[:civility]
   user.first_name = hash[:first_name]
   user.last_name = hash[:last_name]
   user.phone = hash[:phone]
-  # user.avatar = hash[:avatar]
   user.description = hash[:description]
   user.email = "docteur#{count += 1}@gmail.com"
   user.password = "123456"
   user.password_confirmation = "123456"
   user.is_pro = true
-  # user.avatar.attach(io: avatar_docteur_female, filename: 'avatar_docteur_female.jpg', content_type: 'image/jpg')
-  user.save!
   unless hash[:workplace].empty?
     hash[:workplace].each do |address|
       office = Office.new
@@ -521,16 +520,22 @@ psy_array.each do |hash|
       end
       office.address = "#{address[:street]}, #{address[:city]} #{address[:postal]}"
       office.save!
-      p "#{Office.count} offices créées"
     end
   end
-
+  unless hash[:avatar].nil?
+    avatar = Down.download(hash[:avatar])
+    p avatar
+    user.avatar.attach(io: avatar, filename: "psy_id_#{user.id}.jpg", content_type: 'image/jpg')
+  end
   hash[:job].each do |job|
+    p "job entrée"
     job = Job.new
     job.job_name = job
     job.user = user
     job.save!
   end
+  user.save!
+
   # VERIFIE SI LE JOB EXISTE :
   # hash[:job].each do |job|
   #   if Job.exists?(job_name: job)
