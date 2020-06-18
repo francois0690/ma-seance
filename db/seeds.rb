@@ -113,6 +113,90 @@ En outre, elle favorise la communication interpersonnelle ou au contrairement l'
 La musique est un objet extérieur à soi et permet, par conséquent, la projection et l'identification."
 s8.save!
 
+
+s9 = Speciality.new
+s9.name = "PSYCHODRAME"
+s9.description = "Inventée par MORENO en 1925, le psychodrame se présente comme un théâtre improvisé. Cette recherche de la spontanéité permet de passer de la pensée à l'action, et d'obtenir un effet cathartique (libération pulsionnelle).
+Le psychodrame français se réfère à la psychanalyse en travaillant sur l'inconscient, le transfert, l'élaboration symbolique, les identifications simultanées sur les différents membres du groupe.
+A travers le psychodrame, les participants prennent conscience des conflits qu'ils ignoraient et qui ne pouvaient être symbolisés, jusqu'alors, par la représentation et la verbalisation."
+s9.save!
+
+
+s10 = Speciality.new
+s10.name = "SOPHROLOGIE"
+s10.description = "La sophrologie a été fondée par CAYCEDO à Madrid, en 1960. La sophrologie étudie tous les phénomènes provoquant des modifications de la conscience. Ainsi en est-il des relaxations ; des méthodes orientales d'entraînement (yoga, zen et leurs dérivés), de l'hypnose ou d'autres phénomènes comme le Vaudou, le Condombe, le Makumba, y compris aussi les modifications produites par l'action pharmacologique.
+
+La sophrologie amène à une meilleure connaissance de soi et facilite la perception et la compréhension de l'autre. Elle agit sur la conscience par l'intermédiaire des relaxations dynamiques et de la sophronisation (lâcher prise du corps et relâchement musculaire, entre veille et sommeil)."
+s10.save!
+
+s11 = Speciality.new
+s11.name = "LOGOTHERAPIE"
+s11.description = "Créée par Viktor FRANKL, la logothérapie fait référence à la psychologie existentielle. Elle est foncièrement optimiste.
+Cette thérapie cherche à aider les personnes à affronter la triade incontournable de l'existence humaine, à savoir le sentiment de culpabilité, la souffrance et la mort. Ainsi, les névroses sont l'expression du vide existentiel dont souffrent de nombreuses personnes.
+La logothérapie doit aider la personne, au cours de l'échange verbal, et l'autoriser à briser les mécanismes pathologiques de la rétroaction pour lui permettre de reconnaître la réalité de ses désirs et de ses craintes."
+s11.save!
+
+s12 = Speciality.new
+s12.name = "ELECTROCHOC"
+s12.description = "Technique médicale (sous anesthésie) consistant à produire un choc électrique au niveau de la boîte crânienne générant une crise convulsive généralisée, accompagnée d'une perte de conscience.
+La sismothérapie ne se pratique qu'avec le consentement du patient et son accord signé.
+Après la séance d'électrochocs, la personne peut présenter une désorientation temporo-spatiale ponctuelle. La confusion disparaît en général au bout de quelques jours, l'amnésie antérograde entre 15 jours et 3 mois. Par contre, l'amnésie rétrograde peut persister jusqu'à 2 à 3 ans"
+s12.save!
+
+s13 = Speciality.new
+s13.name = "PSYCHOTHERAPIES COGNITIVES"
+s13.description = "Les psychothérapies cognitives visent la modification pathologique du traitement de l'information, par l'intermédiaire de jeux de rôles notamment, en faisant prendre conscience du caractère dysfonctionnel, illogique de la pensée de la personne qui consulte.
+Chaque trouble pathologique correspond à une interprétation erronée de soi-même et de l'environnement. Derrière ces interprétations, on retrouve 4 types d'erreurs de la pensée :
+- L'inférence : arbitraire ou relation causale erronée.
+- La généralisation : abusive à partir d'une expérience ponctuelle.
+- La maximalisation : des dangers.
+- La personnalisation : de tout ce qui a trait à soi."
+s13.save!
+
+s14 = Speciality.new
+s14.name = "RELAXATION CHEZ L'ENFANT"
+s14.description = "La relaxation chez l'enfant n'est appliquée que depuis une 15aine d'années seulement et la plupart des techniques sont dérivées de la méthode de SCHULTZ, comme celle de BERGES, tandis que d'autres sont issues de celles de JACOBSON."
+s14.save!
+
+s15 = Speciality.new
+s15.name = "PSYCHOTHERAPIES SEXOLOGIQUES"
+s15.description = "Les psychothérapies sexologiques visent à améliorer, voire guérir, les troubles génitaux tels que :
+- L'impuissance.
+- L'éjaculation précoce.
+- La frigidité.
+- Les dyspareunies.
+- Les dysorgasmies.
+- Les vaginites…
+
+Avant toutes psychothérapies sexologiques, il est recommandé de rechercher la cause essentielle, organique ou psychologique.
+
+Les traitements biologiques de ces pathologies s'avèrent le plus souvent décevants. La plupart de ces troubles relèvent d'une psychothérapie. Ainsi, les psychothérapies sexologiques peuvent être variées."
+s15.save!
+
+s16 = Speciality.new
+s16.name = "PSYCHOTHERAPIES COMPORTEMENTALES"
+s16.description = "Les psychothérapies comportementales s'inspirent du conditionnement et de l'apprentissage. Elles se réfèrent à un des trois modèles suivants :
+- PAVLOV et le « conditionnement répondant » : un stimulus neutre à l'origine, associé au stimulus inconditionnel, devient conditionnel et peut avoir valeur thérapeutique.
+- SKINNER et le « conditionnement opérant » : une conduite, quelle qu'elle soit, est ou non modifiée par ses conséquences.
+- BANDURA et « l'apprentissage social » : fondée sur l'imitation d'un modèle.
+
+Par exemple, dans la phobie des serpents, on met la personne phobique seule dans une pièce emplie de serpents inoffensifs. Elle peut alors constater que sa panique d'origine n'est pas justifiée car elle n'endurera aucun mal."
+s16.save!
+
+
+
+
+s17 = Speciality.new
+s17.name = "PROGRAMMATION NEURO-LINGUISTIQUE"
+s17.description = "D'inspiration comportementale, la Programmation Neuro-Linguistique vise à modifier le comportement des personnes.
+C'est une thérapie brève qui se déroule en trois phases :
+1. Recueil d'informations et d'observations centrées sur les mouvements oculaires ou autres manifestations corporelles, sans oublier le langage.
+2. Utilisation des techniques d'ancrage (stimulus externe rattaché à un vécu émotionnel mémorisé) et leur désactivation.
+3. Technique de recadrage : replacer le comportement dans le contexte où il prend sa signification."
+s17.save!
+
+
+
 p "#{Speciality.count} spécialités créées"
 
 
