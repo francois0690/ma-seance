@@ -47,14 +47,6 @@ ActiveRecord::Schema.define(version: 2020_06_13_121629) do
     t.index ["user_id"], name: "index_activities_on_user_id"
   end
 
-  create_table "addresses", force: :cascade do |t|
-    t.string "street"
-    t.string "zip_code"
-    t.string "city"
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-  end
-
   create_table "consultations", force: :cascade do |t|
     t.bigint "activity_id"
     t.bigint "user_id"
@@ -75,10 +67,9 @@ ActiveRecord::Schema.define(version: 2020_06_13_121629) do
 
   create_table "offices", force: :cascade do |t|
     t.string "name"
-    t.bigint "address_id"
+    t.string "address"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["address_id"], name: "index_offices_on_address_id"
   end
 
   create_table "specialities", force: :cascade do |t|
@@ -100,10 +91,8 @@ ActiveRecord::Schema.define(version: 2020_06_13_121629) do
     t.string "phone"
     t.boolean "is_pro"
     t.string "description"
-    t.bigint "address_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["address_id"], name: "index_users_on_address_id"
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end

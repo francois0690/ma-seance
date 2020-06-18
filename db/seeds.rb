@@ -17,7 +17,6 @@ p "cleaning database"
 Consultation.destroy_all
 Activity.destroy_all
 Job.destroy_all
-Address.destroy_all
 Speciality.destroy_all
 Office.destroy_all
 User.destroy_all
@@ -25,6 +24,9 @@ User.destroy_all
 
 # Create avatars
 # avatar_docteur_male = URI.open("https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/docteur2_krnjuk.jpg")
+
+# avatar_docteur_male = open(URI.escape("https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/docteur2_krnjuk.jpg"))
+
 avatar_docteur_male = Down.download('https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/docteur2_krnjuk.jpg')
 
 # avatar_docteur_female = URI.open("https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/avatar_docteur_dp7tj7.png")
@@ -115,24 +117,39 @@ s8.save!
 p "#{Speciality.count} spécialités créées"
 
 
-# addresses
-address1 = Address.new(street: "D 568 La carrairade Bat C", zip_code: "13740", city: "LE ROVE")
-address1.save!
-address2 = Address.new(street: "22 boulevard Sébastopol", zip_code: "75004", city: "PARIS 04")
-address2.save!
-address3 = Address.new(street: "1 rue Georges Clémenceau", zip_code: "24100", city: "BERGERAC")
-address3.save!
-address4 = Address.new(street: "35, allée de Bellevue", zip_code: "94170", city: "LE PERREUX SUR MARNE")
-address4.save!
-# address5 = Address.new (street: "", zip_code: "", city: "")
-
-p "#{Address.count} adresses créées"
 
 # offices
-office1 = Office.new(name: "TranssAnalyse", address_id: address4.id)
+office1 = Office.new(name: "TranssAnalyse", address: "18 rue Henri De Ridder, 60000 BEAUVAIS")
 office1.save!
-office2 = Office.new(name: "Les Halles", address_id: address3.id)
+
+office2 = Office.new(name: "Les Halles", address: "22 boulevard Sébastopol, 75004 PARIS")
 office2.save!
+
+office3 = Office.new(name: "Les toubibs en folie", address: "1 rue Georges Clémenceau, 24100 BERGERAC")
+office3.save!
+
+office4 = Office.new(name: "Médecin et cie", address: "35 allée de Bellevue,  94170 LE PERREUX SUR MARNE")
+office4.save!
+
+office5 = Office.new(name: "Medicina Rockefeller", address: "60 Avenue Rockefeller, 69008 LYON")
+office5.save!
+
+office6 = Office.new(name: "Toubib center", address: "43 Boulevard du 11 Novembre 1918, 69100 Villeurbanne")
+office6.save!
+
+office7 = Office.new(name: "les psys en folie", address: "93 Rue Antoine Charial, 69003 Lyon")
+office7.save!
+
+office8 = Office.new(name: "Psy I Love You", address: "12 Rue d'Aubigny, 69003 Lyon")
+office8.save!
+
+office9 = Office.new(name: "Mon médoc", address: "14 Place Jules Ferry, 69006 Lyon")
+office9.save!
+
+
+office10 = Office.new(name: "Ma séance", address: "16 Avenue des Acacias, 69003 Lyon")
+office10.save!
+
 
 p "#{Office.count} offices créées"
 
@@ -184,6 +201,11 @@ p "#{Office.count} offices créées"
 # #m.avatar.attach(io: avatar_patient, filename: 'avatarm.jpg', content_type: 'image/jpg')
 # m.save!
 
+
+
+
+
+
 d1 = User.new
 d1.civility = "M."
 d1.first_name = "Sébastien"
@@ -192,6 +214,7 @@ d1.email = "docteur1@gmail.com"
 d1.password = "123456"
 d1.password_confirmation = "123456"
 d1.is_pro = true
+avatar_docteur_male = Down.download('https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/docteur2_krnjuk.jpg')
 d1.avatar.attach(io: avatar_docteur_male, filename: 'avatar_docteur_male.jpg', content_type: 'image/jpg')
 d1.description = "Je vous accueille tous les jours pour des téléconsultations (appel vocal ou vidéo). Psychologue clinicien, psychothérapeute et psychanalyste, ma pratique auprès d'enfants, d'adolescents et d'adultes repose sur un travail en libéral et en institution (CMP, ITEP, SAVS notamment). Il peut s'agir d'accompagnements ponctuels, de psychothérapie individuelle ou de couple, ou d'entretiens de guidance parentale. N'hésitez pas à me contacter, nous trouverons ensemble la formule qui vous convient !"
 d1.phone = "0611751644"
@@ -205,6 +228,7 @@ d2.email = "docteur2@gmail.com"
 d2.password = "123456"
 d2.password_confirmation = "123456"
 d2.is_pro = true
+avatar_docteur_female = Down.download("https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/avatar_docteur_dp7tj7.png")
 d2.avatar.attach(io: avatar_docteur_female, filename: 'avatar_docteur_female.jpg', content_type: 'image/jpg')
 d2.description = "Je traite vos problèmes posés dans l'exercice de la sexualité, que ce soit avant le rapport ou durant le rapport."
 d2.phone = "0613069386"
@@ -449,7 +473,8 @@ d20.email = "docteur20@gmail.com"
 d20.password = "123456"
 d20.password_confirmation = "123456"
 d20.is_pro = true
-#d4.avatar.attach(io: avatar_docteur_female, filename: 'avatar_docteur_female.jpg', content_type: 'image/jpg')
+avatar_docteur_male = Down.download('https://res.cloudinary.com/dewwle39t/image/upload/v1592053472/ma-seance/docteur2_krnjuk.jpg')
+d20.avatar.attach(io: avatar_docteur_male, filename: 'avatar_docteur_male.jpg', content_type: 'image/jpg')
 d20.description = "Pendant cette période difficile de confinement, je vous propose des téléconsultations vidéos ou téléphoniques ### Vous engager dans une psychothérapie Gestalt, c’est faire le choix de la confiance en la possibilité de changement, d'aller mieux Vous souhaitez commencer une psychothérapie Gestalt : - Peut être vivez-vous une situation de souffrance : Ce peut être à l'occasion d'une expérience difficile (anxiété, tristesse, estime de soi, deuil, conflit, burn out), ou à l'occasion de difficultés relationnelles (en couple, au travail, en famille)  - Peut être désirez-vous donner plus de sens à votre vie, retrouver plus de marge de manœuvre, de capacité à choisir la direction que vous souhaitez donner à votre vie Je vous accompagne dans le travail thérapeutique pour interroger vos comportements répétitifs, vos peurs, vos résistances et je vous soutiens dans votre cheminement vers le changement, la nouveauté et la confiance."
 d20.phone = "0675697705"
 d20.save!
@@ -462,6 +487,7 @@ p1.email = "patient1@gmail.com"
 p1.password = "123456"
 p1.password_confirmation = "123456"
 p1.is_pro = false
+avatar_patient = Down.download('https://res.cloudinary.com/dewwle39t/image/upload/v1592053825/ma-seance/avatar_generique_ikdvyc.png')
 p1.avatar.attach(io: avatar_patient, filename: 'avatarp1.jpg', content_type: 'image/jpg')
 p1.save!
 
