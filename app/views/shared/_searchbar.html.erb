@@ -2,6 +2,7 @@
 <div class="searchbar">
 
   <div id= "no-padding" class="searchbar-left">
+    <i class="fas fa-search"></i>
     <%= text_field_tag :query,
     params[:query],
     class: "form-control",
@@ -11,12 +12,12 @@
   <div class="border"></div>
 
   <div id ="no-padding" class="searchbar-right">
-
-    <i class="far fa-search"></i>
+    <i class="fas fa-user-alt"></i>
     <%= text_field_tag :query,
     params[:query],
     class: "form-control",
     placeholder: "Quel praticien…?"%>
+
   </div>
 
   <div class="searchbar-action">

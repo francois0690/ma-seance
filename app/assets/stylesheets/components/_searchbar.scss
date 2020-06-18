@@ -26,12 +26,31 @@
   }
 
   .searchbar-left, .searchbar-right,{
-    display: inline-block;
+    display: flex;
     justify-content: center;
     padding: 1rem;
     width: 100%;
 
+     .fa-search {
+      font-size: 20px;
+      color: #88898e;
+      display: block;
+      margin: auto;
+      padding-left: 0.8rem;
+      opacity: 0.9;
+     }
+     .fa-user-alt {
+      font-size: 20px;
+      color: #88898e;
+      display: block;
+      margin: auto;
+      padding-left: 0.8rem;
+      opacity: 0.9;
+
+     }
+
     .form-control {
+
       border-radius: 4px;
       height: calc(2.9em + 0.75rem + 2px);
       background-color: $red-bg;
