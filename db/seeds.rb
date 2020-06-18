@@ -156,52 +156,52 @@ p "parsing json..."
 # p "#{Office.count} offices créées"
 
 
-# # Create patient
-# f = User.new
-# f.civility = "M."
-# f.first_name = "Francois"
-# f.last_name = "Jouvray"
-# f.email = "francois0690@gmail.com"
-# f.password = "123456"
-# f.password_confirmation = "123456"
-# f.is_pro = false
-# #f.avatar.attach(io: avatar_patient, filename: 'avatarf.jpg', content_type: 'image/jpg')
-# f.save!
+# Create patient
+f = User.new
+f.civility = "M."
+f.first_name = "Francois"
+f.last_name = "Jouvray"
+f.email = "francois0690@gmail.com"
+f.password = "123456"
+f.password_confirmation = "123456"
+f.is_pro = false
+#f.avatar.attach(io: avatar_patient, filename: 'avatarf.jpg', content_type: 'image/jpg')
+f.save!
 
-# b = User.new
-# b.civility = "M."
-# b.first_name = "Barnabé"
-# b.last_name = "Dubus"
-# b.email = "barnabe.dubus@gmail.com"
-# b.password = "123456"
-# b.password_confirmation = "123456"
-# b.is_pro = false
-# #b.avatar.attach(io: avatar_patient, filename: 'avatarb.jpg', content_type: 'image/jpg')
-# #b.avatar = f.avatar
+b = User.new
+b.civility = "M."
+b.first_name = "Barnabé"
+b.last_name = "Dubus"
+b.email = "barnabe.dubus@gmail.com"
+b.password = "123456"
+b.password_confirmation = "123456"
+b.is_pro = false
+#b.avatar.attach(io: avatar_patient, filename: 'avatarb.jpg', content_type: 'image/jpg')
+#b.avatar = f.avatar
 
-# b.save!
+b.save!
 
-# s = User.new
-# s.civility = "M."
-# s.first_name = "Shaun"
-# s.last_name = "O Graham"
-# s.email = "shaun.o.graham@gmail.com"
-# s.password = "123456"
-# s.password_confirmation = "123456"
-# s.is_pro = false
-# #s.avatar.attach(io: avatar_patient, filename: 'avatars.jpg', content_type: 'image/jpg')
-# s.save!
+s = User.new
+s.civility = "M."
+s.first_name = "Shaun"
+s.last_name = "O Graham"
+s.email = "shaun.o.graham@gmail.com"
+s.password = "123456"
+s.password_confirmation = "123456"
+s.is_pro = false
+#s.avatar.attach(io: avatar_patient, filename: 'avatars.jpg', content_type: 'image/jpg')
+s.save!
 
-# m = User.new
-# m.civility = "Mme"
-# m.first_name = "Myriam"
-# m.last_name = "de Bossoreille"
-# m.email = "myriam.dbdr@gmail.com"
-# m.password = "123456"
-# m.password_confirmation = "123456"
-# m.is_pro = false
-# #m.avatar.attach(io: avatar_patient, filename: 'avatarm.jpg', content_type: 'image/jpg')
-# m.save!
+m = User.new
+m.civility = "Mme"
+m.first_name = "Myriam"
+m.last_name = "de Bossoreille"
+m.email = "myriam.dbdr@gmail.com"
+m.password = "123456"
+m.password_confirmation = "123456"
+m.is_pro = false
+#m.avatar.attach(io: avatar_patient, filename: 'avatarm.jpg', content_type: 'image/jpg')
+m.save!
 
 
 
@@ -524,11 +524,9 @@ psy_array.each do |hash|
   end
   unless hash[:avatar].nil?
     avatar = Down.download(hash[:avatar])
-    p avatar
     user.avatar.attach(io: avatar, filename: "psy_id_#{user.id}.jpg", content_type: 'image/jpg')
   end
   hash[:job].each do |job|
-    p "job entrée"
     job = Job.new
     job.job_name = job
     job.user = user
