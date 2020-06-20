@@ -2,8 +2,8 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home ]
 
   def home
+    @specialities = Speciality.all
     @doctors= User.order(:last_name).page params[:page]
-
     @markers = []
     @doctors.each do |doctor|
       activities = Activity.where(user: doctor).uniq

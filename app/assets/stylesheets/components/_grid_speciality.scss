@@ -1,0 +1,27 @@
+.grid_specialities {
+    margin-top: 32px;
+    background-color: $red-light;
+}
+
+.scroller {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 8px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+.speciality {
+    border: 3px solid $red-medium-2;
+    background-color: $red-medium-2;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+    border-radius: 7px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: $purple;
+    text-align: left;
+    width: 300px;
+    justify-content: center;
+    flex-basis: fit-content;
+    margin-bottom: 16px;
+    overflow-wrap: break-word;
+}
