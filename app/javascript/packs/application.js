@@ -28,10 +28,12 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { bubler } from '../components/_buton';
+import { initMapbox } from '../plugins/init_mapbox';
 
 
 document.addEventListener('turbolinks:load', () => {
-  // Call your functions here, e.g:
-  // initSelect2();
-  bubler
+    // Call your functions here, e.g:
+    // initSelect2();
+    bubler
+    initMapbox();
 });

@@ -101,6 +101,7 @@ GEM
     ffi (1.13.1)
     font-awesome-sass (5.13.0)
       sassc (>= 1.11)
+    geocoder (1.6.3)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     http-accept (1.7.0)
@@ -277,6 +278,7 @@ DEPENDENCIES
   dotenv-rails
   down
   font-awesome-sass
+  geocoder
   jbuilder (~> 2.7)
   kaminari
   listen (~> 3.2)
