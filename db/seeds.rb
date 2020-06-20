@@ -658,6 +658,26 @@ activity5.speciality = s5
 activity5.office = office5
 activity5.save!
 
+activity6 = Activity.new
+activity6.user = d10
+activity6.speciality = s12
+activity6.office = office5
+activity6.save!
+
+
+activity7 = Activity.new
+activity7.user = d10
+activity7.speciality = s16
+activity7.office = office5
+activity7.save!
+
+activity8 = Activity.new
+activity8.user = d10
+activity8.speciality = s11
+activity8.office = office5
+activity8.save!
+
+
 p "#{Activity.count} activités créées"
 
 

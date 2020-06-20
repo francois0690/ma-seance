@@ -1,14 +1,39 @@
 <% if !doctor.nil? %>
     <div class="card_doctor">
-    <% if doctor.avatar.attached? %>    
- <div class="photo" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
-                    url(<%= cl_image_path doctor.avatar.key ,height: 250, width: 250, crop: :fill, gravity: :face %>)">
-        </div> 
+    <% if doctor.avatar.attached? %>
+ <div class="photo" style="background-image: linear-gradient(rgba(239, 103, 99,0.5), rgba(255, 255, 255,0.1)),
+                    url(<%= cl_image_path doctor.avatar.key , width: 300, height: 300, crop: :fill, gravity: :face %>)">
+        </div>
 <%end%>
         <div class="info">
-            <h2><%= "#{doctor.civility} #{doctor.first_name} #{doctor.last_name}" %></h2>
-            <p><%= doctor.description%></p>
-            <p><i><%= doctor.phone%></i></p>
+          <% str = "" %>
+            <h2 id="title"><%= "#{doctor.civility} #{doctor.first_name.capitalize} #{doctor.last_name.upcase}" %></h2>
+          <% doctor.jobs.each_with_index do |j,i| %>
+            <% if i == doctor.jobs.count - 1 %>
+              <% str << j.job_name.capitalize %>
+            <% else %>
+              <% str << "#{j.job_name.capitalize}, " %>
+            <% end  %>
+          <% end %>
+
+            <p id="jobs"><%= str %></p>
+            <p id="phone">Contact : <%= doctor.phone%></p>
+            <% if doctor.description != nil || doctor.description.length < 30 %>
+              <p id="description"><%= doctor.description[0..30].capitalize %>
+            <% end %>
+               <%= link_to root_path, id: "suite" do %>
+                ...
+               <% end %>
+
+            </p>
+
+
+                <% doctor.activities.each do |a| %>
+                    <%= link_to root_path do  %>
+                      <p id="speciality" ><%= a.speciality.name.capitalize %></p>
+                    <% end %>
+              <% end %>
+
         </div>
 </div>
 <%end%>
