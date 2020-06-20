@@ -64,6 +64,10 @@
     font-size: 16px;
     letter-spacing: 2px;
     transition: ease .3s;
+    // text-decoration: none;
+    &:hover {
+      text-decoration: none;
+    }
 }
 
 .accept {
@@ -71,7 +75,6 @@
     color: white;
     &:hover {
         color: $red;
-        text-decoration: none;
         box-shadow: 0px 0px 0px 2px $red inset;
         border-radius: 4px;
         background: linear-gradient(90deg, $red-medium-2 0%, $red-light 100%), $red-medium-2;
@@ -83,21 +86,30 @@
     color: white;
     &:hover {
         color: $purple;
-        text-decoration: none;
         box-shadow: 0px 0px 0px 2px $purple-light inset;
         border-radius: 4px;
         background: linear-gradient(90deg, $purple-light 0%, $red-light 100%);
     }
 }
 .inactive {
-    background: linear-gradient(90deg, $red-light 0%, $red-light 100%);
-    color: $purple-light;
+    background: linear-gradient(90deg, $red-light 0%, $red-light 20%);
+    color: $red-medium-2;
+    box-shadow: 0px 0px 0px 2px $red-medium-2 inset;
     &:hover {
-        color: $purple;
-        text-decoration: none;
-        box-shadow: 0px 0px 0px 2px $red-medium-2 inset;
+        color: $purple-light;
+        box-shadow: 0px 0px 0px 2px $purple-light inset;
         border-radius: 4px;
         background: linear-gradient(90deg, $red-medium-2 0%, $red-medium-2 100%);
+    }
+}
+.selected {
+    color: $purple-light;
+    box-shadow: 0px 0px 0px 2px $purple-light inset;
+    border-radius: 4px;
+    background: linear-gradient(90deg, $red-medium-2 0%, $red-medium-2 100%);
+    &:hover {
+      text-decoration: none;
+      color: $purple-light;
     }
 }
 
