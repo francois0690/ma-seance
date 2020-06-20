@@ -28,7 +28,9 @@ import "bootstrap";
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
 import { bubller } from '../components/_buton';
+
 import { initMapbox } from '../plugins/init_mapbox';
+import { init_Vivus } from '../plugins/init_vivus';
 
 
 document.addEventListener('turbolinks:load', () => {
@@ -36,4 +38,5 @@ document.addEventListener('turbolinks:load', () => {
     // initSelect2();
     bubller
     initMapbox();
+    init_Vivus()
 });
