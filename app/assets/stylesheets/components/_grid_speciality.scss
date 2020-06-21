@@ -1,0 +1,43 @@
+.grid_specialities {
+    padding-top: 16px;
+    padding-bottom: 80px;
+}
+
+.scroller {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-gap: 8px;
+    grid-auto-rows: minmax(100px, auto);
+}
+
+$randomNumber: random(8);
+.speciality {
+    border: 3px solid $red-medium-2;
+    background-color: $red-medium-2;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+    border-radius: 7px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: $purple;
+    text-align: left;
+    width: 350px;
+    justify-content: center;
+    flex-basis: fit-content;
+    margin-bottom: 16px;
+    overflow-wrap: break-word;
+    &:hover {
+        text-decoration: none;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    p {
+        overflow: hidden;
+        display: block;
+        a {
+            &:after {
+                color: $red;
+            }
+        }
+    }
+}
