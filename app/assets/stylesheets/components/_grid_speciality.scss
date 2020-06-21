@@ -10,6 +10,7 @@
     grid-auto-rows: minmax(100px, auto);
 }
 
+$randomNumber: random(8);
 .speciality {
     border: 3px solid $red-medium-2;
     background-color: $red-medium-2;
@@ -19,9 +20,24 @@
     font-size: 1.2rem;
     color: $purple;
     text-align: left;
-    width: 300px;
+    width: 350px;
     justify-content: center;
     flex-basis: fit-content;
     margin-bottom: 16px;
     overflow-wrap: break-word;
+    &:hover {
+        text-decoration: none;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    p {
+        overflow: hidden;
+        display: block;
+        a {
+            &:after {
+                color: $red;
+            }
+        }
+    }
 }
