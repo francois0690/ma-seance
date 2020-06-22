@@ -1,10 +1,14 @@
 .searchbar {
+  z-index: 100;
   display: flex;
   flex-direction: row;
   flex-grow: 1;
   justify-content: space-between;
 
-  margin: 40px auto;
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
   width: 800px;
   height: 60px;
   background: $red-bg;
@@ -52,7 +56,7 @@
     .form-control {
 
       border-radius: 4px;
-      height: calc(2.9em + 0.75rem + 2px);
+      height: calc(2.9em + 0.7rem + 2px);
       background-color: $red-bg;
       border: 0px;
     }
