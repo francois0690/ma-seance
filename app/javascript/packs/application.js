@@ -30,6 +30,8 @@ import "bootstrap";
 import { bubller } from '../components/_buton';
 import { initMapbox } from '../plugins/init_mapbox';
 import { initReadMore, initReadMoreT } from '../plugins/init_readmore';
+import { init_Vivus } from '../plugins/init_vivus';
+
 const AOS = require('aos');
 document.addEventListener('turbolinks:load', () => {
     bubller
