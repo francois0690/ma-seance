@@ -24,19 +24,23 @@ require("channels")
 
 // External imports
 import "bootstrap";
-
 // Internal imports, e.g:
 // import { initSelect2 } from '../components/init_select2';
-import { bubller } from '../components/_buton';
-
+import { bubler } from '../components/_buton';
 import { initMapbox } from '../plugins/init_mapbox';
 import { init_Vivus } from '../plugins/init_vivus';
-
-
+import { initReadMore } from '../plugins/init_readmore';
+const AOS = require('aos');
 document.addEventListener('turbolinks:load', () => {
-    // Call your functions here, e.g:
-    // initSelect2();
-    bubller
+    bubler;
     initMapbox();
-    init_Vivus()
+    init_Vivus();
+});
+// speciliies.forEach((e) => { e. });
+document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+        duration: 1200,
+        startEvent: 'turbolinks:load' // if you are using turbolinks
+    });
+    initReadMore();
 });

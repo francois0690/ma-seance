@@ -1,4 +1,4 @@
-<div class="row justify-content-center">
+<div class="row justify-content-center top-field">
     <div class="col-6">
         <div class="card" id="ia">
             <div class="card-body">
@@ -30,5 +30,8 @@
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
             <path fill="#FF6B65" fill-opacity="1" d="M0,96L80,112C160,128,320,160,480,192C640,224,800,256,960,261.3C1120,267,1280,245,1360,234.7L1440,224L1440,0L1360,0C1280,0,1120,0,960,0C800,0,640,0,480,0C320,0,160,0,80,0L0,0Z"></path>
         </svg>
+    </div>
+    <div class="grid_specialities" >
+        <%= render 'shared/grid_speciality' , specialities: @specialities%>
     </div>
 </div>
