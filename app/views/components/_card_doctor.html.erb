@@ -5,7 +5,7 @@
                     url(<%= cl_image_path doctor.avatar.key , width: 300, height: 300, crop: :fill, gravity: :face %>)">
         </div>
 <%end%>
-        <div class="info">
+        <div class="info" >
           <% str = "" %>
             <h2 id="title"><%= "#{doctor.civility} #{doctor.first_name.capitalize} #{doctor.last_name.upcase}" %></h2>
           <% doctor.jobs.each_with_index do |j,i| %>
@@ -18,14 +18,7 @@
 
             <p id="jobs"><%= str %></p>
             <p id="phone">Contact : <%= doctor.phone%></p>
-            <% if doctor.description != nil || doctor.description.length < 30 %>
-              <p id="description"><%= doctor.description[0..30].capitalize %>
-            <% end %>
-               <%= link_to root_path, id: "suite" do %>
-                ...
-               <% end %>
-
-            </p>
+            <p id="description"><%= doctor.description %></p>
 
 
                 <% doctor.activities.each do |a| %>
