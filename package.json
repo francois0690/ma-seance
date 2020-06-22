@@ -11,6 +11,8 @@
     "jquery": "^3.5.1",
     "mapbox-gl": "^1.11.0",
     "popper.js": "^1.16.1",
+    "turbolinks": "^5.2.0",
+    "vivus": "^0.4.5",
     "readmore-js": "^2.2.1",
     "turbolinks": "^5.2.0"
   },
