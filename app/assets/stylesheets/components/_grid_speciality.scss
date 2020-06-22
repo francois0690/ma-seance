@@ -25,8 +25,9 @@ $randomNumber: random(8);
     flex-basis: fit-content;
     margin-bottom: 16px;
     overflow-wrap: break-word;
+
     &:hover {
-        text-decoration: none;
+    text-decoration: none;
     }
     h2 {
         font-size: 20px;

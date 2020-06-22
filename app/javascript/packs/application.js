@@ -25,16 +25,18 @@ require("channels")
 // External imports
 import "bootstrap";
 // Internal imports, e.g:
+
 // import { initSelect2 } from '../components/init_select2';
-import { bubler } from '../components/_buton';
+import { bubller } from '../components/_buton';
 import { initMapbox } from '../plugins/init_mapbox';
-import { init_Vivus } from '../plugins/init_vivus';
-import { initReadMore } from '../plugins/init_readmore';
+import { initReadMore, initReadMoreT } from '../plugins/init_readmore';
 const AOS = require('aos');
 document.addEventListener('turbolinks:load', () => {
-    bubler;
+    bubller
     initMapbox();
+    initReadMoreT();
     init_Vivus();
+
 });
 // speciliies.forEach((e) => { e. });
 document.addEventListener('DOMContentLoaded', function() {
@@ -42,5 +44,8 @@ document.addEventListener('DOMContentLoaded', function() {
         duration: 1200,
         startEvent: 'turbolinks:load' // if you are using turbolinks
     });
+
     initReadMore();
+
+
 });
