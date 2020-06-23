@@ -1,0 +1,42 @@
+<div class="show-container">
+
+
+
+
+  <div class="show-info">
+    <div class="info-user">
+      <h1><%= @user.first_name %> <%= @user.last_name %></h1>
+      <%= cl_image_tag @user.avatar.key %>
+      <br>
+      <h2>Job : </h2>
+      <li>
+        <% @jobs.each do |job| %>
+          <ol><%= job.job_name %></ol>
+        <% end %>
+      </li>
+      <h3>description :</h3>
+      <p><%= @user.description %></p>
+      <h3>Mes cabinets :</h3>
+      <li>
+        <% @activities.each do |activity| %>
+          <ol><h4>adresse :</h4></ol>
+          <ol><p><%= activity.office.name %></p></ol>
+          <ol><p><%= activity.office.address %></p></ol>
+          <ol><p> pratique : <%= activity.speciality.name %></p></ol>
+        <% end %>
+      </li>
+    </div>
+    <%= link_to "Retour", root_path, class: "button cancel" %>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+  </div>
+
+</div>
+
