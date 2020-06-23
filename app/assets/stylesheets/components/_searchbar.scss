@@ -9,7 +9,7 @@
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 50px;
-  width: 800px;
+  width: 1082px;
   height: 60px;
   background: $red-bg;
   border-radius: 4px;
@@ -63,6 +63,11 @@
 
     .form-control:focus {
       box-shadow: none;
+    }
+    select {
+      width: 300px;
+      background-color: $red-bg;
+      border: 0px;
     }
   }
 
