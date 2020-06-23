@@ -33,6 +33,7 @@ gem 'devise'
 gem 'cloudinary'
 gem 'down'
 
+gem 'awesome_print'
 gem 'autoprefixer-rails'
 gem 'font-awesome-sass'
 gem 'simple_form'
