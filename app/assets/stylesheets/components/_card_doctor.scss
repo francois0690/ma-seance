@@ -20,7 +20,7 @@
         border-radius: 7px;
     }
     .info {
-        overflow-wrap: break-word;
+        // overflow-wrap: break-word;
 
 
 
@@ -50,7 +50,8 @@
             margin-bottom: 8px;
         }
 
-        #description {
+
+           #description {
             text-align: justify;
             opacity: 0.9;
             margin-top: 18px;
@@ -58,13 +59,18 @@
             color: black;
             font-size: 18px;
             font-weight: regular;
-            max-height: 220px;
-            overflow: hidden;
+            // max-height: 220px;
+            // overflow: hidden;
         }
 
 
+
+
+
+
+
       a {
-          color:$red;
+          color:rgba(0,0,0,0.5);
           opacity: 0.9;
           text-decoration: none;
           font-size: 18px;
@@ -73,24 +79,62 @@
           transition: all 0.3s ease;
           &:hover {
             opacity: 1;
-            color: red;
+            color:rgba(0,0,0,1);
+
           }
         }
 
-        #speciality {
-            // flex-grow: 1;
-            margin: 16px 8px;
-            color: rgba(0,0,0,0.8);
-            text-align: center;
-            box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
+        #info-specialities {
+          margin-top: 16px;
+          border-bottom: 1px solid rgba(0,0,0,0.5);
+          font-size: 18px;
+          font-weight: lighter;
 
-            background-color: rgba(200,200,200,.3);
-            border-radius: 8px;
-            font-size: 14px;
-            font-weight: lighter;
+
+        }
+        .info-speciality {
+            // color: rgba(0,0,0,0.8);
+            text-align: center;
             padding: 2px;
-            text-decoration: none;
+            font-size: 14px;
+            width: 95%;
+            // padding: 24px !important;
+            // box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
+
+            // background-color: rgba(200,200,200,.3);
+            // border-radius: 8px;
+            // font-size: 14px;
+            // font-weight: lighter;
+            // padding: 2px;
+            // text-decoration: none;
         }
 
     }
 }
+
+
+
+.my-show-more-button {
+    opacity: 0.9;
+    cursor: pointer;
+    background-color: rgba(254, 223, 214,.5);
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, .1);
+
+    color: rgba(0,0,0,0.8);
+    // text-transform: uppercase;
+    text-align: center;
+    padding: 5px;
+    border-radius: 2px;
+    margin-top: 4px;
+
+  transition: all 0.3s ease;
+          &:hover {
+            opacity: 1;
+            color:rgba(0,0,0,1);
+            background-color: rgba(254, 223, 214,1);
+
+          }
+
+
+}
+
