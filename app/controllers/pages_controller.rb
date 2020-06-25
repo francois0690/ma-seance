@@ -1,9 +1,17 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home ]
 
+
+
   def home
+    if params[:job].present?
+      @result = Job.search params[:job][:job_name]
+      jobs = @result.map{ |job| job }
+      @doctors = User.where(jobs: jobs).page params[:page]
+    else
+      @doctors= User.order(:last_name).page params[:page]
+    end
     @specialities = Speciality.all
-    @doctors= User.order(:last_name).page params[:page]
     @markers = []
     @doctors.each do |doctor|
       activities = Activity.where(user: doctor).uniq
@@ -19,6 +27,12 @@ class PagesController < ApplicationController
   end
 
   def aubergine
+  end
+
+  private
+  def search_params
+    params.require(:home).permit(:job, :specialiste)
+
   end
 
 end

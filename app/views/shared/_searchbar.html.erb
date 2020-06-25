@@ -1,28 +1,25 @@
-<%= form_tag aubergine_path, method: :get do %>
+<%= form_tag(root_path, method: :get, action: 'search') do %>
 <div class="searchbar">
 
   <div id= "no-padding" class="searchbar-left">
     <i class="fas fa-search"></i>
-    <%= text_field_tag :query,
-    params[:query],
+    <%= text_field_tag :localise,
+    params[:localise],
     class: "form-control",
-    placeholder: "Où…?"%>
-  </div>
+      placeholder: "Où…?"%>
+    </div>
 
-  <div class="border"></div>
+    <div class="border"></div>
 
-  <div id ="no-padding" class="searchbar-right">
-    <i class="fas fa-user-alt"></i>
-    <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Quel praticien…?"%>
+    <div id ="no-padding" class="searchbar-right">
+      <i class="fas fa-user-alt"></i>
+      <%= collection_select :job, :job_name, Job.all, :job_name, :job_name, {prompt: 'Quel Praticien?', data: {remote: true}}%>
 
-  </div>
+      </div>
 
-  <div class="searchbar-action">
-    <%= submit_tag "Rechercher", id: "widthheight-100", class: "button accept" %>
-  </div>
-
-<% end %>
-</div>
+      <div class="searchbar-action">
+      <%= submit_tag "Recherchez", id: "widthheight-100", class: "button accept", remote: true %>
+      </div>
+      <%= params[:job_name] %>
+      <% end %>
+      </div>
