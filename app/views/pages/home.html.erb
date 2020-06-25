@@ -23,6 +23,7 @@
         </svg>
     </div>
     <div id="wave-content">
+        <%= render 'shared/searchbar' %>
         <%= render 'shared/grid' , doctors: @doctors , markers: @markers %>
         <%= paginate @doctors%>
     </div>
@@ -32,6 +33,7 @@
         </svg>
     </div>
     <div class="grid_specialities" >
+
         <%= render 'shared/grid_speciality' , specialities: @specialities%>
     </div>
 </div>

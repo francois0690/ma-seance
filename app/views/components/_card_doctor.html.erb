@@ -20,12 +20,16 @@
             <p id="phone">Contact : <%= doctor.phone%></p>
             <p id="description"><%= doctor.description %></p>
 
-
-                <% doctor.activities.each do |a| %>
-                    <%= link_to root_path do  %>
-                      <p id="speciality" ><%= a.speciality.name.capitalize %></p>
-                    <% end %>
-              <% end %>
+            <% if doctor.activities.count == 1 %>
+              <p id="info-specialities" >Ma spécialité</p>
+            <% elsif doctor.activities.count > 1 %>
+              <p id="info-specialities" >Mes spécialités</p>
+            <% end %>
+                  <% doctor.activities.each do |a| %>
+                      <%= link_to root_path do  %>
+                         <p class="button accept info-speciality" remote="true"><%= a.speciality.name %></p>
+                      <% end %>
+                <% end %>
 
         </div>
 </div>

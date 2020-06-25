@@ -1,6 +1,9 @@
 .grid_specialities {
     padding-top: 16px;
     padding-bottom: 80px;
+    a {
+      text-decoration: none;
+    }
 }
 
 .scroller {
@@ -10,7 +13,8 @@
     grid-auto-rows: minmax(100px, auto);
 }
 
-$randomNumber: random(8);
+
+$randomNumber: random(50);
 .speciality {
     border: 3px solid $red-medium-2;
     background-color: $red-medium-2;
@@ -24,7 +28,7 @@ $randomNumber: random(8);
     justify-content: center;
     flex-basis: fit-content;
     margin-bottom: 16px;
-    overflow-wrap: break-word;
+    // overflow-wrap: break-word;
 
     &:hover {
     text-decoration: none;
@@ -33,11 +37,12 @@ $randomNumber: random(8);
         font-size: 20px;
     }
     p {
-        overflow: hidden;
+        // overflow: hidden;
         display: block;
         a {
+
             &:after {
-                color: $red;
+                // color: $red;
             }
         }
     }

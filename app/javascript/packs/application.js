@@ -7,6 +7,7 @@ require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
+require("jquery")
 
 
 // Uncomment to copy all static images under ../images to the output folder and reference
@@ -29,25 +30,34 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { bubller } from '../components/_buton';
 import { initMapbox } from '../plugins/init_mapbox';
-import { initReadMore, initReadMoreT } from '../plugins/init_readmore';
+// import { initReadMore, initReadMoreT } from '../plugins/init_readmore';
 import { init_Vivus } from '../plugins/init_vivus';
+import { initShowMoreDoctors, initShowMoreSpecialities } from '../plugins/init_show-more';
 
 const AOS = require('aos');
 document.addEventListener('turbolinks:load', () => {
     bubller
     initMapbox();
-    initReadMoreT();
+    // initReadMoreT();
+    initShowMoreDoctors();
+
     init_Vivus();
 
 });
-// speciliies.forEach((e) => { e. });
+
+
 document.addEventListener('DOMContentLoaded', function() {
     AOS.init({
         duration: 1200,
         startEvent: 'turbolinks:load' // if you are using turbolinks
     });
 
-    initReadMore();
+    initShowMoreSpecialities();
+    // initReadMore();
+
 
 
 });
+
+
+
