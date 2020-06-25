@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   end
 
   resources :consultations, except: [ :new, :create ]
-  resources :specialitys, only: [:show, :index]
+  resources :specialities, only: [:show, :index]
   resources :users do
       resources :consultations, only: [ :new, :create ]
   end
