@@ -2,28 +2,32 @@
   <div class="show-info">
     <div class="info-user">
       <h1><%= @user.first_name %> <%= @user.last_name %></h1>
-      <br>
-      <h2>Job : </h2>
-      <li>
-        <% @jobs.each do |job| %>
-          <ol><%= job.job_name %></ol>
-        <% end %>
-      </li>
       <h3>description :</h3>
       <p><%= @user.description %></p>
       <h3>Mes cabinets :</h3>
-      <li>
+      <ul>
         <% @activities.each do |activity| %>
-          <ol><h4>adresse :</h4></ol>
-          <ol><p><%= activity.office.name %></p></ol>
-          <ol><p><%= activity.office.address %></p></ol>
-          <ol><p> pratique : <%= activity.speciality.name %></p></ol>
+          <li>
+            <h4>adresse :</h4>
+            <p><%= activity.office.name %></p>
+          </li>
+          <li><p><%= activity.office.address %></p></li>
+          <li><p> pratique : <%= activity.speciality.name %></p></li>
         <% end %>
-      </li>
+      </ul>
     </div>
     <div class="doc-avatar">
       <%= cl_image_tag @user.avatar.key, :width=>400, :height=>400 %>
+      <div class="info-user-right">
+        <h2>Job : </h2>
+        <ul>
+          <% @jobs.each do |job| %>
+            <li><%= job.job_name %></li>
+          <% end %>
+        </ul>
+      </div>
     </div>
+
   </div>
   <%= link_to "Retour", root_path, class: "button cancel" %>
 
