@@ -4037,7 +4037,12 @@ jest-worker@^25.4.0:
     merge-stream "^2.0.0"
     supports-color "^7.0.0"
 
-jquery@>2.1.4, jquery@^3.5.1:
+jquery-ui@^1.12.1:
+  version "1.12.1"
+  resolved "https://registry.yarnpkg.com/jquery-ui/-/jquery-ui-1.12.1.tgz#bcb4045c8dd0539c134bc1488cdd3e768a7a9e51"
+  integrity sha1-vLQEXI3QU5wTS8FIjN0+dop6nlE=
+
+jquery@>2.1.4, jquery@>=1.10, jquery@^3.5.1:
   version "3.5.1"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.5.1.tgz#d7b4d08e1bfdb86ad2f1a3d039ea17304717abb5"
   integrity sha512-XwIBPqcMn57FxfT+Go5pzySnm4KWkT1Tv7gjrpT1srtf8Weynl6R273VJ5GjkRb51IzMp5nbaPjJXMWeju2MKg==
@@ -4157,6 +4162,14 @@ kind-of@^6.0.0, kind-of@^6.0.2:
   version "6.0.3"
   resolved "https://registry.yarnpkg.com/kind-of/-/kind-of-6.0.3.tgz#07c05034a6c349fa06e24fa35aa76db4580ce4dd"
   integrity sha512-dcS1ul+9tmeD95T+x28/ehLgd9mENa3LsvDTtzm3vyBEO7RPptvAD+t44WVXaUjTBRcrpFeFlC8WCruUR456hw==
+
+knockout.typeahead@^4.2.1:
+  version "4.2.1"
+  resolved "https://registry.yarnpkg.com/knockout.typeahead/-/knockout.typeahead-4.2.1.tgz#f878961cc4ca65693921bb323dfee0877ac660d5"
+  integrity sha1-+HiWHMTKZWk5IbsyPf7gh3rGYNU=
+  dependencies:
+    jquery ">=1.10"
+    typeahead.js "^0.10.2"
 
 last-call-webpack-plugin@^3.0.0:
   version "3.0.0"
@@ -7353,6 +7366,11 @@ type-is@~1.6.17, type-is@~1.6.18:
   dependencies:
     media-typer "0.3.0"
     mime-types "~2.1.24"
+
+typeahead.js@^0.10.2:
+  version "0.10.5"
+  resolved "https://registry.yarnpkg.com/typeahead.js/-/typeahead.js-0.10.5.tgz#1d9971b0f44d385feadbf22c9f369db562912de1"
+  integrity sha1-HZlxsPRNOF/q2/IsnzadtWKRLeE=
 
 typedarray@^0.0.6:
   version "0.0.6"

@@ -2,8 +2,8 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home ]
 
 
-
   def home
+    #if params[:localise].present?
     if params[:job].present?
       @result = Job.search params[:job][:job_name]
       jobs = @result.map{ |job| job }
@@ -24,6 +24,10 @@ class PagesController < ApplicationController
         }
       end
     end
+  end
+
+  def reindex_job
+    Job.reindex
   end
 
   def aubergine
