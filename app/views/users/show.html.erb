@@ -1,12 +1,7 @@
 <div class="show-container">
-
-
-
-
   <div class="show-info">
     <div class="info-user">
       <h1><%= @user.first_name %> <%= @user.last_name %></h1>
-      <%= cl_image_tag @user.avatar.key %>
       <br>
       <h2>Job : </h2>
       <li>
@@ -26,17 +21,13 @@
         <% end %>
       </li>
     </div>
-    <%= link_to "Retour", root_path, class: "button cancel" %>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
+    <div class="doc-avatar">
+      <%= cl_image_tag @user.avatar.key, :width=>400, :height=>400 %>
+    </div>
   </div>
+  <%= link_to "Retour", root_path, class: "button cancel" %>
+
+
 
 </div>
 

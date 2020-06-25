@@ -1,0 +1,27 @@
+.show-container{
+  width: 100%;
+  padding-left: 50px;
+}
+
+.show-info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.info-user {
+  width: 700px;
+}
+
+.doc-avatar {
+  width: 500px;
+  padding: 30px;
+  text-align: center;
+  vertical-align: middle;
+
+  & img {
+    border: solid 20px;
+    border-radius: 50%;
+    border-color: $red;
+  }
+}
