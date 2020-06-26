@@ -30,11 +30,26 @@ $randomNumber: random(50);
     margin-bottom: 16px;
     // overflow-wrap: break-word;
 
-    &:hover {
-    text-decoration: none;
-    }
-    h2 {
+     h2 {
+        color: black;
+        text-decoration: none;
         font-size: 20px;
+        text-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+        transition: all 0.5s ease;
+        
+        // border-bottom: 1px transparent;
+
+        &:hover {
+            // color: rgba($light-gray,0.3);
+            text-shadow: 2px 2px 10px rgba($light-gray,1);
+            // border-bottom: 1px solid $light-gray;
+            // text-decoration: underline;
+            // border-bottom: 1px solid $red-medium-2;
+            //box-shadow: 2px 0px 4px rgba(0, 0, 0, .3);
+            
+            // color: rgb(254, 214, 214);
+        }
+
     }
     p {
         // overflow: hidden;

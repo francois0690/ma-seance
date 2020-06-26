@@ -124,10 +124,10 @@
     // text-transform: uppercase;
     text-align: center;
     padding: 5px;
-    border-radius: 2px;
+    border-radius: 8px;
     margin-top: 4px;
 
-  transition: all 0.3s ease;
+    transition: all 0.3s ease;
           &:hover {
             opacity: 1;
             color:rgba(0,0,0,1);

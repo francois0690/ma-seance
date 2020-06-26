@@ -30,7 +30,6 @@
 
 /public/packs
 /public/packs-test
-/node_modules
 /yarn-error.log
 yarn-debug.log*
 .yarn-integrity
@@ -41,3 +40,5 @@ yarn-debug.log*
 .DS_Store
 .env*
 .env*
+.env*
+node_modules
