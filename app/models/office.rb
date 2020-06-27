@@ -1,4 +1,6 @@
 class Office < ApplicationRecord
+    searchkick
+
   validates :name, presence: true
   validates :address, presence: true
   has_many :activities
