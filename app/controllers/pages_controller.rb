@@ -1,8 +1,6 @@
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home ]
 
-
-
   def home
     #if params[:localise].present?
     if params[:job].present?
@@ -34,10 +32,17 @@ class PagesController < ApplicationController
   def aubergine
   end
 
+  def typeform
+  end
+
+  def results
+    # curl --request GET \
+    #   --url https://api.typeform.com/forms/unOwWLBS/responses \
+    #   --header 'Authorization: Bearer 2P3cncZbtsUhLqrEai7KD6QZAKTw95xsJ7fraDR12XLU'
+  end
+
   private
   def search_params
     params.require(:home).permit(:job, :specialiste)
-
   end
-
 end

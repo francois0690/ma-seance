@@ -33,6 +33,7 @@ import { initMapbox } from '../plugins/init_mapbox';
 // import { initReadMore, initReadMoreT } from '../plugins/init_readmore';
 import { init_Vivus } from '../plugins/init_vivus';
 import { initShowMoreDoctors, initShowMoreSpecialities } from '../plugins/init_show-more';
+import * as typeformEmbed from '@typeform/embed'
 
 const AOS = require('aos');
 document.addEventListener('turbolinks:load', () => {
@@ -57,7 +58,17 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
+
 });
 
-
-
+// TYPEFORM
+var typeform = document.getElementById("typeform");
+typeformEmbed.makeWidget(typeform, "https://maseancetherapeutique.typeform.com/to/unOwWLBS?&origin=*", {
+        hideFooter: false,
+        hideHeaders: false,
+        opacity: 0,
+        buttonText: "Take the survey!",
+        onSubmit: function () {
+          window.location.replace("http://localhost:3000/results");
+        }
+      });
