@@ -62,12 +62,11 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // TYPEFORM
-var typeform = document.getElementById("typeform");
+const typeform = document.getElementById("typeform");
 typeformEmbed.makeWidget(typeform, "https://maseancetherapeutique.typeform.com/to/unOwWLBS?&origin=*", {
         hideFooter: false,
         hideHeaders: false,
         opacity: 0,
-        buttonText: "Take the survey!",
         onSubmit: function () {
           window.location.replace("http://localhost:3000/results");
         }

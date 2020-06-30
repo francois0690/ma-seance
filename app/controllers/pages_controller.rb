@@ -1,3 +1,6 @@
+require "json"
+require "rest-client"
+
 class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home ]
 
@@ -36,8 +39,14 @@ class PagesController < ApplicationController
   end
 
   def results
-    # curl --request GET \
-    #   --url https://api.typeform.com/forms/unOwWLBS/responses \
+    url = 'https://api.typeform.com/forms/unOwWLBS/responses'
+    response = RestClient.get(url, {:Authorization => 'Bearer 2P3cncZbtsUhLqrEai7KD6QZAKTw95xsJ7fraDR12XLU'})
+    @response = response.body.keys
+
+    # => repos is an `Array` of `Hashes`.
+
+    # serialized = open(url, {Authorization => "Bearer 2P3cncZbtsUhLqrEai7KD6QZAKTw95xsJ7fraDR12XLU"}).read
+     # = JSON.parse(serialized)
     #   --header 'Authorization: Bearer 2P3cncZbtsUhLqrEai7KD6QZAKTw95xsJ7fraDR12XLU'
   end
 
