@@ -34,6 +34,12 @@ class PagesController < ApplicationController
   def aubergine
   end
 
+  def aubergine_email
+    @user = current_user
+    UserMailer.with(user: @user).aubergine_email.deliver_now
+   render 'aubergine'
+  end
+
   private
   def search_params
     params.require(:home).permit(:job, :specialiste)
