@@ -21,6 +21,7 @@ Rails.application.routes.draw do
   end
   get 'profil', to: 'users#profil', as: 'profil'
   get 'aubergine', to: 'pages#aubergine', as: 'aubergine'
+  get 'aubergine_email', to: 'pages#aubergine_email', as: 'aubergine_email'
 
   patch 'profil/users_id', to: 'users#update_avatar', as: :update_avatar
 
