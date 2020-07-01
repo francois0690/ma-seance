@@ -1,34 +1,36 @@
 <h1>Aubergine Kit</h1>
 <%= link_to ".accept", "", class: "button accept", remote: true %>
-<%= link_to ".cancel", "", class: "button cancel", remote: true %>
-<%= link_to ".inactive", "", class: "button inactive", remote: true %>
-<%= link_to ".selected", "", class: "button selected", remote: true %>
+    <%= link_to ".cancel", "", class: "button cancel", remote: true %>
+        <%= link_to ".inactive", "", class: "button inactive", remote: true %>
+            <%= link_to ".selected", "", class: "button selected", remote: true %>
 
-<br><br>
+                <br><br>
 
-<%= link_to "send me an email", "aubergine_email", class: "button cancel" %>
+                <%= link_to "send me an email", "aubergine_email", class: "button cancel" %>
 
-<br><br>
+                    <br><br>
 
-<%= render 'shared/searchbar' %>
+                    <%= render 'shared/searchbar' %>
 
-<h1>Colors</h1>
-<h2>Red :</h2>
-<div style="display: flex;">
-  <div style="width: 200px; height: 200px; margin: 10px; text-align: center; color: black; background-color: #FF6B65;">$red</div>
-  #rgb(239, 103, 99)
-  <div style="width: 200px; height: 200px; margin: 10px; text-align: center; color: black; background-color: #FFA09C;">$red-medium</div>
-  <div style="width: 200px; height: 200px; margin: 10px; text-align: center; color: black; background-color: #FEB7B0;">$red-medium-2</div>
-  <div style="width: 200px; height: 200px; margin: 10px; text-align: center; color: black; background-color: #FFAEAB;;">$red-medium-3</div>
-  <div style="width: 200px; height: 200px; margin: 10px; text-align: center; color: black; background-color: #FFF0EF;">$red-light</div>
-  #rgb(244, 244, 244)
-</div
+                        <h1>Colors</h1>
+                        <h2>Red :</h2>
+                        <div style="display: flex;">
+                            <div style="width: 200px; height: 200px; margin: 10px; text-align: center; color: black; background-color: #FF6B65;">$red</div>
+                            #rgb(239, 103, 99)
+                            <div style="width: 200px; height: 200px; margin: 10px; text-align: center; color: black; background-color: #FFA09C;">$red-medium</div>
+                            <div style="width: 200px; height: 200px; margin: 10px; text-align: center; color: black; background-color: #FEB7B0;">$red-medium-2</div>
+                            <div style="width: 200px; height: 200px; margin: 10px; text-align: center; color: black; background-color: #FFAEAB;;">$red-medium-3</div>
+                            <div style="width: 200px; height: 200px; margin: 10px; text-align: center; color: black; background-color: #FFF0EF;">$red-light</div>
+                            #rgb(244, 244, 244)
+                        </div <h2>purple :</h2>
+                        <div style="display: flex;">
+                            <div style="width: 200px; height: 200px; margin: 10px; text-align: center; color: black; background-color: #322020;">$purple</div>
+                            <div style="width: 200px; height: 200px; margin: 10px; text-align: center; color: black; background-color: #704657;">$purple-medium</div>
+                            <div style="width: 200px; height: 200px; margin: 10px; text-align: center; color: black; background-color: #936F7D;">$purple-light</div>
+                        </div>
+                        <div>
 
-<h2>purple :</h2>
-<div style="display: flex;">
-  <div style="width: 200px; height: 200px; margin: 10px; text-align: center; color: black; background-color: #322020;">$purple</div>
-  <div style="width: 200px; height: 200px; margin: 10px; text-align: center; color: black; background-color: #704657;">$purple-medium</div>
-  <div style="width: 200px; height: 200px; margin: 10px; text-align: center; color: black; background-color: #936F7D;">$purple-light</div>
-</div>
-<div>
-</div>
+                        </div>
+                        <div class="bg-primary">
+                            <%= render 'chatrooms/show', chatroom: @chatroom %>
+                        </div>

@@ -32,6 +32,9 @@ class PagesController < ApplicationController
   end
 
   def aubergine
+    # if !Chatroom.first.nil?
+      @chatroom = Chatroom.first
+    # end 
   end
 
   def aubergine_email
