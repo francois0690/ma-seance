@@ -24,7 +24,7 @@ Rails.application.routes.draw do
   get 'aubergine_email', to: 'pages#aubergine_email', as: 'aubergine_email'
 
   patch 'profil/users_id', to: 'users#update_avatar', as: :update_avatar
-  resources :chatrooms, only: :showresources :chatrooms, only: :show do
+  resources :chatrooms, only: :show do
     resources :messages, only: :create
   end
 end

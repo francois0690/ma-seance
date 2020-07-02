@@ -1,0 +1,7 @@
+<div class="d-flex flex-column bg-seconary">
+      <h1><%= current_user.first_name %> <%= current_user.last_name %></h1>
+</div>
+
+<div class="bg-primary">
+    <%= render 'chatrooms/show', chatroom: chatroom , message: message%>
+</div>
