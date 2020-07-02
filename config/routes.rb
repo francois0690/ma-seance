@@ -23,6 +23,8 @@ Rails.application.routes.draw do
   get 'aubergine', to: 'pages#aubergine', as: 'aubergine'
   get 'typeform', to: 'pages#typeform', as: 'typeform'
   get 'results', to: 'pages#results', as: 'results'
+  get 'aubergine_email', to: 'pages#aubergine_email', as: 'aubergine_email'
+
   patch 'profil/users_id', to: 'users#update_avatar', as: :update_avatar
 
 end

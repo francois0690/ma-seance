@@ -1,15 +1,26 @@
 <% if user_signed_in? %>
-<nav class="navbar navbar-expand-lg d-flex navbar-light justify-content-around">
-  <div class="flex-grow-1 d-flex justify-content-center">
-    <a class="navbar-brand text-center">Ma séance</a>
+<!-- <nav class="navbar navbar-expand-lg d-flex navbar-light justify-content-around fixed-top"> -->
+<nav class="navbar fixed-top">
+
+  <%= link_to root_path, class: "navbar-logo" do %>
+
+      <%= image_tag "maseance.png" %>
+  <% end %>
+
+
+
+<div class="flex-grow-1 d-flex justify-content-center ">
+    <%= link_to "ma séance", root_path, class: "navbar-title text-center animate__animated animate__fadeInLeftBig animate__slower" %>
   </div>
+
+
   <div class="nav-item dropdown mr-2">
     <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
     <div class="dropdown-menu dropdown-menu-right dropdown-menu-nav" aria-labelledby="navbarDropdown">
       <%
 =begin%>
  <%= link_to "Action", "#", class: "dropdown-item" %>
-      <%= link_to "Another action", "#", class: "dropdown-item" %> 
+      <%= link_to "Another action", "#", class: "dropdown-item" %>
 <%
 =end%>
       <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item button cancel m-0" %>
@@ -17,12 +28,23 @@
   </div>
 </nav>
 <% else %>
-<nav class="navbar navbar-expand-lg d-flex navbar-light align-content-center justify-content-between">
-  <div class="flex-grow-1 d-flex justify-content-center">
-    <%= link_to "Ma séance", root_path, class: "navbar-brand text-center" %>
+<!-- <nav class="navbar navbar-expand-lg d-flex navbar-light align-content-center justify-content-between fixed-top"> -->
+<nav class="navbar fixed-top">
+
+  <%= link_to root_path, class: "navbar-logo" do %>
+
+      <%= image_tag "maseance.png" %>
+  <% end %>
+
+  <div class="flex-grow-1 d-flex justify-content-center ">
+    <%= link_to "ma séance", root_path, class: "navbar-title text-center animate__animated animate__fadeInLeftBig animate__slower" %>
   </div>
   <div class="nav-item d-flex">
     <%= link_to "Login", new_user_session_path, class: "button accept nav-link" %>
   </div>
+
+
 </nav>
+
+
 <% end %>
