@@ -1,40 +1,181 @@
+
+
+
 .show-container{
   width: 100%;
-  padding-left: 50px;
-}
-
-.show-info {
+  background-color: $red-light;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
-}
 
-.info-user {
-  width: 700px;
-  padding-top: 100px;
-}
+  .toubib {
+    margin: 20px;
+    background-color: $red-light;
+    flex-grow: 4;
 
-.doc-avatar {
-  background-color: $purple-light;
-  height: 100vh;
-  z-index: 0;
-  width: 500px;
-  padding: 30px;
-  text-align: center;
-  vertical-align: middle;
-  & img {
-    border: solid 20px;
-    border-radius: 50%;
-    border-color: $red;
+    i {
+     font-size: 24px;
+     //line-height: 1.7;
+     padding-right: 15px;
+    }
+
+    .toubib-img {
+      display: flex;
+      flex-direction: row;
+      background-color: white;
+      border-radius: 7px;
+      box-shadow: 0px 2px 9px rgba(0,0,0,0.1);
+      padding: 25px 15px;
+
+      .toubib-img-left {
+        img {
+          border-radius: 7px;
+        }
+
+      }
+      .toubib-img-right {
+        padding-left: 70px;
+        display: flex;
+        flex-direction: column;
+
+        .toubib-img-right-title {
+          display: flex;
+          flex-direction: row;
+        }
+
+        .splitter {
+          height: 1px;
+          width: 100px;
+          background-color: rgba(0,0,0,0.5);
+          margin: 15px;
+        }
+        .toubib-img-right-description {
+          width: 300px;
+
+            .toubib-img-right-description-title {
+              display: flex;
+              flex-direction: row;
+              padding-bottom: 10px;
+
+              .fa-address-card{
+                color: rgba(0,0,0,0.5);
+                font-size: 17px;
+              }
+
+              h4 {
+                color: rgba(0,0,0,0.5);
+                font-weight: lighter;
+                font-size: 18px;
+              }
+        }
+
+          p {
+            color: rgba(0,0,0,0.5);
+            font-weight: lighter;
+            font-size: 14px;
+            //line-height: 1.3;
+          }
+        }
+      }
+    }
+    .toubib-job{
+      padding: 25px 15px;
+
+       .toubib-job-title{
+        display: flex;
+        flex-direction: row;
+       }
+
+      .toubib-job-card {
+        padding: 25px 15px;
+        background-color: white;
+        border-radius: 7px;
+
+        ul {
+          list-style-type: none;
+        }
+      }
+
+
+    }
+    .toubib-map{
+      padding: 25px 15px;
+
+      .toubib-map-title {
+        display: flex;
+        flex-direction: row;
+      }
+      .toubib-map-card {
+        padding: 25px 15px;
+        background-color: white;
+        border-radius: 7px;
+
+        .toubib-map-card-map{
+
+        }
+
+      }
+    }
   }
-}
 
-.info-user-right {
-  padding-top: 50px;
-  text-align: left;
+  .action-toubib {
+    margin: 20px;
+    background-color: white;
+    flex-grow: 1;
+    border-radius: 7px;
+    box-shadow: 0px 2px 9px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    padding: 25px 15px;
 
-}
 
-ul {
-  list-style-type: none;
+
+    .action-toubib-titre{
+      text-align: center;
+
+      h4 {
+        color: rgba(0,0,0,1);
+        font-weight: lighter;
+        font-size: 18px;
+      }
+    }
+    .splitter {
+      height: 1px;
+      width: 100px;
+      background-color: rgba(0,0,0,0.5);
+      margin: 15px auto;
+      padding: 0px 15px;
+
+    }
+    .action-toubib-option{
+      padding: 15px 70px;
+
+      .action-toubib-option-mail{
+          display: flex;
+          flex-direction: row;
+
+        .action-toubib-option-mail-icone{
+          height: 50px;
+          width: 50px;
+          border-radius:50%;
+          background-color: white;
+          color: $red;
+          box-shadow: 0px 2px 9px rgba(0,0,0,0.1);
+          text-align: center;
+          padding-top: 10px;
+
+          .fa-envelope {
+            font-size: 28px;
+          }
+        }
+
+        .action-toubib-option-mail-txt {
+          padding-left:20px;
+          padding-top: 14px;
+        }
+
+      }
+    }
+  }
+
+
 }
