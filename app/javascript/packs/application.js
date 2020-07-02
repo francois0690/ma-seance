@@ -32,6 +32,7 @@ import { bubller } from '../components/_buton';
 import { initMapbox } from '../plugins/init_mapbox';
 // import { init_Vivus } from '../plugins/init_vivus';
 import { initShowMoreDoctors, initShowMoreSpecialities } from '../plugins/init_show-more';
+import * as typeformEmbed from '@typeform/embed'
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 
 
@@ -58,7 +59,19 @@ document.addEventListener('DOMContentLoaded', function() {
     // initReadMore();
 
 
-
 });
 
-
+const loader = document.querySelector(".loader");
+// TYPEFORM
+const typeform = document.getElementById("typeform");
+typeformEmbed.makeWidget(typeform, "https://maseancetherapeutique.typeform.com/to/unOwWLBS?&origin=*", {
+        hideFooter: false,
+        hideHeaders: false,
+        opacity: 0,
+        onSubmit: (data) => {
+          loader.classList.toggle("hidden");
+          setTimeout(function(){
+            window.location.replace(`http://localhost:3000/results?response_id=${data.response_id}`);},
+            1000);
+        }
+      });

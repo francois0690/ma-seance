@@ -69,3 +69,4 @@ gem 'kaminari'
 gem 'geocoder'
 
 gem 'searchkick', '~> 4.4.0'
+gem 'rest-client'
