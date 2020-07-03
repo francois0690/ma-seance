@@ -1,5 +1,5 @@
 .navbar {
-    background: $red-bg;
+    // background: $red-bg;
     //background-color: transparent;
     padding: 0px 0px;
 
@@ -7,12 +7,12 @@
     display: flex;
     justify-content: center;
     align-items: flex-center;
-    height: 70px;
+    height: 0px;
 
 
 
-//background-color: transparent;
-    transition: 0.5s background-color ease;
+
+    // transition: 0.5s background-color ease;
 
 
   .navbar-title {
@@ -20,20 +20,22 @@
     // font-family: 'Roboto', sans-serif;
     color: black;
     text-shadow: 2px 2px 2px rgba(0,0,0,.2);
-    font-size: 36px;
+    font-size: 38px;
     font-weight: regular;
     text-decoration: none;
 
   }
 
 
-
-
 }
 
 
+.navbar-svg {
+  transition: 0.4s opacity ease;
+}
+
 .navbar-transparent {
-  background-color: transparent;
+  opacity: 0;
 }
 
 .navbar-logo > img {
