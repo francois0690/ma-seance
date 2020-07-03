@@ -61,6 +61,12 @@ class PagesController < ApplicationController
       # pénaliser de - 1000 point pour une contraindication
       # sortire les 3 spécialités avec le meilleur score.
   end
+  
+  def aubergine_email
+    @user = current_user
+    UserMailer.with(user: @user).aubergine_email.deliver_now
+   render 'aubergine'
+  end
 
   private
 

@@ -30,10 +30,11 @@ import "bootstrap";
 // import { initSelect2 } from '../components/init_select2';
 import { bubller } from '../components/_buton';
 import { initMapbox } from '../plugins/init_mapbox';
-// import { initReadMore, initReadMoreT } from '../plugins/init_readmore';
-import { init_Vivus } from '../plugins/init_vivus';
+// import { init_Vivus } from '../plugins/init_vivus';
 import { initShowMoreDoctors, initShowMoreSpecialities } from '../plugins/init_show-more';
 import * as typeformEmbed from '@typeform/embed'
+import { initUpdateNavbarOnScroll } from '../components/navbar';
+
 
 const AOS = require('aos');
 document.addEventListener('turbolinks:load', () => {
@@ -42,7 +43,8 @@ document.addEventListener('turbolinks:load', () => {
     // initReadMoreT();
     initShowMoreDoctors();
 
-    init_Vivus();
+    // init_Vivus();
+    initUpdateNavbarOnScroll();
 
 });
 
@@ -58,6 +60,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 });
+
 const loader = document.querySelector(".loader");
 // TYPEFORM
 const typeform = document.getElementById("typeform");
