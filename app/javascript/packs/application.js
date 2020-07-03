@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', function() {
 const loader = document.querySelector(".loader");
 // TYPEFORM
 const typeform = document.getElementById("typeform");
-typeformEmbed.makeWidget(typeform, "https://maseancetherapeutique.typeform.com/to/unOwWLBS?&origin=*", {
+typeformEmbed.makeWidget(typeform, "https://maseancetherapeutique.typeform.com/to/zcKO5yK0?&origin=*", {
         hideFooter: false,
         hideHeaders: false,
         opacity: 0,
