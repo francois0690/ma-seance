@@ -39,6 +39,7 @@
                     padding: 16px 16px;
 
                     .txt1 {
+                      font-family: 'Montserrat', sans-serif;
                         margin-top: 8px;
                         font-size: 22px;
                         font-weight: bold;
@@ -49,22 +50,25 @@
 
                     }
                     .txt2 {
+                      font-family: 'Montserrat', sans-serif;
                         margin-top: 8px;
-                        font-size: 20px;
+                        font-size: 22px;
                         font-weight: regular;
-                        margin-bottom: 16px;
+                        margin-bottom: 32px;
                         text-align: center;
                         text-justify: inter-word;
 
                     }
 
                     .txt3 {
+                      font-family: 'Montserrat', sans-serif;
                         margin-top: 8px;
                         font-size: 22px;
                         font-weight: regular;
-                        margin-bottom: 28px;
+                        margin-bottom: 38px;
                         text-align: center;
                         text-justify: inter-word;
+
                     }
 
 
@@ -73,8 +77,8 @@
 
                         // padding: 12px 45px;
                         text-align: center;
-                        height: 16vh;
-                        font-size: 32px;
+                        // height: 16vh;
+                        font-size: 22px;
                         // text-decoration: none;
 
                     }
