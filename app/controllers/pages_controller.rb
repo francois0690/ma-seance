@@ -2,7 +2,8 @@ require "json"
 require "rest-client"
 
 class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [ :home ]
+  skip_before_action :authenticate_user!, only: [ :home , :doctor_message_box]
+  before_action :authenticate_by_token, only: [ :doctor_message_box ]
 
   def home
     if params[:localise].present?
@@ -30,7 +31,9 @@ class PagesController < ApplicationController
 
 
   def aubergine
+  end
 
+  def doctor_message_box
   end
 
   def typeform
@@ -67,6 +70,10 @@ class PagesController < ApplicationController
   end
 
   private
+
+  def authenticate_by_token
+    @user = User.find_by(auth_token: params[:token])
+  end
 
   specialities = {
     # TODO : creer le hash "thérapie A" => 0
