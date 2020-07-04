@@ -154,6 +154,13 @@
         border-radius: 7px;
 
         .toubib-map-card-map{
+          padding: 15px 15px;
+
+          #map{
+            width: 100px;
+            height: 100px;
+
+          }
 
         }
 
@@ -191,7 +198,7 @@
 
     }
     .action-toubib-option{
-      padding: 15px 30px;
+      padding: 15px 15px;
 
       .action-toubib-option-mail{
           display: flex;
