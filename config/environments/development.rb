@@ -75,6 +75,6 @@ Rails.application.configure do
   user_name:            ENV['GMAIL_USERNAME'],
   password:             ENV['GMAIL_PASSWORD'],
   authentication:       'plain',
-  from: 'contact@ma-seance.com',
+  # from: 'contact@ma-seance.com',
   enable_starttls_auto: true  }
 end
