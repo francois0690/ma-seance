@@ -1,5 +1,5 @@
 class Office < ApplicationRecord
-    searchkick
+  searchkick
 
   validates :name, presence: true
   validates :address, presence: true
