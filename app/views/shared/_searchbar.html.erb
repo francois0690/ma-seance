@@ -13,14 +13,6 @@
       placeholder: "Où…?"%>
     </div>
 
-    <div class="border"></div>
-
-    <div id ="no-padding" class="searchbar-right">
-      <i class="fas fa-user-alt"></i>
-      <%= collection_select :job, :job_name, Job.all, :job_name, :job_name, {prompt: 'Quel Praticien?', data: {remote: true}}%>
-
-      </div>
-
       <div class="searchbar-action">
       <%= submit_tag "Recherchez", id: "widthheight-100", class: "button accept", remote: true %>
       </div>

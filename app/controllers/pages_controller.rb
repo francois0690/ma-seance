@@ -5,16 +5,6 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home ]
 
   def home
-    if params[:localise].present?
-      @result = Office.search params[:localise]
-      adresses = @result.map{ |adresse| adresse }
-      @doctors = User.where(adresse: adresse).page params[:page]
-    else
-      @doctors= User.order(:last_name).page params[:page]
-    end
-
-
-
     @specialities = Speciality.all
     @markers = []
     @doctors.each do |doctor|
@@ -30,7 +20,16 @@ class PagesController < ApplicationController
     end
   end
 
+
+
   def aubergine
+      if params[:localise].present?
+      @result = Office.search params[:localise], fields: [:adresse]
+      adresses = @result.map{ |adresse| adresse }
+      @doctors = User.where(adresse: adresse).page params[:page]
+    else
+      @doctors= User.order(:last_name).page params[:page]
+    end
   end
 
   def typeform
