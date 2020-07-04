@@ -1,4 +1,5 @@
 class User < ApplicationRecord
+  before_create :generate_token
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   searchkick
@@ -16,4 +17,8 @@ class User < ApplicationRecord
     Office.reindex
   end
 
+  private
+  def generate_token
+    self.auth_token = SecureRandom.hex(32)
+  end
 end

@@ -19,6 +19,7 @@ Rails.application.routes.draw do
   resources :activities do
       resources :consultations, only: [ :new, :create ]
   end
+  get 'doctor', to: 'users#doctor', as: 'doctor'
   get 'profil', to: 'users#profil', as: 'profil'
   get 'aubergine', to: 'pages#aubergine', as: 'aubergine'
   get 'typeform', to: 'pages#typeform', as: 'typeform'
