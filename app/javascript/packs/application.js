@@ -38,6 +38,7 @@ import { loading } from '../plugins/init_loadingbar';
 
 
 const AOS = require('aos');
+
 document.addEventListener('turbolinks:load', () => {
     bubller
     initMapbox();

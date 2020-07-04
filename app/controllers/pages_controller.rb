@@ -5,11 +5,10 @@ class PagesController < ApplicationController
   skip_before_action :authenticate_user!, only: [ :home ]
 
   def home
-    #if params[:localise].present?
-    if params[:job].present?
-      @result = Job.search params[:job][:job_name]
-      jobs = @result.map{ |job| job }
-      @doctors = User.where(jobs: jobs).page params[:page]
+    if params[:localise].present?
+      @result = Office.search params[:localise], fields: [:address]
+      adresses = @result.map{ |adresse| adresse }
+      @doctors = User.where(adresses: adresses).page params[:page]
     else
       @doctors= User.order(:last_name).page params[:page]
     end
@@ -28,11 +27,10 @@ class PagesController < ApplicationController
     end
   end
 
-  def reindex_job
-    Job.reindex
-  end
+
 
   def aubergine
+
   end
 
   def typeform
@@ -61,7 +59,7 @@ class PagesController < ApplicationController
       # pénaliser de - 1000 point pour une contraindication
       # sortire les 3 spécialités avec le meilleur score.
   end
-  
+
   def aubergine_email
     @user = current_user
     UserMailer.with(user: @user).aubergine_email.deliver_now

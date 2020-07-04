@@ -1,6 +1,12 @@
+.grid-wave {
+  margin-left: 100px;
+}
+
 .grid_specialities {
+
     padding-top: 16px;
     padding-bottom: 80px;
+    // margin: 0px 100px;
     a {
       text-decoration: none;
     }
@@ -8,9 +14,10 @@
 
 .scroller {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 8px;
     grid-auto-rows: minmax(100px, auto);
+
 }
 
 
@@ -62,6 +69,7 @@ $randomNumber: random(50);
         }
     }
 }
+
 
 .grid_specialities_result {
     padding-top: 16px;
@@ -213,4 +221,22 @@ $randomNumber: random(50);
     padding-top: 15px;
     margin-right: 20px;
   }
+
+
+.grid-left{
+  display: flex;
+  // flex-grow: 1;
+
+}
+
+.grid-right {
+// width: 22%;
+position: sticky;
+height: 100vh;
+top: 60px;
+// background-color: white;
+padding: 16px 8px;
+
+
+
 }

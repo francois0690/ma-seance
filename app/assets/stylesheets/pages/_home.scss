@@ -1,107 +1,91 @@
-// Specific CSS for your home-page
+            // Specific CSS for your home-page
+            .ia2000-card {
+                display: flex;
+                justify-content: center;
+                .ia2000-card-contenu {
+                    padding: 30px 72px;
+                    background-color: $red-bg;
+                    border-radius: 4px;
+                    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+                    // box-shadow: 5px 5px 30px rgba(0, 0, 0, .3);
 
 
-.ia2000-card {
+                    width: 40%;
+                    h3 {
+                        font-family: 'Montserrat', sans-serif;
+                        font-size: 24px;
+                        font-weight: bold;
+                        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                        padding-bottom: 8px;
+                        margin-bottom: 16px;
+                        margin-top: 32px;
+                        text-align: center;
 
-    display: flex;
-    justify-content: center;
+                    }
+                    .ia2000-card-contenu-texte {
+                        font-family: 'Montserrat', sans-serif;
+                        .txt1 {
+                            font-size: 18px;
 
-    .ia2000-card-contenu {
-      // padding: 64px 72px;
-      padding: 30px 72px;
+                            font-weight: regular;
+                            margin-bottom: 4px;
+                            text-align: justify;
+                            text-justify: inter-word;
+                        }
 
-      background-color: $red-bg;
-      border-radius: 4px;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
-      width: 80%;
+                        .txt2 {
+                            margin-top: 8px;
+                            font-size: 18px;
 
-      h3  {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 24px;
-        font-weight: regular;
-        border-bottom: 1px solid rgba(0,0,0,0.1);
-        padding-bottom: 8px;
-        margin-bottom: 16px;
+                            font-weight: regular;
+                            margin-bottom: 8px;
+                            text-align: justify;
+                            text-justify: inter-word;
 
+                        }
 
-      }
+                    }
+                    .ia2000-card-contenu-link {
+                            margin-top: 8px;
+                            display: flex;
+                            justify-content: center;
+                            flex-direction: column;
+                            p {
+                                font-family: 'Montserrat', sans-serif;
+                                margin-top: 8px;
+                                font-size: 22px;
+                                font-weight: regular;
+                                margin-bottom: 32px;
+                                text-align: justify;
+                                text-justify: inter-word;
+                                // box-shadow: 5px 5px 55px rgba(255, 255, 255, 0.8);
+                                // border-radius: 5%;
 
+                                // padding-right: 32px;
+                                // padding-left: 8px;
+                            }
+                            a {
 
+                                // padding: 12px 45px;
+                                text-align: center;
+                                // text-decoration: none;
 
+                            }
+                    }
 
-
-
-        .ia2000-card-contenu-texte {
-          font-family: 'Montserrat', sans-serif;
-          font-size: 18px;
-
-       p {
-        font-weight: regular;
-        margin-bottom: 4px;
-        text-align: justify;
-        text-justify: inter-word;
-
-        }
-
-
-        }
-
-        .ia2000-card-contenu-link {
-          margin-top: 28px;
-          display: flex;
-          justify-content: flex-end;
-          text-decoration: none;
-
-           p {
-            font-size: 18px;
-            font-weight: regular;
-            margin-bottom: 4px;
-            text-align: justify;
-            text-justify: inter-word;
-            padding-right: 32px;
+                }
             }
 
-            a {
-              padding: 12px 58px;
+            .wave #wave-content {
+                width: 100%;
+                background-color: $red;
+                margin-bottom: 0em;
             }
 
-        }
-      }
-}
+            .wave {
+                background-color: $red-light;
+            }
 
-
-
-// .row {
-//     margin-right: 0;
-//     margin-left: 0;
-// }
-
-// #ia {
-//     margin-top: 150px;
-//     display: flex;
-//     padding: 64px 72px;
-//     background-color: $red-bg;
-//     border-radius: 4px;
-//     box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
-// }
-
-// #ia .card-body {
-//     padding-right: 160px;
-// }
-
-// #ia .card-body .card-text {
-//     margin-top: 48px;
-// }
-
-// .wave #wave-content {
-//     width: 100%;
-//     background-color: $red;
-// }
-
-// .wave {
-//     background-color: $red-light;
-// }
-
-// .top-field {
-//     background-color: $red-light;
-// }
+            .top-field {
+                background-color: $red-light;
+            }
