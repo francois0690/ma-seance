@@ -37,6 +37,7 @@ import { initUpdateNavbarOnScroll } from '../components/navbar';
 
 
 const AOS = require('aos');
+
 document.addEventListener('turbolinks:load', () => {
     bubller
     initMapbox();

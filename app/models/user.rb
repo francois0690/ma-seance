@@ -9,6 +9,7 @@ class User < ApplicationRecord
   has_many :consultations
   has_many :activities
   has_many :jobs
+  has_many :offices, through: :activities
   has_one_attached :avatar
 
   after_commit :reindex_office
