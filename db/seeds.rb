@@ -630,51 +630,51 @@ p "#{Job.count} jobs crées"
 # Activity
 activity1 = Activity.new
 activity1.user = d1
-activity1.speciality = s1
-activity1.office = office1
+activity1.speciality_id = s1.id
+activity1.office_id = office1.id
 activity1.save!
 
 activity2 = Activity.new
 activity2.user = d2
-activity2.speciality = s2
-activity2.office = office2
+activity2.speciality_id = s2.id
+activity2.office_id = office2.id
 activity2.save!
 
 activity3 = Activity.new
 activity3.user = d3
-activity3.speciality = s3
-activity3.office = office3
+activity3.speciality_id = s3.id
+activity3.office_id = office3.id
 activity3.save!
 
 activity4 = Activity.new
 activity4.user = d4
-activity4.speciality = s4
-activity4.office = office4
+activity4.speciality_id = s4.id
+activity4.office_id = office4.id
 activity4.save!
 
 activity5 = Activity.new
 activity5.user = d5
-activity5.speciality = s5
-activity5.office = office5
+activity5.speciality_id = s5.id
+activity5.office_id = office5.id
 activity5.save!
 
 activity6 = Activity.new
 activity6.user = d10
-activity6.speciality = s12
-activity6.office = office5
+activity6.speciality_id = s12.id
+activity6.office_id = office5.id
 activity6.save!
 
 
 activity7 = Activity.new
 activity7.user = d10
-activity7.speciality = s16
-activity7.office = office5
+activity7.speciality_id = s16.id
+activity7.office_id = office5.id
 activity7.save!
 
 activity8 = Activity.new
 activity8.user = d10
-activity8.speciality = s11
-activity8.office = office5
+activity8.speciality_id = s11.id
+activity8.office_id = office5.id
 activity8.save!
 
 
