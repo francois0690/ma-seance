@@ -1,22 +1,15 @@
-
-
-
-
-<%= form_tag(root_path, method: :get, action: 'search') do %>
-<div class="searchbar">
-
-  <div id= "no-padding" class="searchbar-left">
-    <i class="fas fa-search"></i>
-    <%= text_field_tag :localise,
-    params[:localise],
-    class: "form-control",
-      placeholder: "Où…?"%>
+<%= form_tag(speciality_path(@speciality), method: :get, action: 'search') do %>
+  <div class="searchbar">
+    <div id= "no-padding" class="searchbar-left">
+      <i class="fas fa-search"></i>
+      <%= text_field_tag :localise, params[:localise], class: "form-control", placeholder: "Où…?" %>
     </div>
 
-      <div class="searchbar-action">
+    <div class="searchbar-action">
       <%= submit_tag "Recherchez", id: "widthheight-100", class: "button accept", remote: true %>
-      </div>
-      <%= params[:job_name] %>
-      <% end %>
-      </div>
+    </div>
+
+    <%= params[:job_name] %>
+  </div>
+<% end %>
 
