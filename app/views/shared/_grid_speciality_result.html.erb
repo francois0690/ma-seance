@@ -4,11 +4,18 @@
     <div class="marge"></div>
       <div class="d-flex  flex-column first-col">
         <% a_spe[0].each do |s| %>
-          <div class="speciality-result" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" >
+          <div class="speciality-result" data-aos="fade-up" data-aos-anchor-placement="top-bottom" >
             <%= link_to speciality_path(s) do %>
               <h2><%= s.name %></h2>
             <%end%>
             <p><i><%= s.description%></i></p>
+            <div class="recommand">
+              <p>
+                <b>recommandé pour vous à</b>
+                <div class="ldBar label-center" data-preset="circle" data-duration="8" style="width:60px;height:60px"></div>
+              </p>
+            </div>
+
             <%= link_to "en savoir plus", speciality_path(s), class: "button accept" %>
           </div>
 
@@ -16,11 +23,18 @@
       </div>
       <div class="d-flex  flex-column second-col">
         <% a_spe[1].each do |s| %>
-          <div class="speciality-result" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" >
+          <div class="speciality-result" data-aos="fade-up" data-aos-anchor-placement="top-bottom" >
             <%= link_to speciality_path(s) do %>
               <h2><%= s.name %></h2>
             <%end%>
             <p><i><%= s.description%></i></p>
+            <div class="recommand">
+              <p>
+                <b>recommandé pour vous à</b>
+                <div class="ldBar ldBar2 label-center" data-preset="circle" data-duration="8" style="width:60px;height:60px"></div>
+              </p>
+            </div>
+
             <%= link_to "en savoir plus", speciality_path(s), class: "button accept" %>
           </div>
         <%end%>
@@ -33,6 +47,12 @@
             <%end%>
             <p><i><%= s.description%></i></p>
             <%= link_to "en savoir plus", speciality_path(s), class: "button accept" %>
+          </div>
+          <div class="recommand">
+            <p>
+              <b>recommandé pour vous à</b>
+              <div class="ldBar label-center" data-preset="circle" data-duration="8" style="width:60px;height:60px"></div>
+            </p>
           </div>
         <%end%>
       </div>

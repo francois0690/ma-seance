@@ -186,3 +186,31 @@ $randomNumber: random(50);
   padding-bottom: 32px;
   text-align: center;
 }
+
+.ldBar {
+  width:100%;
+  height:60px
+}
+
+.ldBar path.mainline {
+  // z-index: 10;
+  display: block;
+  position: static;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke: $red;
+}
+
+.ldBar path.baseline {
+  stroke: $purple-light;
+}
+
+.recommand{
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+  p {
+    padding-top: 15px;
+    margin-right: 20px;
+  }
+}
