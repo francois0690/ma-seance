@@ -7,14 +7,19 @@
                     background-color: $red-bg;
                     border-radius: 4px;
                     box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
-                    width: 50%;
+                    // box-shadow: 5px 5px 30px rgba(0, 0, 0, .3);
+
+
+                    width: 40%;
                     h3 {
                         font-family: 'Montserrat', sans-serif;
                         font-size: 24px;
-                        font-weight: regular;
+                        font-weight: bold;
                         border-bottom: 1px solid rgba(0, 0, 0, 0.1);
                         padding-bottom: 8px;
                         margin-bottom: 16px;
+                        margin-top: 32px;
+                        text-align: center;
 
                     }
                     .ia2000-card-contenu-texte {
@@ -46,11 +51,11 @@
                             justify-content: center;
                             flex-direction: column;
                             p {
+                                font-family: 'Montserrat', sans-serif;
                                 margin-top: 8px;
-
-                                font-size: 20px;
+                                font-size: 22px;
                                 font-weight: regular;
-                                margin-bottom: 16px;
+                                margin-bottom: 32px;
                                 text-align: justify;
                                 text-justify: inter-word;
                                 // box-shadow: 5px 5px 55px rgba(255, 255, 255, 0.8);
