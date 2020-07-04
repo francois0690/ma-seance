@@ -1,0 +1,72 @@
+<div class="grid_specialities_result ">
+    <div class="scroller ">
+    <% a_spe = specialities.to_a.in_groups(4, false) %>
+    <div class="marge"></div>
+      <div class="d-flex  flex-column first-col">
+        <% a_spe[0].each do |s| %>
+          <div class="speciality-result" data-aos="fade-up" data-aos-anchor-placement="top-bottom" >
+            <%= link_to speciality_path(s) do %>
+              <h2><%= s.name %></h2>
+            <%end%>
+            <p><i><%= s.description%></i></p>
+            <div class="recommand">
+              <p>
+                <b>recommandé pour vous à</b>
+                <div class="ldBar label-center" data-preset="circle" data-duration="8" style="width:60px;height:60px"></div>
+              </p>
+            </div>
+
+            <%= link_to "en savoir plus", speciality_path(s), class: "button accept" %>
+          </div>
+
+        <%end%>
+      </div>
+      <div class="d-flex  flex-column second-col">
+        <% a_spe[1].each do |s| %>
+          <div class="speciality-result" data-aos="fade-up" data-aos-anchor-placement="top-bottom" >
+            <%= link_to speciality_path(s) do %>
+              <h2><%= s.name %></h2>
+            <%end%>
+            <p><i><%= s.description%></i></p>
+            <div class="recommand">
+              <p>
+                <b>recommandé pour vous à</b>
+                <div class="ldBar ldBar2 label-center" data-preset="circle" data-duration="8" style="width:60px;height:60px"></div>
+              </p>
+            </div>
+
+            <%= link_to "en savoir plus", speciality_path(s), class: "button accept" %>
+          </div>
+        <%end%>
+      </div>
+      <div class="d-flex  flex-column third-col">
+        <% a_spe[2].each do |s| %>
+          <div class="speciality-result" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" >
+            <%= link_to specialies_path(s) do %>
+              <h2><%= s.name %></h2>
+            <%end%>
+            <p><i><%= s.description%></i></p>
+            <%= link_to "en savoir plus", speciality_path(s), class: "button accept" %>
+          </div>
+          <div class="recommand">
+            <p>
+              <b>recommandé pour vous à</b>
+              <div class="ldBar label-center" data-preset="circle" data-duration="8" style="width:60px;height:60px"></div>
+            </p>
+          </div>
+        <%end%>
+      </div>
+      <div class="d-flex  flex-column fourth-col">
+        <% a_spe[3].each do |s| %>
+          <div class="speciality-result" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" >
+            <%= link_to speciality_path(s) do %>
+              <h2><%= s.name %></h2>
+            <%end%>
+            <p><i><%= s.description%></i></p>
+            <%= link_to "en savoir plus", speciality_path(s), class: "button accept" %>
+          </div>
+
+        <%end%>
+      </div>
+  </div>
+</div>

@@ -1,0 +1,96 @@
+
+.ia2000-right {
+
+        display: flex;
+        justify-content: center;
+        .ia2000-right-contenu {
+
+
+          // border: 3px solid rgba(0, 0, 0, .8);
+          background-color: white;
+          box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+          border-radius: 7px;
+          padding: 1rem;
+          font-size: 1.2rem;
+          color: $purple;
+          text-align: left;
+          // width: 350px;
+          justify-content: center;
+          flex-basis: fit-content;
+          margin-bottom: 16px;
+          height: 85vh;
+
+
+          // margin-right: 40px;
+
+
+            // padding: 30px 72px;
+            // background-color: $red-bg;
+            // border-radius: 4px;
+            // box-shadow: 0 5px 10px rgba(200, 0, 0, .9);
+            // width: 20%;
+
+            .ia2000-right-contenu-link {
+                    margin-top: 28px;
+                    display: flex;
+                    justify-content: center;
+
+                    flex-direction: column;
+                    padding: 16px 16px;
+
+                    .txt1 {
+                      font-family: 'Montserrat', sans-serif;
+                        margin-top: 8px;
+                        font-size: 22px;
+                        font-weight: bold;
+                        margin-bottom: 16px;
+                        text-align: center;
+                        text-justify: inter-word;
+                        text-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+
+                    }
+                    .txt2 {
+                      font-family: 'Montserrat', sans-serif;
+                        margin-top: 8px;
+                        font-size: 22px;
+                        font-weight: regular;
+                        margin-bottom: 32px;
+                        text-align: center;
+                        text-justify: inter-word;
+
+                    }
+
+                    .txt3 {
+                      font-family: 'Montserrat', sans-serif;
+                        margin-top: 8px;
+                        font-size: 22px;
+                        font-weight: regular;
+                        margin-bottom: 38px;
+                        text-align: center;
+                        text-justify: inter-word;
+
+                    }
+
+
+                    a {
+
+
+                        // padding: 12px 45px;
+                        text-align: center;
+                        // height: 16vh;
+                        font-size: 22px;
+                        // text-decoration: none;
+
+                    }
+            }
+
+        }
+    }
+
+
+
+
+
+
+
+

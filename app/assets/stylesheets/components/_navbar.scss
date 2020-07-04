@@ -23,6 +23,7 @@
     font-size: 38px;
     font-weight: regular;
     text-decoration: none;
+    transition: 2s opacity ease;
 
   }
 
@@ -31,7 +32,7 @@
 
 
 .navbar-svg {
-  transition: 0.4s opacity ease;
+  transition: 0.8s opacity ease;
 }
 
 .navbar-transparent {

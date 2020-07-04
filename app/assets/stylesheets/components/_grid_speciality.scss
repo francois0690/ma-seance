@@ -1,6 +1,12 @@
+.grid-wave {
+  margin-left: 100px;
+}
+
 .grid_specialities {
+
     padding-top: 16px;
     padding-bottom: 80px;
+    // margin: 0px 100px;
     a {
       text-decoration: none;
     }
@@ -8,9 +14,10 @@
 
 .scroller {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 8px;
     grid-auto-rows: minmax(100px, auto);
+
 }
 
 
@@ -36,7 +43,7 @@ $randomNumber: random(50);
         font-size: 20px;
         text-shadow: 2px 2px 3px rgba(0,0,0,0.1);
         transition: all 0.5s ease;
-        
+
         // border-bottom: 1px transparent;
 
         &:hover {
@@ -46,7 +53,7 @@ $randomNumber: random(50);
             // text-decoration: underline;
             // border-bottom: 1px solid $red-medium-2;
             //box-shadow: 2px 0px 4px rgba(0, 0, 0, .3);
-            
+
             // color: rgb(254, 214, 214);
         }
 
@@ -61,4 +68,175 @@ $randomNumber: random(50);
             }
         }
     }
+}
+
+
+.grid_specialities_result {
+    padding-top: 16px;
+    padding-bottom: 80px;
+    a {
+      text-decoration: none;
+    }
+}
+
+.speciality-result {
+    border: 3px solid $red-medium-2;
+    background-color: $red-medium-2;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+    border-radius: 7px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: $purple;
+    text-align: left;
+    width: 600px;
+    justify-content: center;
+    flex-basis: fit-content;
+    margin-bottom: 16px;
+    // overflow-wrap: break-word;
+
+     h2 {
+        color: black;
+        text-decoration: none;
+        font-size: 20px;
+        text-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+        transition: all 0.5s ease;
+
+        // border-bottom: 1px transparent;
+
+        &:hover {
+            // color: rgba($light-gray,0.3);
+            text-shadow: 2px 2px 10px rgba($light-gray,1);
+            // border-bottom: 1px solid $light-gray;
+            // text-decoration: underline;
+            // border-bottom: 1px solid $red-medium-2;
+            //box-shadow: 2px 0px 4px rgba(0, 0, 0, .3);
+
+            // color: rgb(254, 214, 214);
+        }
+
+    }
+    p {
+        // overflow: hidden;
+        display: block;
+        a {
+
+            &:after {
+                // color: $red;
+            }
+        }
+    }
+}
+
+.speciality-result-card {
+    border: 3px solid $red-medium-2;
+    background-color: $red-medium-2;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+    border-radius: 7px;
+    padding: 1rem;
+    font-size: 1.2rem;
+    color: $purple;
+    text-align: left;
+    width: 900px;
+    justify-content: center;
+    flex-basis: fit-content;
+    margin: 130px auto 0 auto;
+    // overflow-wrap: break-word;
+
+     h1 {
+        color: black;
+        text-decoration: none;
+        font-size: 32px;
+        text-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+        transition: all 0.5s ease;
+
+        // border-bottom: 1px transparent;
+
+        &:hover {
+            // color: rgba($light-gray,0.3);
+            text-shadow: 2px 2px 10px rgba($light-gray,1);
+            // border-bottom: 1px solid $light-gray;
+            // text-decoration: underline;
+            // border-bottom: 1px solid $red-medium-2;
+            //box-shadow: 2px 0px 4px rgba(0, 0, 0, .3);
+
+            // color: rgb(254, 214, 214);
+        }
+
+    }
+    p {
+        // overflow: hidden;
+        display: block;
+        a {
+
+            &:after {
+                // color: $red;
+            }
+        }
+    }
+}
+
+.specility-title {
+  margin-top: 100px;
+}
+
+.red-margin {
+  padding-top: 80px;
+  background-color: $red;
+}
+.red {
+  background-color: $red;
+  h2 {
+    margin: 0;
+  }
+}
+
+.intro {
+  padding-bottom: 32px;
+  text-align: center;
+}
+
+.ldBar {
+  width:100%;
+  height:60px
+}
+
+.ldBar path.mainline {
+  // z-index: 10;
+  display: block;
+  position: static;
+  stroke-width: 10;
+  stroke-linecap: round;
+  stroke: $red;
+}
+
+.ldBar path.baseline {
+  stroke: $purple-light;
+}
+
+.recommand{
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+  p {
+    padding-top: 15px;
+    margin-right: 20px;
+  }
+
+
+.grid-left{
+  display: flex;
+  // flex-grow: 1;
+
+}
+
+.grid-right {
+// width: 22%;
+position: sticky;
+height: 100vh;
+top: 60px;
+// background-color: white;
+padding: 16px 8px;
+
+
+
 }

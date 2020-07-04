@@ -13,6 +13,7 @@
     "jquery": "^3.5.1",
     "jquery-ui": "^1.12.1",
     "knockout.typeahead": "^4.2.1",
+    "loadingio-bar": "^0.1.1",
     "mapbox-gl": "^1.11.0",
     "popper.js": "^1.16.1",
     "readmore-js": "^2.2.1",

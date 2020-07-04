@@ -34,6 +34,7 @@ import { initMapbox } from '../plugins/init_mapbox';
 import { initShowMoreDoctors, initShowMoreSpecialities } from '../plugins/init_show-more';
 import * as typeformEmbed from '@typeform/embed'
 import { initUpdateNavbarOnScroll } from '../components/navbar';
+import { loading } from '../plugins/init_loadingbar';
 
 
 const AOS = require('aos');
@@ -46,7 +47,7 @@ document.addEventListener('turbolinks:load', () => {
 
     // init_Vivus();
     initUpdateNavbarOnScroll();
-
+    loading();
 });
 
 
@@ -65,14 +66,17 @@ document.addEventListener('DOMContentLoaded', function() {
 const loader = document.querySelector(".loader");
 // TYPEFORM
 const typeform = document.getElementById("typeform");
-typeformEmbed.makeWidget(typeform, "https://maseancetherapeutique.typeform.com/to/zcKO5yK0?&origin=*", {
-        hideFooter: false,
-        hideHeaders: false,
-        opacity: 0,
-        onSubmit: (data) => {
-          loader.classList.toggle("hidden");
-          setTimeout(function(){
-            window.location.replace(`http://localhost:3000/results?response_id=${data.response_id}`);},
-            1000);
-        }
-      });
+
+if (typeform) {
+  typeformEmbed.makeWidget(typeform, "https://maseancetherapeutique.typeform.com/to/zcKO5yK0?&origin=*", {
+    hideFooter: false,
+    hideHeaders: false,
+    opacity: 0,
+    onSubmit: (data) => {
+      loader.classList.toggle("hidden");
+      setTimeout(function(){
+        window.location.replace(`http://localhost:3000/results?response_id=${data.response_id}`);},
+        1000);
+    }
+  });
+}

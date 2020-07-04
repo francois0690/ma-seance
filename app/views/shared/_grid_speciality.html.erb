@@ -1,48 +1,49 @@
-<div class="grid_specialities ">
-    <div class="scroller ">
-    <% a_spe = specialities.to_a.in_groups(4, false) %>
-    <div class="marge"></div>
-      <div class="d-flex  flex-column first-col">
-        <% a_spe[0].each do |s| %>
-          <div class="speciality" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" >
-            <%= link_to speciality_path(s) do %>
-              <h2><%= s.name %></h2>
-            <%end%>
-            <p><i><%= s.description%></i></p>
-          </div>
-          
-        <%end%>
-      </div>
-      <div class="d-flex  flex-column second-col">
-        <% a_spe[1].each do |s| %>
-          <div class="speciality" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" >
-            <%= link_to speciality_path(s) do %>
-              <h2><%= s.name %></h2>
-            <%end%>
-            <p><i><%= s.description%></i></p>
-          </div>
-        <%end%>
-      </div>
-      <div class="d-flex  flex-column third-col">
-        <% a_spe[2].each do |s| %>
-          <div class="speciality" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" >
-            <%= link_to speciality_path(s) do %>
-              <h2><%= s.name %></h2>
-            <%end%>  
-            <p><i><%= s.description%></i></p>
-          </div>
-        <%end%>
-      </div>
-      <div class="d-flex  flex-column fourth-col">
-        <% a_spe[3].each do |s| %>
-          <div class="speciality" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" >
-            <%= link_to speciality_path(s) do %>
-              <h2><%= s.name %></h2>
-            <%end%>
-            <p><i><%= s.description%></i></p>
-          </div>
-          
-        <%end%>
-      </div>
+<div class="grid-left">
+  <div class="grid_specialities ">
+      <div class="scroller ">
+      <% a_spe = specialities.to_a.in_groups(3, false) %>
+      <div class="marge"></div>
+
+        <div class="d-flex  flex-column first-col">
+          <% a_spe[0].each do |s| %>
+            <div class="speciality" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" >
+              <%= link_to speciality_path(s) do %>
+                <h2><%= s.name %></h2>
+              <%end%>
+              <p><i><%= s.description%></i></p>
+            </div>
+
+          <%end%>
+        </div>
+        <div class="d-flex  flex-column second-col">
+          <% a_spe[1].each do |s| %>
+            <div class="speciality" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" >
+              <%= link_to speciality_path(s) do %>
+                <h2><%= s.name %></h2>
+              <%end%>
+              <p><i><%= s.description%></i></p>
+            </div>
+          <%end%>
+        </div>
+        <div class="d-flex  flex-column third-col">
+          <% a_spe[2].each do |s| %>
+            <div class="speciality" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" >
+              <%= link_to speciality_path(s) do %>
+                <h2><%= s.name %></h2>
+              <%end%>
+              <p><i><%= s.description%></i></p>
+            </div>
+          <%end%>
+        </div>
+
+    </div>
+
   </div>
+
+  <div class="grid-right">
+    <%= render 'shared/ia2000_right' %>
+  </div>
+
 </div>
+
+
