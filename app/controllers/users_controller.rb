@@ -10,11 +10,6 @@ class UsersController < ApplicationController
     # @specialities = activities.specialities
     # @consultation = activities.onsultation
 
-    @user = User.find(params[:id])
-
-
-
-    @adresses = Office.first.address
 
     @markers = @user.offices.map do |office|
       {
@@ -22,8 +17,6 @@ class UsersController < ApplicationController
         lat: office.latitude
       }
     end
-
-
   end
 
   private
