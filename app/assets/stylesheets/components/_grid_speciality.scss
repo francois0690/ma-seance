@@ -1,6 +1,12 @@
+.grid-wave {
+  margin-left: 100px;
+}
+
 .grid_specialities {
+
     padding-top: 16px;
     padding-bottom: 80px;
+    // margin: 0px 100px;
     a {
       text-decoration: none;
     }
@@ -8,9 +14,10 @@
 
 .scroller {
     display: grid;
-    grid-template-columns: repeat(6, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     grid-gap: 8px;
     grid-auto-rows: minmax(100px, auto);
+
 }
 
 
@@ -36,7 +43,7 @@ $randomNumber: random(50);
         font-size: 20px;
         text-shadow: 2px 2px 3px rgba(0,0,0,0.1);
         transition: all 0.5s ease;
-        
+
         // border-bottom: 1px transparent;
 
         &:hover {
@@ -46,7 +53,7 @@ $randomNumber: random(50);
             // text-decoration: underline;
             // border-bottom: 1px solid $red-medium-2;
             //box-shadow: 2px 0px 4px rgba(0, 0, 0, .3);
-            
+
             // color: rgb(254, 214, 214);
         }
 
@@ -61,4 +68,22 @@ $randomNumber: random(50);
             }
         }
     }
+}
+
+
+.grid-left{
+  display: flex;
+  // flex-grow: 1;
+
+}
+
+.grid-right {
+// width: 22%;
+position: sticky;
+height: 100vh;
+top: 60px;
+// background-color: white;
+padding: 16px 8px;
+
+
 }
