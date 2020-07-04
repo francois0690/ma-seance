@@ -8,6 +8,7 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   has_many :consultations
   has_many :activities
+  has_many :specialities, through: :activities
   has_many :jobs
   has_many :offices, through: :activities
   has_one_attached :avatar
