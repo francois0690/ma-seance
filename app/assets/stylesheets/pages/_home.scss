@@ -1,36 +1,23 @@
 // Specific CSS for your home-page
-
-
 .ia2000-card {
-
     display: flex;
     justify-content: center;
-
     .ia2000-card-contenu {
-      // padding: 64px 72px;
-      padding: 30px 72px;
-
-      background-color: $red-bg;
-      border-radius: 4px;
-      box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
-      width: 80%;
-
-      h3  {
-        font-family: 'Montserrat', sans-serif;
-        font-size: 24px;
-        font-weight: regular;
-        border-bottom: 1px solid rgba(0,0,0,0.1);
-        padding-bottom: 8px;
-        margin-bottom: 16px;
-
-
+        margin-top: 100px;
+        // padding: 64px 72px;
+        padding: 30px 72px;
+        background-color: $red-bg;
+        border-radius: 4px;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
+        width: 80%;
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 24px;
+            font-weight: regular;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            padding-bottom: 8px;
+            margin-bottom: 16px;
       }
-
-
-
-
-
-
         .ia2000-card-contenu-texte {
           font-family: 'Montserrat', sans-serif;
           font-size: 18px;
@@ -40,42 +27,41 @@
         margin-bottom: 4px;
         text-align: justify;
         text-justify: inter-word;
-
         }
-
-
-        }
-
-        .ia2000-card-contenu-link {
-          margin-top: 28px;
-          display: flex;
-          justify-content: flex-end;
-          text-decoration: none;
-
-           p {
+        .ia2000-card-contenu-texte {
+            font-family: 'Montserrat', sans-serif;
             font-size: 18px;
-            font-weight: regular;
-            margin-bottom: 4px;
-            text-align: justify;
-            text-justify: inter-word;
-            padding-right: 32px;
+            p {
+                font-weight: regular;
+                margin-bottom: 4px;
+                text-align: justify;
+                text-justify: inter-word;
             }
-
-            a {
-              padding: 12px 58px;
-            }
-
         }
-      }
+        .ia2000-card-contenu-link {
+            margin-top: 28px;
+            display: flex;
+            justify-content: flex-end;
+            text-decoration: none;
+            p {
+                font-size: 18px;
+                font-weight: regular;
+                margin-bottom: 4px;
+                text-align: justify;
+                text-justify: inter-word;
+                padding-right: 32px;
+            }
+            a {
+                padding: 12px 58px;
+            }
+        }
+    }
 }
-
-
 
 // .row {
 //     margin-right: 0;
 //     margin-left: 0;
 // }
-
 // #ia {
 //     margin-top: 150px;
 //     display: flex;
@@ -84,24 +70,22 @@
 //     border-radius: 4px;
 //     box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
 // }
-
 // #ia .card-body {
 //     padding-right: 160px;
 // }
-
 // #ia .card-body .card-text {
 //     margin-top: 48px;
 // }
+.wave #wave-content {
+    width: 100%;
+    background-color: $red;
+    margin-bottom: 0em;
+}
 
-// .wave #wave-content {
-//     width: 100%;
-//     background-color: $red;
-// }
+.wave {
+    background-color: $red-light;
+}
 
-// .wave {
-//     background-color: $red-light;
-// }
-
-// .top-field {
-//     background-color: $red-light;
-// }
+.top-field {
+    background-color: $red-light;
+}
