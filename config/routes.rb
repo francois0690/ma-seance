@@ -27,5 +27,7 @@ Rails.application.routes.draw do
   get 'doctor_message_box', to: 'pages#doctor_message_box', as: 'doctor_message_box'
 
   patch 'profil/users_id', to: 'users#update_avatar', as: :update_avatar
-  resources :chatrooms, only: :show
+  resources :chatrooms, only: :show do
+    resources :messages, only: :create
+  end
 end
