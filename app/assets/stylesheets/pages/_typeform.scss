@@ -1,14 +1,16 @@
 #typeform {
   width: 80vw;
   height: 100vh;
-  margin: 50px auto;
-  padding: 50px;
+  margin: -200px auto;
+
+  padding: 0px 50px;
 }
 
 .hidden {
   display: none;
 }
 .loader {
+  //margin-top: 150px;
   margin-top: 150px;
   margin-bottom: 1000px;
   text-align: center;
