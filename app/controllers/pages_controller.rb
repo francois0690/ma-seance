@@ -41,7 +41,7 @@ class PagesController < ApplicationController
 
   def results
     # @response_id = params[:response_id]
-    @response_id = "j0km07smi5dhzxypj0jhpp9pmu6363lf"
+    @response_id = params[:response_id]
     nb_of_responses = 0
     while nb_of_responses < 1
       data = request_api
