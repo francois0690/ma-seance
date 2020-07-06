@@ -2,6 +2,7 @@
             .ia2000-card {
                 display: flex;
                 justify-content: center;
+                // margin-top: -80px;
                 .ia2000-card-contenu {
                     padding: 30px 72px;
                     background-color: $red-bg;
@@ -83,7 +84,9 @@
             }
 
             .wave {
-                background-color: $red-light;
+                // background-color: $red-light;
+                margin-top: -20px;
+
             }
 
             .top-field {
