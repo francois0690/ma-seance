@@ -1,6 +1,8 @@
-<h1>Hello <%= @user.first_name %></h1>
-  <%= link_to  "répondre", doctor_message_box_url(token: @token) %>
-  <p>
-    🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆
-  </p>
-<p>Thanks for joining and have a great day!</p>
+<h1>Hello
+    <%= @user.first_name %>
+</h1>
+<%= link_to  "répondre", doctor_message_box_url(token: @token, room: @room) %>
+    <p>
+        🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆
+    </p>
+    <p>Thanks for joining and have a great day!</p>

@@ -1,0 +1,51 @@
+<div class="dashboard">
+
+    <div class="presentation">
+        <h1>
+            <%= "Bonjour #{current_user.full_name}" %>
+        </h1>
+    </div>
+    <div class="chat">
+        <div class="row align-items-end">
+            <div class=" drow-1 col-6 p-5">
+                <div class=" d-flex flex-column justify-ites-start">
+                    <% @my_chatrooms.each_with_index do |chatroom, i| %>
+
+                        <%= link_to "#{@my_channels[i].full_name}", "dashboard", index: i, class: "channel", remote: true %>
+                            <%end%>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="w-100">
+                    <div id="messages" data-chatroom-id="<%= chatroom.id %>">
+                        <% @chatroom.messages.each do |message| %>
+                            <% if message.user == current_user %>
+                                <div class="message-container right" id="message-<%= message.id %>">
+                                    <%else%>
+                                        <div class="message-container" id="message-<%= message.id %>">
+                                            <%end%>
+                                                <i class="author">
+                                                <div>
+                                                    <%= message.user.full_name %>
+                                                </div>
+                                                <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
+                                                </i>
+                                                <p>
+                                                    <%= message.content %>
+                                                </p>
+                                        </div>
+                                        <% end %>
+                                </div>
+                                <%= simple_form_for [ @chatroom, @message ], remote: true do |f| %>
+                                    <div class="d-flex flex-column">
+                                        <%= f.input :content, label: false, placeholder: "Message" , as: :text %>
+                                            <%= f.button :submit, "Envoyer", class: "button accept" %>
+                                    </div>
+                                    <% end %>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
