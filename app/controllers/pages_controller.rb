@@ -7,8 +7,9 @@ class PagesController < ApplicationController
 
   def home
     if params[:localise].present?
-      @result = Office.search params[:localise], fields: [:address]
+      @result = Office.search params[:localise]
       adresses = @result.map{ |adresse| adresse }
+
       @doctors = User.where(adresses: adresses).page params[:page]
     else
       @doctors= User.order(:last_name).page params[:page]

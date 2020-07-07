@@ -1,10 +1,14 @@
 class SpecialitiesController < ApplicationController
     def show
         @speciality = Speciality.find(params[:id])
-        @doctors = User.joins(:specialities).where(specialities: { name: @speciality.name} )
+        if params[:localise].present?
+          @result = Office.search params[:localise]
+          adresses = @result.response["hits"]["hits"].map { |result| result["_id"].to_i }.map { |id| Office.find(id) }
+          @doctors = User.all.joins(:activities).where(activities: {office_id: adresses})
+        else
+          @doctors = User.joins(:specialities).where(specialities: { name: @speciality.name} )
         # @activities = Activity.where(speciality: @speciality)
         # @doctors = User.where(activities: @activities).order(:last_name).page params[:page]
-
         @markers = []
         # @doctors.each do |doctor|
         #   activities = Activity.where(user: doctor).uniq
@@ -17,5 +21,6 @@ class SpecialitiesController < ApplicationController
         #     }
         #   end
         # end
-    end
+          end
+      end
 end
