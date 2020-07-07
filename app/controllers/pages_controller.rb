@@ -97,7 +97,7 @@ class PagesController < ApplicationController
 
   def request_api
     url = "https://api.typeform.com/forms/unOwWLBS/responses?included_response_ids=#{params[:response_id]}"
-    response = RestClient.get(url, {:Authorization => 'Bearer 2P3cncZbtsUhLqrEai7KD6QZAKTw95xsJ7fraDR12XLU'})
+    response = RestClient.get(url, {:Authorization => "Bearer #{ENV["TYPEFORM_API_KEY"]}" })
     data = JSON.parse(response.body)
     return data
   end
