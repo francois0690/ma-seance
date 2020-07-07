@@ -15,13 +15,15 @@ Rails.application.routes.draw do
   resources :users do
       resources :consultations, only: [ :new, :create ]
       resources :messages, only: [ :new, :create ]
+      collection do
+        get :channel
+      end
   end
 
   resources :activities do
       resources :consultations, only: [ :new, :create ]
   end
   get 'profil', to: 'users#profil', as: 'profil'
-  get 'channel', to: 'users#channel', as: 'channel'
   get 'aubergine', to: 'pages#aubergine', as: 'aubergine'
   get 'typeform', to: 'pages#typeform', as: 'typeform'
   get 'results', to: 'pages#results', as: 'results'

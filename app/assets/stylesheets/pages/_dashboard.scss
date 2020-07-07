@@ -5,6 +5,11 @@
     border-radius: 5px;
 }
 
+#messages {
+    height: 400px;
+    overflow-y: scroll;
+}
+
 .message-container {
     background-color: $red-light;
     border-radius: 8px;
@@ -38,5 +43,6 @@
     margin: 4px;
     &:hover {
         color: white;
+        text-decoration: none;
     }
 }
