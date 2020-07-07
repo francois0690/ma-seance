@@ -9,6 +9,7 @@ require "open-uri"
 require "down"
 
 
+# heroku run rake searchkick:reindex:all
 
 
 

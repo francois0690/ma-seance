@@ -44,8 +44,35 @@ class PagesController < ApplicationController
   end
 
   def results
-    # @response_id = params[:response_id]
-    @response_id = "j0km07smi5dhzxypj0jhpp9pmu6363lf"
+    sleep(2)
+    # wait_for_api
+    specialities = []
+    result = ["SOPHROLOGIE", "EMDR"]
+    result.each do |spec|
+      query = Speciality.find_by name: spec
+      specialities << query
+    end
+    @specialities = specialities
+  end
+
+  def aubergine_email
+    @user = current_user
+    UserMailer.with(user: @user).aubergine_email.deliver_now
+   render 'aubergine'
+  end
+
+  private
+
+  def authenticate_by_token
+    @user = User.find_by(auth_token: params[:token])
+  end
+
+  specialities = {
+    # TODO : creer le hash "thérapie A" => 0
+  }
+
+  def wait_for_api
+    @response_id = params[:response_id]
     nb_of_responses = 0
     while nb_of_responses < 1
       data = request_api
@@ -66,22 +93,6 @@ class PagesController < ApplicationController
       # pénaliser de - 1000 point pour une contraindication
       # sortire les 3 spécialités avec le meilleur score.
   end
-
-  def aubergine_email
-    @user = current_user
-    UserMailer.with(user: @user).aubergine_email.deliver_now
-   render 'aubergine'
-  end
-
-  private
-
-  def authenticate_by_token
-    @user = User.find_by(auth_token: params[:token])
-  end
-
-  specialities = {
-    # TODO : creer le hash "thérapie A" => 0
-  }
 
   def search_params
     params.require(:home).permit(:job, :specialiste, :response_id)

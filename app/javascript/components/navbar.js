@@ -6,7 +6,7 @@ const initUpdateNavbarOnScroll = () => {
   if (navbar) {
     window.addEventListener('scroll', () => {
         // console.log(ia2000.style.display);
-      if (window.scrollY >= window.innerHeight / 15) {
+      if (window.scrollY >= window.innerHeight / 20) {
         // console.log(navbar);
         navbar.classList.add('navbar-transparent');
         navbarTitle.classList.add('navbar-transparent');
