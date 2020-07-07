@@ -6,9 +6,11 @@
   background-color: $red-light;
   display: flex;
   flex-direction: row;
+  padding-top: 50px;
 
   .toubib {
     margin: 20px;
+    margin-bottom: 90px;
     background-color: $red-light;
     flex-grow: 2;
 
@@ -149,16 +151,20 @@
         flex-direction: row;
       }
       .toubib-map-card {
-        padding: 25px 15px;
+        padding: 15px 15px;
         background-color: white;
         border-radius: 7px;
 
         .toubib-map-card-map{
           padding: 15px 15px;
 
-          #map{
-            width: 100px;
-            height: 100px;
+          .map-doctor{
+            width: 100%;
+            height: 500px;
+
+              .mapboxgl-canvas{
+                width: 100%;
+              }
 
           }
 
@@ -170,6 +176,7 @@
 
   .action-toubib {
     margin: 20px;
+    margin-bottom: 115px;
     background-color: white;
     flex-grow: 1;
     border-radius: 7px;
@@ -177,6 +184,7 @@
     display: flex;
     flex-direction: column;
     padding: 25px 15px;
+    padding-bottom: 50px;
 
 
 
