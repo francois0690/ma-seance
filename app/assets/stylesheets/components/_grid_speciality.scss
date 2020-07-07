@@ -23,11 +23,12 @@
 
 $randomNumber: random(50);
 .speciality {
-    border: 3px solid $red-medium-2;
-    background-color: $red-medium-2;
+    // border: 3px solid $red-medium-2;
+    background-color: $red-bg;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
     border-radius: 7px;
-    padding: 1rem;
+    // padding: 1rem;
+    padding: 38px;
     font-size: 1.2rem;
     color: $purple;
     text-align: left;
@@ -61,6 +62,8 @@ $randomNumber: random(50);
     p {
         // overflow: hidden;
         display: block;
+        text-align: justify;
+                            text-justify: inter-word;
         a {
 
             &:after {
@@ -80,11 +83,12 @@ $randomNumber: random(50);
 }
 
 .speciality-result {
-    border: 3px solid $red-medium-2;
-    background-color: $red-medium-2;
+    border: 3px solid $red-bg;
+    background-color: $red-bg;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
     border-radius: 7px;
-    padding: 1rem;
+    // padding: 1rem;
+    padding: 38px;
     font-size: 1.2rem;
     color: $purple;
     text-align: left;
@@ -128,11 +132,13 @@ $randomNumber: random(50);
 }
 
 .speciality-result-card {
-    border: 3px solid $red-medium-2;
-    background-color: $red-medium-2;
+
+    border: 3px solid $red-bg;
+    background-color: $red-bg;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
     border-radius: 7px;
-    padding: 1rem;
+    // padding: 1rem;
+    padding: 38px;
     font-size: 1.2rem;
     color: $purple;
     text-align: left;
@@ -143,12 +149,19 @@ $randomNumber: random(50);
     // overflow-wrap: break-word;
 
      h1 {
+
+        font-family: 'Montserrat', sans-serif;
+        font-weight: regular;
         color: black;
         text-decoration: none;
         font-size: 32px;
-        text-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+        text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
         transition: all 0.5s ease;
 
+        text-align: justify;
+        text-justify: inter-word;
+
+        margin-bottom: 16px;
         // border-bottom: 1px transparent;
 
         &:hover {
@@ -166,6 +179,8 @@ $randomNumber: random(50);
     p {
         // overflow: hidden;
         display: block;
+
+
         a {
 
             &:after {
@@ -181,7 +196,7 @@ $randomNumber: random(50);
 
 .red-margin {
   padding-top: 80px;
-  background-color: $red;
+  background-color: $red-medium-3;
 }
 .red {
   background-color: $red;
@@ -236,5 +251,5 @@ position: sticky;
 height: 100vh;
 top: 60px;
 // background-color: white;
-padding: 16px 8px;
+padding: 16px 58px;
 }

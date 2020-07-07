@@ -3,14 +3,16 @@
         <%= f.input :email,
                 required: false,
                 autofocus: true,
+                label: 'Addresse e-mail :',
                 input_html: { autocomplete: "email" } %>
         <%= f.input :password,
                 required: false,
+                label: 'Mot de passe :',
                 input_html: { autocomplete: "current-password" } %>
-        <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
-        <%= f.button :submit, "Log in", class: "button accept" %>
+        <%= f.input :remember_me, label: 'Se souvenir de moi',  as: :boolean if devise_mapping.rememberable? %>
+        <%= f.button :submit, "Connexion", class: "button accept my-center" %>
     </div>
 <% end %>
-<div class="flex d-flex justify-content-center mt-5 ">
+<div class="flex d-flex justify-content-center mt-5 mr-2 ">
     <%= render "devise/shared/links" %>
 </div>
