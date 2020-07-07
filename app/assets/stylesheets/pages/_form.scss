@@ -2,7 +2,11 @@
     margin: 32px auto;
     width: 400px;
     padding: 30px;
-    background-color: #FFDFD6;
-    border: 2px solid #FFDFD6;
+    background-color: $red-medium-3;
+    border: 2px solid $red-medium-3;
     border-radius: 10px;
+}
+
+.my-center {
+  width: 100%;
 }
