@@ -15,7 +15,11 @@
 .scroller {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-gap: 8px;
+    // grid-gap: 8px;
+
+   row-gap: 8px;
+   column-gap: 8px;
+
     grid-auto-rows: minmax(100px, auto);
 
 }
@@ -31,55 +35,43 @@ $randomNumber: random(50);
     padding: 38px;
     font-size: 1.2rem;
     color: $purple;
-    text-align: left;
+    // text-align: left;
     width: 350px;
     justify-content: center;
     flex-basis: fit-content;
     margin-bottom: 16px;
+
+    // text-align: justify;
+    // text-justify: inter-word;
+
     // overflow-wrap: break-word;
 
      h2 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: bold;
         color: black;
         text-decoration: none;
         font-size: 20px;
         text-shadow: 2px 2px 3px rgba(0,0,0,0.1);
-        transition: all 0.5s ease;
-
-        // border-bottom: 1px transparent;
-
-        &:hover {
-            // color: rgba($light-gray,0.3);
-            text-shadow: 2px 2px 10px rgba($light-gray,1);
-            // border-bottom: 1px solid $light-gray;
-            // text-decoration: underline;
-            // border-bottom: 1px solid $red-medium-2;
-            //box-shadow: 2px 0px 4px rgba(0, 0, 0, .3);
-
-            // color: rgb(254, 214, 214);
-        }
-
     }
     p {
-        // overflow: hidden;
         display: block;
-        text-align: justify;
-                            text-justify: inter-word;
-        a {
+        font-family: 'Montserrat', sans-serif;
 
-            &:after {
-                // color: $red;
-            }
-        }
     }
 }
 
 
 .grid_specialities_result {
+    // padding-left: 48px;
+
     padding-top: 16px;
     padding-bottom: 80px;
-    a {
+   a {
       text-decoration: none;
     }
+
+
 }
 
 .speciality-result {
@@ -88,46 +80,42 @@ $randomNumber: random(50);
     box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
     border-radius: 7px;
     // padding: 1rem;
-    padding: 38px;
+    padding: 38px 38px;
     font-size: 1.2rem;
     color: $purple;
     text-align: left;
     width: 600px;
     justify-content: center;
     flex-basis: fit-content;
-    margin-bottom: 16px;
+    // margin-bottom: 16px;
     // overflow-wrap: break-word;
 
-     h2 {
+
+
+     .speciality-result-titre {
+
+        font-family: 'Montserrat', sans-serif;
+        font-size: 22px;
+        font-weight: bold;
         color: black;
         text-decoration: none;
-        font-size: 20px;
         text-shadow: 2px 2px 3px rgba(0,0,0,0.1);
-        transition: all 0.5s ease;
+        // transition: all 0.5s ease;
+        text-align: left;
+        margin-bottom: 8px;
+        padding-bottom: 2px;
+        border-bottom: 1px solid rgba(0,0,0,0.2);
 
-        // border-bottom: 1px transparent;
 
-        &:hover {
-            // color: rgba($light-gray,0.3);
-            text-shadow: 2px 2px 10px rgba($light-gray,1);
-            // border-bottom: 1px solid $light-gray;
-            // text-decoration: underline;
-            // border-bottom: 1px solid $red-medium-2;
-            //box-shadow: 2px 0px 4px rgba(0, 0, 0, .3);
-
-            // color: rgb(254, 214, 214);
-        }
 
     }
-    p {
+    .speciality-result-desc {
         // overflow: hidden;
         display: block;
-        a {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: regular;
+        font-size: 20px;
 
-            &:after {
-                // color: $red;
-            }
-        }
     }
 }
 
@@ -138,14 +126,14 @@ $randomNumber: random(50);
     box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
     border-radius: 7px;
     // padding: 1rem;
-    padding: 38px;
+    padding: 38px 48px;
     font-size: 1.2rem;
     color: $purple;
     text-align: left;
     width: 900px;
     justify-content: center;
     flex-basis: fit-content;
-    margin: 130px auto 0 auto;
+    margin: 8px auto;
     // overflow-wrap: break-word;
 
      h1 {
@@ -156,37 +144,21 @@ $randomNumber: random(50);
         text-decoration: none;
         font-size: 32px;
         text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
-        transition: all 0.5s ease;
-
-        text-align: justify;
-        text-justify: inter-word;
+        // transition: all 0.5s ease;
 
         margin-bottom: 16px;
-        // border-bottom: 1px transparent;
+        padding-bottom: 8px;
+        border-bottom: 1px solid rgba(0,0,0,.5);
 
-        &:hover {
-            // color: rgba($light-gray,0.3);
-            text-shadow: 2px 2px 10px rgba($light-gray,1);
-            // border-bottom: 1px solid $light-gray;
-            // text-decoration: underline;
-            // border-bottom: 1px solid $red-medium-2;
-            //box-shadow: 2px 0px 4px rgba(0, 0, 0, .3);
 
-            // color: rgb(254, 214, 214);
-        }
 
     }
     p {
         // overflow: hidden;
         display: block;
-
-
-        a {
-
-            &:after {
-                // color: $red;
-            }
-        }
+        font-family: 'Montserrat', sans-serif;
+        font-weight: regular;
+        text-align: left;
     }
 }
 
@@ -199,15 +171,30 @@ $randomNumber: random(50);
   background-color: $red-medium-3;
 }
 .red {
-  background-color: $red;
+  background-color: $red-medium-3;
   h2 {
     margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: regular;
+
   }
+
+  .recommand-button {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+
+.result-intro {
+  margin-top: -350px;
 }
 
 .intro {
   padding-bottom: 32px;
+  // margin: 0 auto;
   text-align: center;
+
 }
 
 .ldBar {
@@ -233,6 +220,11 @@ $randomNumber: random(50);
   align-items: center;
   padding-bottom: 30px;
   p {
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+
     padding-top: 15px;
     margin-right: 20px;
   }
