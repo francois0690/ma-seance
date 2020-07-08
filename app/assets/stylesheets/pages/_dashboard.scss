@@ -29,13 +29,14 @@
 }
 
 .channels {
-    background-color: $red;
+    background-color: lightgray;
     height: 100%;
+    border-radius: 5px;
 }
 
 .channel {
-    background-color: $red-medium;
-    color: $purple-light;
+    background-color: $purple-light;
+    color: white;
     padding-left: 16px;
     padding-top: 8px;
     border-radius: 5px;
@@ -44,5 +45,31 @@
     &:hover {
         color: white;
         text-decoration: none;
+        box-shadow: 0 5px 10px $red;
+    }
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    // color: #333;
+    opacity: 0.8;
+    color: black;
+    border-bottom: 4px solid transparent;
+    background-color: rgba(122, 122, 122, 0);
+    border-bottom: 1px solid #555555;
+}
+
+.nav-pills .nav-link {
+    text-transform: capitalize;
+    background-color: rgba(122, 122, 122, 0);
+    // color: rgb(122, 122, 122);
+    transition: opacity 0.5s ease;
+    opacity: 0.6;
+    color: black;
+    &:hover,
+    &:focus {
+        // color: #333;
+        opacity: 1;
+        color: black;
     }
 }

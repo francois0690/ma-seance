@@ -1,12 +1,5 @@
 class UsersController < ApplicationController
   def dashboard
-    @my_chatrooms = Chatroom.where("name ILIKE :name", name: "%#{current_user.id}-%")
-    @my_channels  = @my_chatrooms.map do |c|
-      doctor_id = c.name.match(/(\d+)-(\d+)/)[2].to_i
-      User.find(doctor_id)
-    end
-    @message = Message.new
-    @chatroom = @my_chatrooms.first
   end
 
   def channel
