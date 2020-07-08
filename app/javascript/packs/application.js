@@ -35,19 +35,21 @@ import { initShowMoreDoctors, initShowMoreSpecialities } from '../plugins/init_s
 import * as typeformEmbed from '@typeform/embed'
 import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { loading } from '../plugins/init_loadingbar';
-
+import { initScrollAuto } from '../components/scroll_auto';
 
 const AOS = require('aos');
 
 document.addEventListener('turbolinks:load', () => {
     bubller
+    initShowMoreDoctors();
+    initUpdateNavbarOnScroll();
+    initScrollAuto();
+    loading();
     initMapbox();
     // initReadMoreT();
-    initShowMoreDoctors();
-
     // init_Vivus();
-    initUpdateNavbarOnScroll();
-    loading();
+
+
 });
 
 
@@ -59,7 +61,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     initShowMoreSpecialities();
     // initReadMore();
-
 
 });
 

@@ -22,6 +22,7 @@
             font-size: 28px;
             font-weight: regular;
             border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+            text-shadow: 2px 2px 3px rgba(0,0,0,0.3);
             padding-bottom: 8px;
             margin-bottom: 16px;
             margin-top: 32px;
@@ -36,8 +37,8 @@
 
                 font-weight: regular;
                 margin-bottom: 4px;
-                text-align: justify;
-                text-justify: inter-word;
+                // text-align: justify;
+                // text-justify: inter-word;
             }
 
             .txt2 {
@@ -46,8 +47,8 @@
 
                 font-weight: regular;
                 margin-bottom: 8px;
-                text-align: justify;
-                text-justify: inter-word;
+                // text-align: justify;
+                // text-justify: inter-word;
 
             }
 
@@ -63,8 +64,8 @@
                     font-size: 22px;
                     font-weight: regular;
                     margin-bottom: 32px;
-                    text-align: justify;
-                    text-justify: inter-word;
+                    text-align: center;
+                    // text-justify: inter-word;
                     // box-shadow: 5px 5px 55px rgba(255, 255, 255, 0.8);
                     // border-radius: 5%;
 
