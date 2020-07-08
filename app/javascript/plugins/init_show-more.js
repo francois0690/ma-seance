@@ -28,7 +28,8 @@ $('.speciality > p').showMore({
 };
 
 
-// minheight: box_sizes[Math.floor(Math.random() * 32)],
+// minheight: box_sizes[Math.floor(Math.random() * 32)]
 
+// buttontxtmore: 'Lire la suite...',
 
 export { initShowMoreDoctors, initShowMoreSpecialities };
