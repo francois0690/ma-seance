@@ -21,8 +21,11 @@ class UsersController < ApplicationController
     set_user
     @jobs = @user.jobs
     @activities = @user.activities
-    @user = User.find(params[:id])
-    @adresses = Office.first.address
+    # @offices = activities.offices
+    # @specialities = activities.specialities
+    # @consultation = activities.onsultation
+
+
     @markers = @user.offices.map do |office|
       {
         lng: office.longitude,

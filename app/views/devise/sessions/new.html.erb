@@ -10,7 +10,7 @@
                 label: 'Mot de passe :',
                 input_html: { autocomplete: "current-password" } %>
         <%= f.input :remember_me, label: 'Se souvenir de moi',  as: :boolean if devise_mapping.rememberable? %>
-        <%= f.button :submit, "Connexion", class: "button accept" %>
+        <%= f.button :submit, "Connexion", class: "button accept my-center" %>
     </div>
 <% end %>
 <div class="flex d-flex justify-content-center mt-5 mr-2 ">
