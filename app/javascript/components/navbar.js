@@ -1,7 +1,7 @@
 const initUpdateNavbarOnScroll = () => {
   const navbar = document.querySelector('.navbar-svg');
-  const navbarTitle = document.querySelector('.navbar-title');
-  const ia2000 = document.querySelector('.ia2000-card');
+  const navbarTitle = document.querySelector('.div-navbar-title');
+  // const ia2000 = document.querySelector('.ia2000-card');
 
   if (navbar) {
     window.addEventListener('scroll', () => {

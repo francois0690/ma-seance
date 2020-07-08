@@ -46,17 +46,29 @@ $randomNumber: random(50);
 
     // overflow-wrap: break-word;
 
-     h2 {
+     .grid-speciality-title {
+     // a > h2 {
         font-family: 'Montserrat', sans-serif;
         font-weight: bold;
         color: black;
         text-decoration: none;
         font-size: 20px;
         text-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        padding-bottom: 8px;
+        margin-bottom: 16px;
+        transition: 0.5s all ease;
+
+        &:hover {
+          color: $red;
+        }
     }
-    p {
+    .grid-speciality-description {
         display: block;
         font-family: 'Montserrat', sans-serif;
+        font-weight: regular;
+
+        font-size: 18px;
 
     }
 }
@@ -187,7 +199,9 @@ $randomNumber: random(50);
 
 
 .result-intro {
-  margin-top: -350px;
+  // margin-top: 100px;
+  // position: static;
+  // top: 0px;
 }
 
 .intro {

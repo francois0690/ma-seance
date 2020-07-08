@@ -8,9 +8,9 @@
           <% a_spe[0].each do |s| %>
             <div class="speciality" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" >
               <%= link_to speciality_path(s) do %>
-                <h2><%= s.name %></h2>
+                <h2 class="grid-speciality-title"><%= s.name %></h2>
               <%end%>
-              <p><i><%= s.description%></i></p>
+              <p class="grid-speciality-description"><i><%= s.description%></i></p>
             </div>
 
           <%end%>
@@ -19,9 +19,9 @@
           <% a_spe[1].each do |s| %>
             <div class="speciality" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" >
               <%= link_to speciality_path(s) do %>
-                <h2><%= s.name %></h2>
+                <h2 class="grid-speciality-title"><%= s.name %></h2>
               <%end%>
-              <p><i><%= s.description%></i></p>
+              <p class="grid-speciality-description"><i><%= s.description%></i></p>
             </div>
           <%end%>
         </div>
@@ -29,9 +29,9 @@
           <% a_spe[2].each do |s| %>
             <div class="speciality" data-aos="fade-up" data-aos-anchor-placement="bottom-bottom" >
               <%= link_to speciality_path(s) do %>
-                <h2><%= s.name %></h2>
+                <h2 class="grid-speciality-title"><%= s.name %></h2>
               <%end%>
-              <p><i><%= s.description%></i></p>
+              <p class="grid-speciality-description"><i><%= s.description%></i></p>
             </div>
           <%end%>
         </div>

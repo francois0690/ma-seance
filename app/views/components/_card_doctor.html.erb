@@ -2,7 +2,7 @@
     <div class="card_doctor">
     <% if doctor.avatar.attached? %>
  <div class="photo" style="background-image: linear-gradient(rgba(241,209,209,0.1), rgba(250,242,242,0.1)),
-                    url(<%= cl_image_path doctor.avatar.key , height: 300, width: 300, crop: :fill, gravity: :face; %>)">
+                    url(<%= cl_image_path doctor.avatar.key , height: 250, width: 250, crop: :fill, gravity: :face; %>)">
         </div>
 <%end%>
         <div class="info" >
@@ -17,7 +17,7 @@
           <% end %>
 
             <p id="jobs"><%= str %></p>
-            <p id="phone">Contact : <%= doctor.phone%></p>
+            <p id="phone"><i class="fas fa-phone"></i>&ensp;<%= doctor.phone%></p>
             <p id="description"><%= doctor.description %></p>
 
             <% if doctor.activities.count == 1 %>
