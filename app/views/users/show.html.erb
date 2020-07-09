@@ -58,13 +58,13 @@
         <div class="toubib-job">
             <div class="toubib-job-title">
                 <i class="fas fa-briefcase"></i>
-                <h3>Spécialité</h3>
+                <h3>Spécialités</h3>
             </div>
             <div class="toubib-job-card">
                 <ul>
-                    <% @jobs.each do |job| %>
+                    <% @specialities.each do |speciality| %>
                         <li>
-                            <%= job.job_name.capitalize  %>
+                            <%= speciality.name.capitalize  %>
                         </li>
                         <% end %>
                 </ul>
