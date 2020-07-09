@@ -46,8 +46,15 @@
 
             </div>
         </div>
+        <div class="message">
 
-
+            <%= simple_form_for [@user, @message], method: :post , remote: true do |f| %>
+                <div class="d-flex flex-column ">
+                    <%= f.input :content, label: false, placeholder: "Message" , as: :text %>
+                        <%= f.button :submit, "Envoyer un message", class: "button valid_message" %>
+                </div>
+                <% end %>
+        </div>
         <div class="toubib-job">
             <div class="toubib-job-title">
                 <i class="fas fa-briefcase"></i>
