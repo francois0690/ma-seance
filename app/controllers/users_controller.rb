@@ -2,6 +2,23 @@ class UsersController < ApplicationController
   def dashboard
   end
 
+  def show
+    set_user
+    @jobs = @user.jobs
+    @activities = @user.activities
+    # @offices = activities.offices
+    # @specialities = activities.specialities
+    # @consultation = activities.onsultation
+
+
+    @markers = @user.offices.map do |office|
+      {
+        lng: office.longitude,
+        lat: office.latitude
+      }
+    end
+  end
+  
   def channel
     @my_chatrooms = Chatroom.where("name ILIKE :name", name: "%#{current_user.id}-%")
     @my_channels  = @my_chatrooms.map do |c|
