@@ -17,6 +17,7 @@ class UsersController < ApplicationController
         lat: office.latitude
       }
     end
+    @message = Message.new
   end
   
   def channel
@@ -40,9 +41,6 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def piece_params
-    params.require(:user).permit(:id)
-  end
   def message_params 
     params.require(:message).permit(:content)
   end

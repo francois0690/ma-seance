@@ -1,4 +1,5 @@
 class MessagesController < ApplicationController
+
   def create
     @chatroom = get_chatroom
     @message = Message.new(message_params)
@@ -47,7 +48,6 @@ class MessagesController < ApplicationController
     chatroom = Chatroom.new( {name: name}) if chatroom.nil?
     chatroom.save
     doctor = User.find(doctor_id)
-    p doctor
     UserMailer.with(user: doctor, room: name).aubergine_email.deliver_now
     return chatroom
   end
