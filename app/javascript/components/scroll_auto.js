@@ -8,7 +8,7 @@ const initScrollAuto = () => {
     if (offset) {
       // console.log("offset=" + offset);
       window.scrollTo({
-        top: offset.offsetTop + 150,
+        top: offset.offsetTop + 220,
         behavior: 'smooth'
       });
     }
