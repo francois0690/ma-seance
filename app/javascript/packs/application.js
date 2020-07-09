@@ -51,6 +51,7 @@ document.addEventListener('turbolinks:load', () => {
     initScrollAuto();
     loading();
     initMapbox();
+    console.log("ok")
     // initReadMoreT();
     // init_Vivus();
 
