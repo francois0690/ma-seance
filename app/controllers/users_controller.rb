@@ -17,25 +17,6 @@ class UsersController < ApplicationController
     render "users/dashboard"
   end
 
-  def show
-    set_user
-    @jobs = @user.jobs
-    @activities = @user.activities
-    # @offices = activities.offices
-    # @specialities = activities.specialities
-    # @consultation = activities.onsultation
-
-
-    @markers = @user.offices.map do |office|
-      {
-        lng: office.longitude,
-        lat: office.latitude
-      }
-    end
-    @chatroom = Chatroom.new
-    @message = Message.new
-  end
-
   private
 
   def set_user

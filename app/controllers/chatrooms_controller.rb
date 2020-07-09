@@ -16,7 +16,7 @@ class ChatroomsController < ApplicationController
       doctor_id = c.name.match(/(\d+)-(\d+)/)[2].to_i
       {user: User.find(doctor_id), room: c.id }
     end
-    @chatroom = @chatrooms.find(params[:id]) if params[:id]
+    @chatroom = @chatrooms.find(params[:id]) unless params[:id].nil?
     @chatroom = @chatrooms.first if @chatroom.nil?
   end
 

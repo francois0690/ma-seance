@@ -5,7 +5,9 @@
         <%= render partial: 'rooms' %>
     </div>
 
-    <div class="col-6">
-        <%= render  "chatrooms/form", chatroom: @chatroom, message:@message %>
-    </div>
+    <% unless @chatroom.nil? %>
+        <div class="col">
+            <%= render  "chatrooms/form", chatroom: @chatroom, message:@message %>
+        </div>
+        <%end%>
 </div>

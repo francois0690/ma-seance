@@ -15,9 +15,9 @@ Rails.application.routes.draw do
   resources :users do
       resources :consultations, only: [ :new, :create ]
       resources :messages, only: [ :new, :create ]
-      collection do
-        get :channel
-      end
+      # collection do
+      #   get :channel
+      # end
   end
 
   resources :activities do
