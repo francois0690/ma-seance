@@ -1,0 +1,104 @@
+<div class="show-container">
+    <div class="toubib">
+
+
+        <div class="toubib-img">
+            <div class="toubib-img-left">
+                <%= cl_image_tag @user.avatar.key, :width=>200, :height=>200 %>
+            </div>
+            <div class="toubib-img-right">
+
+                <div class="toubib-img-right-title ">
+                    <i class="fas fa-user-md"></i>
+                    <h3> Dr&nbsp
+                        <%=@user.first_name %>
+                            <%= @user.last_name %>
+                    </h3>
+                </div>
+                <div class="splitter"></div>
+                <div class="toubib-img-right-description">
+
+                    <div class="toubib-img-right-description-pro">
+                        <div class="toubib-img-right-description-title">
+                            <i class="far fa-address-card"></i>
+                            <h4> Présentation du professionnel</h4>
+                        </div>
+                        <p>
+                            <%= @user.description %>
+                        </p>
+                    </div>
+
+                    <div class="toubib-img-right-descritpion-address">
+                        <div class="toubib-img-right-descritpion-address-title">
+                            <i class="fas fa-map-marker"></i>
+                            <h4>Adresse</h4>
+                        </div>
+                        <% @activities.each do |activity| %>
+                            <p>
+                                <%= activity.office.name %>
+                            </p>
+                            <p>
+                                <%= activity.office.address %>
+                            </p>
+                            <%end %>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="toubib-job">
+            <div class="toubib-job-title">
+                <i class="fas fa-briefcase"></i>
+                <h3>Spécialité</h3>
+            </div>
+            <div class="toubib-job-card">
+                <ul>
+                    <% @jobs.each do |job| %>
+                        <li>
+                            <%= job.job_name.capitalize  %>
+                        </li>
+                        <% end %>
+                </ul>
+            </div>
+        </div>
+
+        <div class="toubib-map">
+            <div class="toubib-map-title">
+                <i class="fas fa-map-marker"></i>
+                <h3>Situation</h3>
+            </div>
+            <div class="toubib-map-card">
+                <div class="toubib-map-card-map">
+                    <div id="grid-map" class="map-doctor" data-markers="<%= @markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="action-toubib">
+        <div class="action-toubib-titre">
+            <h4>CONTACTER LE PROFESSIONNEL</h4>
+        </div>
+        <div class="splitter"></div>
+        <div class="action-toubib-option">
+
+            <!-- /////////// USER_MAILER /////////////-->
+
+            <div class="action-toubib-option-mail">
+                <div class="action-toubib-option-mail-icone">
+                    <i class="far fa-envelope"></i>
+                </div>
+                <div class="action-toubib-option-mail-txt">
+                    <p>Envoyer un mail</p>
+                </div>
+            </div>
+            <!-- /////////// ACTION_AUTRE /////////////-->
+            <div class="action-toubib-option-autre"></div>
+
+        </div>
+    </div>
+
+
+</div>
