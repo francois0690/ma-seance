@@ -1,5 +1,4 @@
 import ldBar from 'loadingio-bar';
-console.log(ldBar)
 
 const loading = () => {
   const bar = document.querySelector('.ldBar');
