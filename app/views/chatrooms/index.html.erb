@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-6 col-md-3">
+        <%= render partial: 'rooms' %>
+    </div>
+
+    <% unless @chatroom.nil? %>
+        <div class="col">
+            <%= render  "chatrooms/form", chatroom: @chatroom, message:@message %>
+        </div>
+        <%end%>
+</div>

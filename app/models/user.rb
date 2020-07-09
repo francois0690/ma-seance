@@ -19,6 +19,9 @@ class User < ApplicationRecord
     Office.reindex
   end
 
+  def full_name
+    "#{civility} #{first_name} #{last_name}"
+  end
   private
   def generate_token
     self.auth_token = SecureRandom.hex(32)

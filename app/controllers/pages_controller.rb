@@ -35,6 +35,10 @@ class PagesController < ApplicationController
   end
 
   def doctor_message_box
+    room = params[:room]
+    @chatroom = Chatroom.find_by(name: room)
+    @message = Message.new
+
   end
 
   def typeform

@@ -14,6 +14,10 @@ Rails.application.routes.draw do
   resources :specialities, only: [:show, :index]
   resources :users do
       resources :consultations, only: [ :new, :create ]
+      resources :messages, only: [ :new, :create ]
+      # collection do
+      #   get :channel
+      # end
   end
 
   resources :activities do
@@ -27,5 +31,7 @@ Rails.application.routes.draw do
   get 'doctor_message_box', to: 'pages#doctor_message_box', as: 'doctor_message_box'
 
   patch 'profil/users_id', to: 'users#update_avatar', as: :update_avatar
-
+  resources :chatrooms, only: [:show, :index] do
+    resources :messages, only: :create
+  end
 end

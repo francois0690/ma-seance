@@ -1,0 +1,9 @@
+
+<% if @channels.present? %>
+  <nav class="nav flex-column channels">
+      <% @channels.each do |channel| %>
+       <%= link_to channel[:user].full_name, chatroom_path(channel[:room]), class: 'channel nav-link room-nav-link'%>
+      <% end %>
+  </nav>
+  
+<% end %>
