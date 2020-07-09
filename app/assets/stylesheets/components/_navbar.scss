@@ -1,44 +1,32 @@
 .navbar {
-    // background: $red-bg;
-    //background-color: transparent;
     padding: 2px 16px;
-
-
     display: flex;
     justify-content: center;
     align-items: flex-center;
     height: 0px;
 
+    .div-navbar-title {
+      display: flex;
+      justify-content: center;
+      flex-grow: 1;
+      margin-left: -75px;
+      transition: 0.5s opacity ease;
+    }
 
+    .navbar-title {
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+      text-shadow: 0px 3px 5px rgba(0,0,0,.85);
+      font-size: 40px;
+      font-weight: bold;
+      text-decoration: none;
 
-  .div-navbar-title {
+    }
 
-    display: flex;
-    justify-content: center;
-    flex-grow: 1;
-    margin-left: -75px;
-    // padding-top: 26px;
-
-  }
-
-
-    // transition: 0.5s background-color ease;
-
-
-  .navbar-title {
-    font-family: 'Montserrat', sans-serif;
-    // font-family: 'Roboto', sans-serif;
-    color: white;
-    // text-shadow: 1px 3px 3px rgba(0,0,0,.3);
-    text-shadow: 0px 3px 5px rgba(0,0,0,.85);
-    // text-shadow: 0px 2px 5px rgba(255,255,255,.9);
-    font-size: 40px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: 2s opacity ease;
-
-
-  }
+    .navbar-logo > img {
+      padding-top: 16px;
+      height: 95px;
+    }
 }
 
 .navbar-svg {
@@ -49,13 +37,6 @@
   opacity: 0;
 }
 
-.navbar-logo > img {
-  padding-top: 16px;
-  height: 95px;
-
-  // box-shadow: 3px 3px 55px rgba(0,0,0,0.1);
-
-}
 
 .navbar .nav-item .nav-link {
     width: 160px;

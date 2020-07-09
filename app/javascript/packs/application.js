@@ -37,19 +37,24 @@ import { initUpdateNavbarOnScroll } from '../components/navbar';
 import { loading } from '../plugins/init_loadingbar';
 import { initChatroomCable } from '../channels/chatroom_channel.js';
 
+import { initScrollAuto } from '../components/scroll_auto';
 
 const AOS = require('aos');
 
 document.addEventListener('turbolinks:load', () => {
     bubller
-    initMapbox();
-    // initReadMoreT();
     initShowMoreDoctors();
     initChatroomCable();
 
     // init_Vivus();
     initUpdateNavbarOnScroll();
+    initScrollAuto();
     loading();
+    initMapbox();
+    // initReadMoreT();
+    // init_Vivus();
+
+
 });
 
 
@@ -61,7 +66,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     initShowMoreSpecialities();
     // initReadMore();
-
 
 });
 

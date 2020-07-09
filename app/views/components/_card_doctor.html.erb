@@ -1,8 +1,8 @@
 <% if !doctor.nil? %>
     <div class="card_doctor">
     <% if doctor.avatar.attached? %>
- <div class="photo" style="background-image: linear-gradient(rgba(239, 103, 99,0.5), rgba(255, 255, 255,0.1)),
-                    url(<%= cl_image_path doctor.avatar.key , width: 300, height: 300, crop: :fill, gravity: :face %>)">
+ <div class="photo" style="background-image: linear-gradient(rgba(241,209,209,0.1), rgba(250,242,242,0.1)),
+                    url(<%= cl_image_path doctor.avatar.key , height: 250, width: 250, crop: :fill, gravity: :face; %>)">
         </div>
 <%end%>
         <div class="info" >
@@ -17,19 +17,22 @@
           <% end %>
 
             <p id="jobs"><%= str %></p>
-            <p id="phone">Contact : <%= doctor.phone%></p>
+            <p id="phone"><i class="fas fa-phone"></i>&ensp;<%= doctor.phone%></p>
             <p id="description"><%= doctor.description %></p>
 
             <% if doctor.activities.count == 1 %>
-              <p id="info-specialities" >Ma spécialité</p>
+              <p id="info-specialities" >Ma spécialité :</p>
             <% elsif doctor.activities.count > 1 %>
-              <p id="info-specialities" >Mes spécialités</p>
+              <p id="info-specialities" >Mes spécialités :</p>
             <% end %>
-                  <% doctor.activities.each do |a| %>
-                      <%= link_to root_path do  %>
-                         <p class="button accept info-speciality" remote="true"><%= a.speciality.name %></p>
-                      <% end %>
-                <% end %>
+
+            <% doctor.activities.each do |a| %>
+              <li class="info-speciality"> <%= a.speciality.name %></li>
+            <% end %>
+
+            <%= link_to user_path(doctor) do  %>
+                         <p class="button accept info-button" remote="true">contactez-moi</p>
+            <% end %>
 
         </div>
 </div>
