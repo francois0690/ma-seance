@@ -82,7 +82,7 @@ if (typeform) {
             loader.classList.toggle("hidden");
             typeform.classList.toggle("hidden");
             setTimeout(function() {
-                    window.location.replace(`https://ma-seance.herokuapp.com/results?response_id=${data.response_id}`);
+                    window.location.replace(REDIRECT`/results?response_id=${data.response_id}`);
                 },
                 1000);
         }
