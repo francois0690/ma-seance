@@ -72,7 +72,6 @@ document.addEventListener('DOMContentLoaded', function() {
 const loader = document.querySelector(".loader");
 // TYPEFORM
 const typeform = document.getElementById("typeform");
-
 if (typeform) {
     typeformEmbed.makeWidget(typeform, "https://maseancetherapeutique.typeform.com/to/zcKO5yK0?&origin=*", {
         hideFooter: false,
@@ -82,7 +81,7 @@ if (typeform) {
             loader.classList.toggle("hidden");
             typeform.classList.toggle("hidden");
             setTimeout(function() {
-                    window.location.replace(REDIRECT`/results?response_id=${data.response_id}`);
+                    window.location.replace(`${typeform.dataset.redirectUrl}/results?response_id=${data.response_id}`);
                 },
                 1000);
         }
