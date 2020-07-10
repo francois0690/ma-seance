@@ -28,20 +28,35 @@
             </p>
           </div>
 
-          <div class="toubib-img-right-descritpion-address">
-            <div class="toubib-img-right-descritpion-address-title">
-              <i class="fas fa-map-marker"></i>
-              <h4>Adresse</h4>
-            </div>
-            <% @activities.each do |activity| %>
-            <p>
-              <%= activity.office.name %>
-            </p>
-            <p>
-              <%= activity.office.address %>
-            </p>
-            <%end %>
+
+          <div class="toubib-img-right-description-address-and-phone">
+              <div class="toubib-img-right-description-address">
+                  <div class="toubib-img-right-description-address-title">
+                    <i class="fas fa-map-marker"></i>
+                    <h4>Adresse</h4>
+                  </div>
+                  <% @activities.each do |activity| %>
+                  <p>
+                    <%= activity.office.name %>
+                  </p>
+                  <p>
+                    <%= activity.office.address %>
+                  </p>
+                  <%end %>
+              </div>
+
+              <div class="toubib-img-right-description-phone">
+                <div class="toubib-img-right-description-phone-title">
+                  <i class="fas fa-phone"></i>
+                  <h4>Téléphone</h4>
+                </div>
+                <p>
+                  <%=@user.phone %>
+                </p>
+              </div>
           </div>
+
+
         </div>
 
       </div>
@@ -59,9 +74,9 @@
       <div class="message">
 
         <%= simple_form_for [@user, @message], method: :post , remote: true do |f| %>
-        <div class="d-flex flex-column ">
-          <%= f.input :content, label: false, placeholder: "Message" , as: :text %>
-          <%= f.button :submit, "Envoyer un message", class: "button valid_message" %>
+        <div class="d-flex flex-column">
+          <%= f.input :content, label: false, placeholder: "Vous pouvez m'envoyer un message privé directement depuis cette interface.", as: :text %>
+          <%= f.button :submit, "Envoyer un message privé", class: "button valid_message" %>
         </div>
         <% end %>
       </div>
@@ -69,13 +84,20 @@
     <div class="toubib-job">
       <div class="toubib-job-title">
         <i class="fas fa-briefcase"></i>
-        <h3>Spécialités</h3>
+
+        <% if @specialities.count == 1 %>
+          <h3>Ma spécialité</h3>
+        <% else %>
+          <h3>Mes spécialités</h3>
+        <% end %>
       </div>
       <div class="toubib-job-card">
         <ul>
           <% @specialities.each do |speciality| %>
-          <li>
-            <%= speciality.name.capitalize  %>
+          <li class="toubib-job-card-li">
+               <%= link_to speciality_path(speciality) do %>
+                 <%= speciality.name.capitalize  %>
+               <% end %>
           </li>
           <% end %>
         </ul>
@@ -85,7 +107,7 @@
     <div class="toubib-map">
       <div class="toubib-map-title">
         <i class="fas fa-map-marker"></i>
-        <h3>Situation</h3>
+        <h3>Situation géographique</h3>
       </div>
       <div class="toubib-map-card">
         <div class="toubib-map-card-map">

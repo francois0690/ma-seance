@@ -50,7 +50,10 @@
                         margin-bottom: 16px;
                         text-align: center;
                         text-justify: inter-word;
-                        text-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+                        text-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+
+                        border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+                        padding-bottom: 8px;
 
                     }
                     .txt2 {
@@ -59,17 +62,6 @@
                         font-size: 22px;
                         font-weight: regular;
                         margin-bottom: 32px;
-                        text-align: center;
-                        text-justify: inter-word;
-
-                    }
-
-                    .txt3 {
-                      font-family: 'Montserrat', sans-serif;
-                        margin-top: 8px;
-                        font-size: 22px;
-                        font-weight: regular;
-                        margin-bottom: 38px;
                         text-align: center;
                         text-justify: inter-word;
 
