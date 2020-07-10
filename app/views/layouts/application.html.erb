@@ -12,7 +12,9 @@
   </head>
 
   <body>
+    <% unless action_name == "doctor_message_box" %>
     <%= render 'shared/navbar' %>
+    <% end %>
     <%= render 'shared/flashes' %>
 
       <%= yield %>

@@ -2,11 +2,12 @@ class SpecialitiesController < ApplicationController
   def show
     @speciality = Speciality.find(params[:id])
     if params[:localise].present?
-      @result = Office.search params[:localise]
-      adresses = @result.response["hits"]["hits"].map { |result| result["_id"].to_i }.map { |id| Office.find(id) }
-      @doctors = User.all.joins(:activities).where(activities: {office_id: adresses})
+      @result = Office.where("address ILIKE ?", "%#{params[:localise]}%")
+      #@result = Office.search params[:localise], fields: [:address], misspellings: {edit_distance: 2}
+      #adresses = @result.response["hits"]["hits"].map { |result| result["_id"].to_i }.map { |id| Office.find(id) }
+      @doctors = User.all.joins(:activities).where(activities: {office_id: @result}).order(:last_name).page params[:page]
     else
-      @doctors = User.joins(:specialities).where(specialities: { name: @speciality.name} )
+      @doctors = User.joins(:specialities).where(specialities: { name: @speciality.name} ).order(:last_name).page params[:page]
         # @activities = Activity.where(speciality: @speciality)
         # @doctors = User.where(activities: @activities).order(:last_name).page params[:page]
         @markers = []

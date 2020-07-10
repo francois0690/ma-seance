@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
 
   authenticated do
-    root to: 'users#dashboard', as: :authenticated_root
+    root to: 'pages#home', as: :authenticated_root
   end
 
   resources :consultations, except: [ :new, :create ]

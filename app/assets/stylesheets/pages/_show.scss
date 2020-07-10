@@ -1,10 +1,10 @@
 .show-container {
     margin: 0 auto;
-    width: 90%;
+    width: 60%;
     // background-color: white;
     display: flex;
     flex-direction: row;
-    padding-top: 50px;
+    // padding-top: 50px;
     .toubib {
         margin: 20px;
         margin-bottom: 90px;
@@ -66,7 +66,7 @@
                             padding-bottom: 10px;
                             .fa-address-card {
                                 color: rgba(0, 0, 0, 0.6);
-                                font-size: 17px;
+                                font-size: 19px;
                             }
                             h4 {
                                 font-family: 'Montserrat', sans-serif;
@@ -74,44 +74,97 @@
                                 // font-weight: bold;
                                 color: rgba(0, 0, 0, 1);
                                 font-weight: regular;
-                                font-size: 18px;
+                                font-size: 20px;
                             }
                         }
                         p {
                             color: rgba(0, 0, 0, 0.9);
                             font-family: 'Montserrat', sans-serif;
                             font-weight: lighter;
-                            font-size: 14px;
+                            font-size: 16px;
                             //line-height: 1.3;
                         }
                     }
-                    .toubib-img-right-descritpion-address {
-                        width: 50%;
-                        padding-left: 70px;
-                        .toubib-img-right-descritpion-address-title {
-                            display: flex;
-                            flex-direction: row;
-                            padding-bottom: 10px;
-                            .fa-map-marker {
-                                // font-family: 'Montserrat', sans-serif;
-                                color: rgba(0, 0, 0, 0.6);
-                                font-size: 17px;
+
+
+                    .toubib-img-right-description-address-and-phone {
+                            width: 50%;
+                            padding-left: 70px;
+
+
+                        .toubib-img-right-description-address {
+
+                            .toubib-img-right-description-address-title {
+                                display: flex;
+                                flex-direction: row;
+                                padding-bottom: 10px;
+                                .fa-map-marker {
+                                    // font-family: 'Montserrat', sans-serif;
+                                    color: rgba(0, 0, 0, 0.6);
+                                    font-size: 19px;
+                                }
+                                h4 {
+                                    font-family: 'Montserrat', sans-serif;
+                                    color: rgba(0, 0, 0, 0.9);
+                                    font-weight: regular;
+                                    font-size: 20px;
+                                }
                             }
-                            h4 {
+                            p {
                                 font-family: 'Montserrat', sans-serif;
                                 color: rgba(0, 0, 0, 0.9);
-                                font-weight: regular;
-                                font-size: 18px;
+                                font-weight: lighter;
+                                font-size: 16px;
+                                margin-bottom: 0px;
                             }
                         }
-                        p {
-                            font-family: 'Montserrat', sans-serif;
-                            color: rgba(0, 0, 0, 0.9);
-                            font-weight: lighter;
-                            font-size: 14px;
-                            margin-bottom: 0px;
+
+                        .toubib-img-right-description-phone {
+                            margin-top: 34px;
+                            // width: 50%;
+                            // padding-left: 70px;
+                            .toubib-img-right-description-phone-title {
+                                display: flex;
+                                flex-direction: row;
+                                padding-bottom: 10px;
+                                .fa-phone {
+                                    // font-family: 'Montserrat', sans-serif;
+                                    color: rgba(0, 0, 0, 0.6);
+                                    font-size: 19px;
+                                }
+                                h4 {
+                                    font-family: 'Montserrat', sans-serif;
+                                    color: rgba(0, 0, 0, 0.9);
+                                    font-weight: regular;
+                                    font-size: 20px;
+                                }
+                            }
+                            p {
+                                font-family: 'Montserrat', sans-serif;
+                                color: rgba(0, 0, 0, 0.9);
+                                font-weight: lighter;
+                                font-size: 16px;
+                                margin-bottom: 0px;
+                            }
                         }
                     }
+                }
+            }
+        }
+
+        .message-cont {
+          padding: 25px 0px;
+          .message-title {
+            display: flex;
+            flex-direction: row;
+
+            .fa-envelope {
+              line-height: 1.3;
+             }
+             h3 {
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 22px;
+                    font-weight: bold;
                 }
             }
         }
@@ -131,8 +184,28 @@
                 background-color: white;
                 border-radius: 7px;
                 box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.1);
-                ul {
+                .toubib-job-card-li {
                     list-style-type: none;
+
+
+                    a {
+
+                    font-family: 'Montserrat', sans-serif;
+                    font-size: 22px;
+                    font-weight: regular;
+                    color: black;
+                    text-decoration: none;
+                    text-shadow: 2px 2px 3px rgba(0,0,0,0.1);
+        // border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+                    padding-bottom: 8px;
+                    margin-bottom: 16px;
+                    transition: 0.5s all ease;
+
+                    &:hover {
+                      color: $red;
+                    }
+                    }
+
                 }
             }
         }
@@ -157,6 +230,8 @@
                     .map-doctor {
                         width: 100%;
                         height: 500px;
+                        border-radius: 7px;
+                        box-shadow: 4px 4px 10px rgba(0, 0, 0, .4);
                         .mapboxgl-canvas {
                             width: 100%;
                         }
@@ -206,9 +281,7 @@
                     box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.1);
                     text-align: center;
                     padding-top: 10px;
-                    .fa-envelope {
-                        font-size: 28px;
-                    }
+
                 }
                 .action-toubib-option-mail-txt {
                     padding-left: 20px;
@@ -229,12 +302,26 @@
 }
 
 .message {
-    margin: 32px auto;
+    margin: 0px auto;
     padding: 30px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
     border-radius: 10px;
+
+
+    #message_content {
+      color: black;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: regular;
+      font-size: 16px;
+    }
 }
 
 .valid_message {
     background-color: $red-medium-3;
+    width: 50%;
+    transition: all 0.5s ease;
+        &:hover {
+          background-color: $red-medium-2;
+          // transform:scale(1.02);
+        }
 }

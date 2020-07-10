@@ -4,7 +4,7 @@ class UsersController < ApplicationController
 
   def show
     set_user
-    @jobs = @user.jobs
+    @specialities = @user.specialities
     @activities = @user.activities
     # @offices = activities.offices
     # @specialities = activities.specialities
@@ -19,7 +19,7 @@ class UsersController < ApplicationController
     end
     @message = Message.new
   end
-  
+
   def channel
     @my_chatrooms = Chatroom.where("name ILIKE :name", name: "%#{current_user.id}-%")
     @my_channels  = @my_chatrooms.map do |c|
@@ -41,7 +41,7 @@ class UsersController < ApplicationController
     @user = User.find(params[:id])
   end
 
-  def message_params 
+  def message_params
     params.require(:message).permit(:content)
   end
 end
