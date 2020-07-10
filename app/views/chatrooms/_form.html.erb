@@ -1,21 +1,26 @@
 <div class="grow-1">
+
     <div id="messages" data-chatroom-id="<%= chatroom.id %>">
         <% chatroom.messages.each do |message| %>
-            <div class="message-container" id="message-<%= message.id %>">
-                <i class="author">
+            <%if message.user== current_user%>
+                <div class="message-container-mine" id="message-<%= message.id %>">
+                    <%else%>
+                        <div class="message-container" id="message-<%= message.id %>">
+                            <%end%>
+                                <i class="author">
               <div><%= message.user.full_name %></div>
-              <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small>
+              <!-- <small><%= message.created_at.strftime("%a %b %e at %l:%M%p") %></small> -->
               </i>
-                <p>
-                    <%= message.content %>
-                </p>
-            </div>
-            <% end %>
+                                <p>
+                                    <%= message.content %>
+                                </p>
+                        </div>
+                        <% end %>
+                </div>
+                <%= simple_form_for [ chatroom, message ], remote: true do |f| %>
+                    <div class="d-flex flex-column ">
+                        <%= f.input :content, label: false, placeholder: "Message" , as: :text %>
+                            <%= f.button :submit, "Envoyer", class: "button accept" %>
+                    </div>
+                    <% end %>
     </div>
-    <%= simple_form_for [ chatroom, message ], remote: true do |f| %>
-        <div class="d-flex flex-column ">
-            <%= f.input :content, label: false, placeholder: "Message" , as: :text %>
-                <%= f.button :submit, "Envoyer", class: "button accept" %>
-        </div>
-        <% end %>
-</div>

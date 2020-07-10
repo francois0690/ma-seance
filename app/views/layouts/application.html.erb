@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>MaSeance</title>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+        <%= csp_meta_tag %>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
-  </head>
+            <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+            <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+                <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+                <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
+</head>
 
-  <body>
+<body>
     <% unless action_name == "doctor_message_box" %>
-    <%= render 'shared/navbar' %>
-    <% end %>
-    <%= render 'shared/flashes' %>
+        <%= render 'shared/navbar' %>
+            <% end %>
+                <%= render 'shared/flashes' %>
 
-      <%= yield %>
+                    <%= yield %>
 
 
 
-    <%= render 'shared/footer' %>
-  </body>
+                        <% unless action_name == "doctor_message_box" %>
+                            <%= render 'shared/footer' %>
+                                <% end %>
+</body>
+
 </html>

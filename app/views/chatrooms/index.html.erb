@@ -1,11 +1,13 @@
 <div class="row">
-    <div class="col-6 col-md-3">
+    <div class="col-1">
+    </div>
+    <div class="col-4">
         <%= render partial: 'rooms' %>
     </div>
 
-    <% unless @chatroom.nil? %>
-        <div class="col">
+    <div class="col-6 chat-left">
+        <% unless @chatroom.nil? %>
             <%= render  "chatrooms/form", chatroom: @chatroom, message:@message %>
-        </div>
-        <%end%>
+                <%end%>
+    </div>
 </div>
