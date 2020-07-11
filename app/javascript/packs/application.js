@@ -41,6 +41,22 @@ import { initScrollAuto } from '../components/scroll_auto';
 
 const AOS = require('aos');
 
+ocument.addEventListener('turbolinks:load', () => {
+    // bubller();
+    initShowMoreDoctors();
+    initChatroomCable();
+
+    // init_Vivus();
+    initUpdateNavbarOnScroll();
+    initScrollAuto();
+    loading();
+    initMapbox();
+    // initReadMoreT();
+    // init_Vivus();
+    btnCleaner();
+    typeformLoader();
+
+});
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -87,19 +103,4 @@ const btnCleaner = () => {
   }
 }
 
-document.addEventListener('turbolinks:load', () => {
-    // bubller();
-    initShowMoreDoctors();
-    initChatroomCable();
-
-    // init_Vivus();
-    initUpdateNavbarOnScroll();
-    initScrollAuto();
-    loading();
-    initMapbox();
-    // initReadMoreT();
-    // init_Vivus();
-    btnCleaner();
-    typeformLoader();
-
-});
+d
