@@ -265,7 +265,7 @@ b.email = "barnabe.dubus@gmail.com"
 b.password = "123456"
 b.password_confirmation = "123456"
 b.is_pro = false
-avatar_patient = Down.download('https://avatars0.githubusercontent.com/u/55020167?s=400&u=3e0880f7916aeabde344be62e94e72f2bd1c0596&v=4')
+avatar_patient = Down.download('https://res.cloudinary.com/dewwle39t/image/upload/v1594477388/ma-seance/pigeon_tlnmty.jpg')
 b.avatar.attach(io: avatar_patient, filename: 'avatarb.jpg', content_type: 'image/jpg')
 
 
