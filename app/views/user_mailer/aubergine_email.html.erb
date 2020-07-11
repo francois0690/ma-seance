@@ -1,8 +1,10 @@
-<h1>Hello
-    <%= @user.first_name %>
+<div class="message-box-banner">
+    Ma-séance
+</div>
+<h1>Bonjour
+    <%= @user.full_name %>,
 </h1>
-<%= link_to  "répondre", doctor_message_box_url(token: @token, room: @room) %>
-    <p>
-        🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆🍆
-    </p>
-    <p>Thanks for joining and have a great day!</p>
+<p> Un membre de Ma-séance vousà laisser unn message.
+    <%=l ink_to " voir le message ", doctor_message_box_url(token: @token, room: @room) %>
+        à bientôt
+</p>
