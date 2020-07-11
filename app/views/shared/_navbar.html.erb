@@ -12,7 +12,7 @@
                     </div>
 
                     <div class="nav-item dropdown  mr-2">
-                        <%= cl_image_tag current_user.avatar.key, class: "avatar-bordered dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+                        <%= cl_image_tag current_user.avatar.key, height: 60, width: 60, crop: :fill, gravity: :face, class: "avatar-bordered dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
                             <div class="dropdown-menu dropdown-menu-right dropdown-menu-nav cancel p-0" aria-labelledby="navbarDropdown">
                                 <%= link_to "Mes conversations", chatrooms_path, class: "dropdown-item cancel" %>
                                     <%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item cancel" %>
