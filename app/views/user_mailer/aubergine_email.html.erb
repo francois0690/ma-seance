@@ -5,5 +5,5 @@
     <%= @user.full_name %>,
 </h1>
 <p> Un membre de Ma-séance vous a laissé un message.</p>
-<%=link_to " voir le message ", doctor_message_box_url(token: @token, room: @room) %>
+<%=link_to " voir le message ", doctor_message_box_url(token: @user.auth_token, room: @room) %>
     <p>à bientôt</p>
