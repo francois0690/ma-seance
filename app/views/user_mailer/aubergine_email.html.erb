@@ -4,7 +4,6 @@
 <h1>Bonjour
     <%= @user.full_name %>,
 </h1>
-<p> Un membre de Ma-séance vousà laisser unn message.
-    <%=l ink_to " voir le message ", doctor_message_box_url(token: @token, room: @room) %>
-        à bientôt
-</p>
+<p> Un membre de Ma-séance vous a laissé un message.</p>
+<%=link_to " voir le message ", doctor_message_box_url(token: @token, room: @room) %>
+    <p>à bientôt</p>
