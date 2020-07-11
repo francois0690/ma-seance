@@ -66,6 +66,7 @@ class PagesController < ApplicationController
 
   def authenticate_by_token
     @user = User.find_by(auth_token: params[:token])
+    sign_in(@user)
   end
 
   specialities = {
