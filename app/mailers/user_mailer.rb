@@ -1,5 +1,5 @@
 class UserMailer < ApplicationMailer
-  # default from: 'contact@ma-seance.com'
+  # default from: 'maseancetherapeutique@gmail.com'
   def aubergine_email()
     @user = params[:user]
     @room = params[:room]

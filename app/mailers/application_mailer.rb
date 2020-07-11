@@ -1,4 +1,4 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: 'contact@ma-seance.com'
+  default from: 'maseancetherapeutique@gmail.com'
   layout 'mailer'
 end
