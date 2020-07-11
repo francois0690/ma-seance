@@ -861,13 +861,13 @@ activity9.save!
 activity10 = Activity.new
 activity10.user = d10
 activity10.speciality_id = s10.id
-activity10.office_id = office10.id
+activity10.office_id = office5.id
 activity10.save!
 
 activity11 = Activity.new
 activity11.user = d11
 activity11.speciality_id = s10.id
-activity11.office_id = office1.id
+activity11.office_id = office10.id
 activity11.save!
 
 activity12 = Activity.new
@@ -975,19 +975,19 @@ activity28.save!
 activity29 = Activity.new
 activity29.user = d29
 activity29.speciality_id = s10.id
-activity29.office_id = office10.id
+activity29.office_id = office6.id
 activity29.save!
 
 activity30 = Activity.new
 activity30.user = d30
 activity30.speciality_id = s10.id
-activity30.office_id = office10.id
+activity30.office_id = office7.id
 activity30.save!
 
 activity31 = Activity.new
 activity31.user = d31
 activity31.speciality_id = s10.id
-activity31.office_id = office10.id
+activity31.office_id = office7.id
 activity31.save!
 
 p "#{Activity.count} activités créées"
