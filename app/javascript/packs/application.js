@@ -53,6 +53,7 @@ document.addEventListener('turbolinks:load', () => {
     initMapbox();
     // initReadMoreT();
     // init_Vivus();
+    btnCleaner()
 
 
 });
@@ -87,3 +88,12 @@ if (typeform) {
         }
     });
 }
+
+const btnCleaner = () => {
+  const submitMessage = document.querySelector('.valid_message')
+  const messageInput = document.getElementById('message_content')
+  submitMessage.addEventListener('click', function() {
+    messageInput.value = ""
+  });
+}
+
