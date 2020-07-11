@@ -1,3 +1,4 @@
+
 .chat {
     background-color: $red;
     padding: 24px;
@@ -76,4 +77,9 @@
 
 .message-box-banner {
     background-color: $red-light;
+}
+.message-box {
+    background-color: $red;
+    text-align: center;
+    color: white;
 }
