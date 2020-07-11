@@ -41,21 +41,6 @@ import { initScrollAuto } from '../components/scroll_auto';
 
 const AOS = require('aos');
 
-document.addEventListener('turbolinks:load', () => {
-    bubller
-    initShowMoreDoctors();
-    initChatroomCable();
-
-    // init_Vivus();
-    initUpdateNavbarOnScroll();
-    initScrollAuto();
-    loading();
-    initMapbox();
-    // initReadMoreT();
-    // init_Vivus();
-
-
-});
 
 
 document.addEventListener('DOMContentLoaded', function() {
@@ -71,19 +56,49 @@ document.addEventListener('DOMContentLoaded', function() {
 
 const loader = document.querySelector(".loader");
 // TYPEFORM
-const typeform = document.getElementById("typeform");
-if (typeform) {
-    typeformEmbed.makeWidget(typeform, "https://maseancetherapeutique.typeform.com/to/Eeg5LyRw?&origin=*", {
-        hideFooter: false,
-        hideHeaders: false,
-        opacity: 0,
-        onSubmit: (data) => {
-            loader.classList.toggle("hidden");
-            typeform.classList.toggle("hidden");
-            setTimeout(function() {
-                    window.location.replace(`${typeform.dataset.redirectUrl}/results?response_id=${data.response_id}`);
-                },
-                1000);
-        }
+
+const typeformLoader = () => {
+  const typeform = document.getElementById("typeform");
+  if (typeform) {
+    typeformEmbed.makeWidget(typeform, "https://delux.typeform.com/to/Eeg5LyRw?&origin=*", {
+      hideFooter: false,
+      hideHeaders: false,
+      opacity: 0,
+      onSubmit: (data) => {
+        loader.classList.toggle("hidden");
+        typeform.classList.toggle("hidden");
+        setTimeout(() => {
+          window.location.replace(`${typeform.dataset.redirectUrl}/results?response_id=${data.response_id}`);
+        }, 1000);
+      }
     });
+  }
 }
+
+const btnCleaner = () => {
+  const submitMessage = document.querySelector('.valid_message')
+  const messageInput = document.getElementById('message_content')
+
+  if (submitMessage) {
+    submitMessage.addEventListener('click', function() {
+      messageInput.value = ""
+    });
+  }
+}
+
+document.addEventListener('turbolinks:load', () => {
+    // bubller();
+    initShowMoreDoctors();
+    initChatroomCable();
+
+    // init_Vivus();
+    initUpdateNavbarOnScroll();
+    initScrollAuto();
+    loading();
+    initMapbox();
+    // initReadMoreT();
+    // init_Vivus();
+    btnCleaner();
+    typeformLoader();
+
+});
