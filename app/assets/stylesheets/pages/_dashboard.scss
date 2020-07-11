@@ -1,112 +1,85 @@
-        .chat {
-            background-color: $red;
-            padding: 24px;
-            width: 80%;
-            border-radius: 5px;
-        }
-        
-        .chat-left {
-            box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
-            padding: 16px;
-            // background-color: #e4e3e3;
-            background-color: $red-medium-3;
-        }
-        
-        #messages {
-            height: 400px;
-            overflow: scroll;
-        }
-        
-        .message-container {
-            background-color: white;
-            // background-color: $red-light;
-            border-radius: 8px;
-            padding: 16px;
-            margin-left: 35%;
-            margin-right: 16px;
-            margin-top: 16px;
-        }
-        
-        .message-container-mine {
-            background-color: white;
-            border-radius: 8px;
-            padding: 16px;
-            margin-left: 16px;
-            margin-right: 35%;
-            margin-top: 16px
-        }
-        
-        .author {
-            display: flex;
-            align-content: space-between;
-        }
-        
-        .author div {
-            display: flex;
-        }
-        
-        .dashboard {
-            margin-top: 200px;
-            background-color: $red-light;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-        
-        .channels {
-            background-color: #e4e3e3;
-            height: 100%;
-            border-radius: 5px;
-            box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
-            align-content: center;
-            padding-top: 8px;
-            padding-bottom: 8px;
-            overflow: scroll;
-        }
-        
-        .channel {
-            background-color: $purple-light;
-            color: white;
-            padding-left: 16px;
-            padding-top: 8px;
-            border-radius: 5px;
-            height: 40px;
-            margin: 4px;
-            width: 95%;
-            &:hover {
-                color: white;
-                text-decoration: none;
-                box-shadow: 0 5px 10px rgba(0, 0, 0, .3);
-            }
-        }
-        
-        .nav-pills .nav-link.active,
-        .nav-pills .show>.nav-link {
-            // color: #333;
-            opacity: 0.8;
-            color: black;
-            border-bottom: 4px solid transparent;
-            background-color: rgba(107, 107, 107, 0);
-            border-bottom: 1px solid #555555;
-        }
-        
-        .nav-pills .nav-link {
-            text-transform: capitalize;
-            background-color: rgba(122, 122, 122, 0);
-            // color: rgb(122, 122, 122);
-            transition: opacity 0.5s ease;
-            opacity: 0.6;
-            color: black;
-            &:hover,
-            &:focus {
-                // color: #333;
-                opacity: 1;
-                color: black;
-            }
-        }
-        
-        .message-box {
-            background-color: $red;
-            text-align: center;
-            color: white;
-        }
+
+.chat {
+    background-color: $red;
+    padding: 24px;
+    width: 80%;
+    border-radius: 5px;
+}
+
+#messages {
+    height: 400px;
+    overflow-y: scroll;
+}
+
+.message-container {
+    background-color: $red-light;
+    border-radius: 8px;
+    padding-left: 16px;
+}
+
+.right {
+    align-self: end;
+}
+
+.dashboard {
+    margin-top: 200px;
+    background-color: $red-light;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.channels {
+    background-color: lightgray;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.channel {
+    background-color: $purple-light;
+    color: white;
+    padding-left: 16px;
+    padding-top: 8px;
+    border-radius: 5px;
+    height: 40px;
+    margin: 4px;
+    &:hover {
+        color: white;
+        text-decoration: none;
+        box-shadow: 0 5px 10px $red;
+    }
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    // color: #333;
+    opacity: 0.8;
+    color: black;
+    border-bottom: 4px solid transparent;
+    background-color: rgba(122, 122, 122, 0);
+    border-bottom: 1px solid #555555;
+}
+
+.nav-pills .nav-link {
+    text-transform: capitalize;
+    background-color: rgba(122, 122, 122, 0);
+    // color: rgb(122, 122, 122);
+    transition: opacity 0.5s ease;
+    opacity: 0.6;
+    color: black;
+    &:hover,
+    &:focus {
+        // color: #333;
+        opacity: 1;
+        color: black;
+    }
+}
+
+.message-box-banner {
+    background-color: $red-light;
+}
+.message-box {
+    background-color: $red;
+    text-align: center;
+    color: white;
+}

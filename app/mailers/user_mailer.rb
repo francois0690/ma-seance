@@ -5,7 +5,7 @@ class UserMailer < ApplicationMailer
     @room = params[:room]
     @token = Devise.friendly_token.first(16)
     @user.auth_token = @token
-    mail(to: @user.email, subject: "t'as clické sur le bouton aubergine!")
+    mail(to: @user.email, subject: "Nouveau contact, Ma-séance")
   end
 
 
