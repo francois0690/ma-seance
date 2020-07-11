@@ -77,11 +77,12 @@ const typeformLoader = () => {
 
 const btnCleaner = () => {
   const submitMessage = document.querySelector('.valid_message')
-  const messageInput = document.getElementById('message_content')
+  // const messageInput = document.getElementById('message_content')
 
   if (submitMessage) {
     submitMessage.addEventListener('click', function() {
-      messageInput.value = ""
+      console.log(submitMessage);
+      submitMessage.value = "Message bien envoyé !"
     });
   }
 }
