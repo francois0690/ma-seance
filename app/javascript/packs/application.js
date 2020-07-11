@@ -55,7 +55,6 @@ document.addEventListener('turbolinks:load', () => {
     // init_Vivus();
     btnCleaner();
     typeformLoader();
-
 });
 
 
@@ -67,14 +66,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     initShowMoreSpecialities();
     // initReadMore();
-
 });
 
-const loader = document.querySelector(".loader");
+
 // TYPEFORM
 
 const typeformLoader = () => {
   const typeform = document.getElementById("typeform");
+  const loader = document.querySelector(".loader");
   if (typeform) {
     typeformEmbed.makeWidget(typeform, "https://delux.typeform.com/to/Eeg5LyRw?&origin=*", {
       hideFooter: false,
