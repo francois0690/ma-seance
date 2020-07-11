@@ -14,7 +14,9 @@
 </div>
 <div class="red-margin">
   <%= render 'shared/searchbar' %>
-  <%= render 'shared/grid' , doctors: @doctors , markers: @markers %>
+  <div class="container">
+    <%= render 'shared/grid' , doctors: @doctors , markers: @markers %>
+  </div>
   <%= paginate @doctors %>
 </div>
 

@@ -41,7 +41,7 @@ import { initScrollAuto } from '../components/scroll_auto';
 
 const AOS = require('aos');
 
-ocument.addEventListener('turbolinks:load', () => {
+document.addEventListener('turbolinks:load', () => {
     // bubller();
     initShowMoreDoctors();
     initChatroomCable();
@@ -102,5 +102,3 @@ const btnCleaner = () => {
     });
   }
 }
-
-d

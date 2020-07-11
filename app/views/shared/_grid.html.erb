@@ -1,16 +1,9 @@
-<div class="grid">
-    <div class="doctors">
-      <div class="one"> <%= render 'components/card_doctor' , doctor: doctors[0]%> </div>
-      <div class="two"><%= render 'components/card_doctor' , doctor: doctors[1]%></div>
-      <div id="grid-map" class="grid-map" data-markers="<%= markers.to_json %>"
-     data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"></div>
-      <div class="three"><%= render 'components/card_doctor' , doctor: doctors[2]%></div>
-      <div class="four"><%= render 'components/card_doctor' , doctor: doctors[3]%></div>
-      <div class="five"><%= render 'components/card_doctor' , doctor: doctors[4]%></div>
-      <div class="six"><%= render 'components/card_doctor' , doctor: doctors[5]%></div>
-      <div class="seven"><%= render 'components/card_doctor' , doctor: doctors[6]%></div>
-      <div class="height"><%= render 'components/card_doctor' , doctor: doctors[7]%></div>
-      <div class="nine"><%= render 'components/card_doctor' , doctor: doctors[8]%></div>
-      <div class="ten"><%= render 'components/card_doctor' , doctor: doctors[9]%></div>
-    </div>
+<div style="display: flex; align-items: flex-start;">
+  <div class="doctors" style="flex-grow: 1; grid-template-columns: repeat(2, 1fr);">
+    <% doctors.each do |doctor| %>
+      <div><%= render 'components/card_doctor' , doctor: doctor %></div>
+    <% end %>
+  </div>
+
+  <div id="grid-map" class="grid-map" data-markers="<%= markers.to_json %>" data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>" style="height: 90vh; width: 350px; flex-shrink: 0; margin-left: 20px; position: sticky; top: 20px;"></div>
 </div>
