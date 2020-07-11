@@ -453,7 +453,7 @@ d11.email = "maseancetherapeutique@gmail.com"
 d11.password = "123456"
 d11.password_confirmation = "123456"
 d11.is_pro = true
-avatar_docteur_male = Down.download('https://images.unsplash.com/photo-1571512599285-9ac4fdf3dba9?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1234&q=80')
+avatar_docteur_male = Down.download('https://res.cloudinary.com/dewwle39t/image/upload/v1594462840/ma-seance/res_1594462322538_vmaijf.jpg')
 d11.avatar.attach(io: avatar_docteur_male, filename: 'avatar_docteur_male.jpg', content_type: 'image/jpg')
 d11.description = "Initialement spécialisé dans l'éducation et la pédagogie auprès des enfants et des adolescents comme animateur et conseillé pédagogique au sein de l'éducation nationale et auprès de l'Aide Sociale à l'Enfance (l'ASE), je me suis intéressé peu à peu à l'adulte et aux personnes âgées qui font partie intégrante de ma patientèle. ​ Formé à la relation d'aide et notamment à l'Approche Centrée sur la Personne *(A.C.P) de CARL ROGERS depuis 2011 à Paris en psychanalyse et psychothérapie. ​ A ce titre j'accompagne en psychothérapie des adultes depuis 2011 en proies à des situations émotionnelles douloureuses (suicide d'un proche, dépression, harcèlement au travail, solitude, mal-être,burn-out, deuil, séparation, victimes d'inceste, ...). Formé par l'école SOHO Holistique à La Baule par Marc Niedergang et Jacqueline Niedergang depuis 2018. La pratique de la sophrologie concerne toute personne qui souhaite améliorer son existence et développer mieux être et sérénité."
 d11.phone = "0685431183"
